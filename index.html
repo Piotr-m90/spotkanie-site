@@ -216,20 +216,20 @@
   .btn-outline-amber:hover { background: rgba(212, 137, 10, 0.08); border-color: var(--gold); }
   .hero-cine__social-proof { display: flex; align-items: center; gap: 16px; }
   .hero-cine__avatars { display: flex; }
-  .hero-cine__avatars span {
-    width: 36px; height: 36px;
+  .hero-cine__avatars .av {
+    width: 42px; height: 42px;
     border-radius: 50%;
     border: 2px solid var(--bg-base);
-    margin-left: -10px;
-    display: inline-flex; align-items: center; justify-content: center;
-    font-size: 12px; font-weight: 600;
-    color: var(--bg-base);
-    font-family: 'Fraunces', serif;
+    margin-left: -12px;
+    background-image: url('https://muszynski-media.gumlet.io/muszynski-online/avatars-msp-strip.png?w=1600&format=auto&quality=88');
+    background-size: 400% 100%;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   }
-  .hero-cine__avatars span:nth-child(1) { background: linear-gradient(135deg, #d4890a, #b87005); margin-left: 0; }
-  .hero-cine__avatars span:nth-child(2) { background: linear-gradient(135deg, #c98555, #a86b3f); }
-  .hero-cine__avatars span:nth-child(3) { background: linear-gradient(135deg, #e8b87a, #c08a4a); }
-  .hero-cine__avatars span:nth-child(4) { background: linear-gradient(135deg, #8b6f4f, #5e4a35); color: rgba(255,255,255,0.85); }
+  .hero-cine__avatars .av:nth-child(1) { background-position: 0% center; margin-left: 0; }
+  .hero-cine__avatars .av:nth-child(2) { background-position: 33.33% center; }
+  .hero-cine__avatars .av:nth-child(3) { background-position: 66.67% center; }
+  .hero-cine__avatars .av:nth-child(4) { background-position: 100% center; }
   .hero-cine__proof-text { font-size: 13px; color: var(--text-mute); line-height: 1.45; }
   .hero-cine__proof-text strong { color: var(--gold); font-weight: 600; }
   .hero-cine__portrait-wrap { position: relative; }
@@ -741,18 +741,21 @@
         <br>piętnaście minut.
         <span class="hero-cine__title-script">Resztę robię sam.</span>
       </h1>
-      <p class="hero-cine__sub">Buduję marki, strony i agentów AI dla ludzi, którzy nie chcą czekać miesiąca na ofertę. Wpadnij na rozmowę — sprawdzimy, czy nasze drogi mają sens, żeby się przeciąć.</p>
+      <p class="hero-cine__sub">Pomagam właścicielom małych i średnich firm zarabiać więcej, pracować mniej i wykorzystać AI tam, gdzie ma sens. Bez kursów na pół roku, bez agencji na pół roku, bez "to skomplikowane".</p>
       <div class="hero-cine__actions">
         <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="btn-amber">Zarezerwuj 15 minut</a>
         <a href="#projekty" class="btn-outline-amber">Zobacz portfolio</a>
       </div>
       <div class="hero-cine__social-proof">
-        <div class="hero-cine__avatars">
-          <span>M</span><span>C</span><span>G</span><span>+</span>
+        <div class="hero-cine__avatars" aria-hidden="true">
+          <span class="av" title="Właściciel warsztatu"></span>
+          <span class="av" title="Właścicielka butiku"></span>
+          <span class="av" title="Właściciel firmy budowlanej"></span>
+          <span class="av" title="Właścicielka salonu urody"></span>
         </div>
         <div class="hero-cine__proof-text">
-          <strong>3 marki własne</strong> · <strong>2 pierwsi klienci brandowi</strong><br>
-          rozwijają swoje historie tym samym fundamentem.
+          <strong>3 własne marki</strong> · <strong>2 osobiści klienci</strong><br>
+          rozwijają swoje historie razem ze mną.
         </div>
       </div>
     </div>
@@ -782,48 +785,48 @@
         <div class="pillar__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3v18" stroke-linecap="round"/></svg>
         </div>
-        <h3 class="pillar__title">Marki własne</h3>
-        <p class="pillar__desc">Trzy projekty na różnych etapach. Jeden fundament. Inna branża, ten sam sposób budowania.</p>
+        <h3 class="pillar__title">Strony, które sprzedają</h3>
+        <p class="pillar__desc">Nie wizytówki z 2015 roku. Strony, które zbierają kontakty, sprzedają usługi i pracują, gdy Ty śpisz.</p>
       </div>
 
       <div class="pillar">
         <div class="pillar__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a4 4 0 014 4v2a4 4 0 01-8 0V6a4 4 0 014-4z"/><path d="M5 20v-2a7 7 0 0114 0v2" stroke-linecap="round"/></svg>
         </div>
-        <h3 class="pillar__title">Klienci brandowi</h3>
-        <p class="pillar__desc">Marka osobista pod klucz. Strona, storytelling, lejek, brand brain — dla pierwszych klientów.</p>
+        <h3 class="pillar__title">Marka osobista</h3>
+        <p class="pillar__desc">Pomagam Ci mówić o sobie tak, żeby klienci sami Cię znajdowali. Bez gadania od rzeczy, bez sztucznych slajdów.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="pillar__title">Asystent AI w firmie</h3>
+        <p class="pillar__desc">Odpowiada klientom 24/7, pisze oferty, robi notatki ze spotkań. Tak jakby ktoś u Ciebie pracował, tylko nie chodzi na obiad.</p>
       </div>
 
       <div class="pillar">
         <div class="pillar__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg>
         </div>
-        <h3 class="pillar__title">Strony WWW</h3>
-        <p class="pillar__desc">Trzynaście stron pod jedną domeną. Każda osobny stack i cel, ten sam fundament jakości.</p>
+        <h3 class="pillar__title">Sklep w internecie</h3>
+        <p class="pillar__desc">Sklep z usługą lub produktem, w którym klient kupuje sam, bez Twojego "podeślij ofertę". Płaci, dostaje, dziękuje.</p>
       </div>
 
       <div class="pillar">
         <div class="pillar__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7l8 4 8-4M4 12l8 4 8-4M4 17l8 4 8-4" stroke-linejoin="round"/></svg>
         </div>
-        <h3 class="pillar__title">Portale i panele</h3>
-        <p class="pillar__desc">Dashboardy, portale klienckie, miejsca w których ludzie pracują — nie tylko czytają.</p>
-      </div>
-
-      <div class="pillar">
-        <div class="pillar__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8" stroke-linecap="round"/></svg>
-        </div>
-        <h3 class="pillar__title">Agenci AI</h3>
-        <p class="pillar__desc">Pomocnicy do contentu, sprzedaży, obsługi klienta. Wdrożeni — nie pokazani na konferencji.</p>
+        <h3 class="pillar__title">Zdjęcia i filmy</h3>
+        <p class="pillar__desc">Profesjonalne zdjęcia produktowe i krótkie filmy reklamowe — bez fotografa, bez planu zdjęciowego, bez 3000 zł za sesję.</p>
       </div>
 
       <div class="pillar">
         <div class="pillar__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" stroke-linecap="round"/></svg>
         </div>
-        <h3 class="pillar__title">Fundament</h3>
-        <p class="pillar__desc">Najpierw porządek w głowie i w plikach. Dopiero potem narzędzia, dopiero potem agenci.</p>
+        <h3 class="pillar__title">Porządek w firmie</h3>
+        <p class="pillar__desc">Najpierw układamy co, gdzie, kiedy i dla kogo. Dopiero potem podpinamy AI. Bez tego nawet najlepszy program to zabawka.</p>
       </div>
 
     </div>
@@ -836,10 +839,10 @@
     <div class="projects-grid">
 
       <div>
-        <span class="section-eyebrow">Nasze projekty</span>
-        <h2 class="section-title">Żywe systemy. <em>Realne wyniki.</em></h2>
-        <p class="section-sub">Wszystko co tu widzisz dziś pracuje. Trzy marki własne na różnych etapach — każda z innym fundamentem, ale jednakową logiką budowania.</p>
-        <a href="projekty.html" class="btn-outline-amber">Wszystkie projekty</a>
+        <span class="section-eyebrow">Co buduję</span>
+        <h2 class="section-title">Każda strona <em>inną historię.</em></h2>
+        <p class="section-sub">Trzy własne marki na różnych etapach. Plus pierwsi klienci, którym zbudowałem osobistą stronę od zera. Każda inna branża, ale wszystkie wyglądają, jakby robił je ten sam człowiek — bo robił.</p>
+        <a href="projekty.html" class="btn-outline-amber">Zobacz wszystkie</a>
       </div>
 
       <div class="project-cards">
@@ -851,8 +854,8 @@
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">Muszyński.online</h3>
-            <p class="project-card__desc">Marka osobista i platforma ekspercka. Konsultacje, audyty, wdrożenia AI OS.</p>
-            <div class="project-card__meta">13+ stron · od 2024</div>
+            <p class="project-card__desc">Moja główna marka. Uczę właścicieli małych firm, jak używać AI, żeby zarabiać więcej.</p>
+            <div class="project-card__meta">Od 2024 · po polsku</div>
           </div>
         </article>
 
@@ -863,8 +866,8 @@
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">Common Roots</h3>
-            <p class="project-card__desc">Marka coachingowa — zdrowie, praca, rozwój. 6 języków, portal klienta, lejki.</p>
-            <div class="project-card__meta">6 lokali · Next.js + Auth</div>
+            <p class="project-card__desc">Marka o zdrowiu, pracy i rozwoju — w sześciu językach, z własnym portalem klienta.</p>
+            <div class="project-card__meta">Z Marcinem Koreckim</div>
           </div>
         </article>
 
@@ -875,8 +878,8 @@
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">Metropolix</h3>
-            <p class="project-card__desc">Klub B2P dla polskiej przedsiębiorczości za granicą. Mapa, katalog, ambasadorzy.</p>
-            <div class="project-card__meta">4 tiery · BD platform</div>
+            <p class="project-card__desc">Klub polskich przedsiębiorców mieszkających za granicą. Mapa firm, polecenia, kontakty.</p>
+            <div class="project-card__meta">Z Magdaleną</div>
           </div>
         </article>
 
@@ -891,19 +894,19 @@
     <div class="why-grid">
 
       <div>
-        <span class="section-eyebrow">Dlaczego Piotr</span>
+        <span class="section-eyebrow">Dlaczego ja</span>
         <h2 class="section-title">Rozmawiam z Tobą. <em>Nie sprzedaję kursu.</em></h2>
-        <p class="section-sub">Nie obiecuję pasywnego dochodu w 90 dni. Nie pokazuję screenshotów z Lambo. Pokazuję strony, marki i agentów, którzy dziś pracują — i opowiadam, jak zbudowałem każde z nich.</p>
+        <p class="section-sub">Nie obiecuję pasywnego dochodu w 90 dni. Nie pokazuję zdjęć z drogimi samochodami. Pokazuję strony, marki i konkretne rozwiązania, które dziś przynoszą klientów — i opowiadam, jak każde zbudowałem.</p>
         <p class="section-sub">Pierwsza rozmowa kosztuje 15 minut Twojego czasu. Nic więcej.</p>
       </div>
 
       <div class="stats-grid">
-        <div class="stat"><div class="stat__num">3</div><div class="stat__label">Marki własne</div></div>
-        <div class="stat"><div class="stat__num">13<span style="font-size:24px">+</span></div><div class="stat__label">Stron live</div></div>
-        <div class="stat"><div class="stat__num">2</div><div class="stat__label">Klienci brandowi</div></div>
+        <div class="stat"><div class="stat__num">3</div><div class="stat__label">Własne marki</div></div>
+        <div class="stat"><div class="stat__num">6<span style="font-size:24px">+</span></div><div class="stat__label">Stron sprzedaje</div></div>
+        <div class="stat"><div class="stat__num">2</div><div class="stat__label">Klienci osobiście</div></div>
         <div class="stat"><div class="stat__num">15<span style="font-size:18px;margin-left:4px">min</span></div><div class="stat__label">Na poznanie się</div></div>
         <div class="stat"><div class="stat__num">0<span style="font-size:18px;margin-left:4px">€</span></div><div class="stat__label">Za rozmowę</div></div>
-        <div class="stat"><div class="stat__num">100<span style="font-size:24px">%</span></div><div class="stat__label">Własny stack</div></div>
+        <div class="stat"><div class="stat__num">48<span style="font-size:18px;margin-left:4px">h</span></div><div class="stat__label">Na odpowiedź</div></div>
       </div>
 
     </div>
@@ -917,25 +920,25 @@
 
       <div>
         <span class="section-eyebrow">Wspólnie</span>
-        <h2 class="section-title">Budujemy razem. <em>Nie dla siebie.</em></h2>
-        <p class="section-sub">Każdy projekt to wspólna praca z osobą, której to dotyczy. Ty mówisz nad czym pracujesz, ja proponuję jak to zrobić — i robimy razem, krok po kroku.</p>
+        <h2 class="section-title">Robimy razem. <em>Krok po kroku.</em></h2>
+        <p class="section-sub">Każda zmiana w Twojej firmie to wspólna praca. Ty wiesz najlepiej, jak działa Twój biznes. Ja wiem, jak wykorzystać AI, żeby działał szybciej.</p>
 
         <ul class="together-list">
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <div><strong>Spotkanie 15 minut, bez handlu</strong><span>Poznajemy się, sprawdzamy czy w ogóle jest sens dalej.</span></div>
+            <div><strong>15 minut, żeby się poznać</strong><span>Mówisz nad czym pracujesz. Słucham. Nie sprzedaję nic na tej rozmowie.</span></div>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <div><strong>Plan na tydzień, nie na pół roku</strong><span>Dostajesz konkretną mapę: co zrobić, w jakiej kolejności, czego nie robić.</span></div>
+            <div><strong>Plan na najbliższy tydzień, nie na rok</strong><span>Dostajesz konkretną listę: co zrobić jutro, co za 7 dni, czego w ogóle nie ruszać.</span></div>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <div><strong>Wdrażamy razem, krok po kroku</strong><span>Nie zostawiam Cię z dokumentem PDF. Pracujemy w Twoim systemie.</span></div>
+            <div><strong>Wdrażamy razem przy Twoim komputerze</strong><span>Nie zostawiam Cię z PDF-em do przeczytania. Pracujemy w Twoich narzędziach.</span></div>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <div><strong>Iteracje tygodniowe, nie raz na kwartał</strong><span>Co tydzień patrzymy co działa, co poprawić — i poprawiamy.</span></div>
+            <div><strong>Sprawdzamy co tydzień, nie raz na kwartał</strong><span>Co tydzień patrzymy, co działa, co nie — i poprawiamy, póki nie zacznie przynosić klientów.</span></div>
           </li>
         </ul>
       </div>
@@ -943,8 +946,8 @@
       <div class="together-image">
         <div class="together-image__inner">
           <svg class="together-image__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10"/></svg>
-          <p class="together-image__quote">Nie potrzebujesz <em>dziesięciu agentów</em>.<br>Potrzebujesz <em>jednego, który działa</em>.</p>
-          <div class="together-image__caption">Pierwsza zasada AI OS</div>
+          <p class="together-image__quote">Nie potrzebujesz <em>dziesięciu narzędzi</em>.<br>Potrzebujesz <em>jednego, które działa</em>.</p>
+          <div class="together-image__caption">Pierwsza zasada przy AI w firmie</div>
         </div>
       </div>
 
@@ -964,7 +967,7 @@
     <div class="testimonials-grid">
 
       <div class="testimonial">
-        <p class="testimonial__quote">"Piotr nie sprzedaje kursu ani slajdów. Mówi co działa, robi to ze mną, a potem patrzymy razem co poprawić. Tak buduje się Common Roots."</p>
+        <p class="testimonial__quote">"Piotr nie sprzedaje slajdów ani kursów. Mówi co działa, robi to ze mną, potem razem patrzymy co poprawić. Wszystko, co dziś jest na Common Roots, powstało w ten sposób."</p>
         <div class="testimonial__author">
           <div class="testimonial__avatar">M</div>
           <div class="testimonial__author-info">
@@ -975,7 +978,7 @@
       </div>
 
       <div class="testimonial">
-        <p class="testimonial__quote">"Mamy klub, mapę, ambasadorów i strony, które działają. Piotr ogarnia warstwę technologiczną, a ja relacje. Komplementarnie."</p>
+        <p class="testimonial__quote">"Mamy klub, mapę, ambasadorów i strony, które rzeczywiście pracują. Ja prowadzę rozmowy z partnerami, Piotr ogarnia całą stronę techniczną. Idealnie się uzupełniamy."</p>
         <div class="testimonial__author">
           <div class="testimonial__avatar">M</div>
           <div class="testimonial__author-info">
@@ -986,7 +989,7 @@
       </div>
 
       <div class="testimonial">
-        <p class="testimonial__quote">"15 minut z Piotrem to nie sales call. To rozmowa, po której naprawdę wiesz, czy warto iść dalej. Dla mnie była warta — buduje moją markę."</p>
+        <p class="testimonial__quote">"15 minut z Piotrem to nie rozmowa handlowa. To moment, po którym naprawdę wiesz, czy warto iść dalej. U mnie było warto — dziś razem budujemy moją markę osobistą."</p>
         <div class="testimonial__author">
           <div class="testimonial__avatar">G</div>
           <div class="testimonial__author-info">
@@ -997,7 +1000,7 @@
       </div>
 
       <div class="testimonial">
-        <p class="testimonial__quote">"Pierwsze 15 minut — i wiedziałam, że nie sprzedaje, tylko słucha. Druga rozmowa była już o tym, jak buduję markę. Polecam."</p>
+        <p class="testimonial__quote">"Pierwsze 15 minut wystarczyło, żeby zobaczyć, że Piotr słucha, a nie sprzedaje. Druga rozmowa była już o konkretnym planie. Polecam każdemu, kto myśli o swojej marce."</p>
         <div class="testimonial__author">
           <div class="testimonial__avatar">B</div>
           <div class="testimonial__author-info">
