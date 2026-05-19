@@ -214,22 +214,35 @@
     transition: background 0.2s, border-color 0.2s;
   }
   .btn-outline-amber:hover { background: rgba(212, 137, 10, 0.08); border-color: var(--gold); }
-  .hero-cine__social-proof { display: flex; align-items: center; gap: 16px; }
+  .hero-cine__social-proof { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
   .hero-cine__avatars { display: flex; }
   .hero-cine__avatars .av {
-    width: 42px; height: 42px;
+    width: 44px; height: 44px;
     border-radius: 50%;
     border: 2px solid var(--bg-base);
     margin-left: -12px;
-    background-image: url('https://muszynski-media.gumlet.io/muszynski-online/avatars-msp-strip.png?w=1600&format=auto&quality=88');
-    background-size: 400% 100%;
+    background-size: cover;
+    background-position: center 18%;
     background-repeat: no-repeat;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, z-index 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
   }
-  .hero-cine__avatars .av:nth-child(1) { background-position: 0% center; margin-left: 0; }
-  .hero-cine__avatars .av:nth-child(2) { background-position: 33.33% center; }
-  .hero-cine__avatars .av:nth-child(3) { background-position: 66.67% center; }
-  .hero-cine__avatars .av:nth-child(4) { background-position: 100% center; }
+  .hero-cine__avatars .av:hover {
+    transform: translateY(-6px) scale(1.15);
+    z-index: 10;
+    box-shadow: 0 8px 24px rgba(212, 137, 10, 0.5), 0 0 0 2px var(--gold);
+  }
+  .hero-cine__avatars .av:nth-child(1) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-av-7-blazer.png?w=180&format=auto&quality=85'); margin-left: 0; }
+  .hero-cine__avatars .av:nth-child(2) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-av-4-outdoor.png?w=180&format=auto&quality=85'); }
+  .hero-cine__avatars .av:nth-child(3) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-av-8-window.png?w=180&format=auto&quality=85'); }
+  .hero-cine__avatars .av:nth-child(4) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-portrait-hero.png?w=180&format=auto&quality=85'); background-position: center 8%; }
+  .hero-cine__avatars .av:nth-child(5) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-cinematic-hero.png?w=180&format=auto&quality=85'); }
+  .hero-cine__avatars .av:nth-child(6) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-av-5-navy.png?w=180&format=auto&quality=85'); }
+  .hero-cine__avatars .av:nth-child(7) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png?w=180&format=auto&quality=85'); }
+  .hero-cine__avatars .av:nth-child(8) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-av-6-spotlight.png?w=180&format=auto&quality=85'); }
   .hero-cine__proof-text { font-size: 13px; color: var(--text-mute); line-height: 1.45; }
   .hero-cine__proof-text strong { color: var(--gold); font-weight: 600; }
   .hero-cine__portrait-wrap { position: relative; }
@@ -859,15 +872,19 @@
         <a href="#projekty" class="btn-outline-amber">Zobacz portfolio</a>
       </div>
       <div class="hero-cine__social-proof">
-        <div class="hero-cine__avatars" aria-hidden="true">
-          <span class="av" title="Właściciel warsztatu"></span>
-          <span class="av" title="Właścicielka butiku"></span>
-          <span class="av" title="Właściciel firmy budowlanej"></span>
-          <span class="av" title="Właścicielka salonu urody"></span>
+        <div class="hero-cine__avatars" aria-label="Piotr Muszyński w różnych odsłonach">
+          <span class="av" title="Klasyczny portret biznesowy"></span>
+          <span class="av" title="Outdoor, golden hour"></span>
+          <span class="av" title="Przy oknie, denim"></span>
+          <span class="av" title="Studio shot, oryginał"></span>
+          <span class="av" title="Cinematic granat"></span>
+          <span class="av" title="Profil bok, navy"></span>
+          <span class="av" title="Czarna koszula, amber bokeh"></span>
+          <span class="av" title="Spotlight editorial"></span>
         </div>
         <div class="hero-cine__proof-text">
-          <strong>3 własne marki</strong> · <strong>2 osobiści klienci</strong><br>
-          rozwijają swoje historie razem ze mną.
+          <strong>Osiem odsłon, jedna osoba.</strong><br>
+          Tę samą energię dostają moi klienci na każdej rozmowie.
         </div>
       </div>
     </div>
