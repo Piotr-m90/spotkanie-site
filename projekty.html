@@ -104,6 +104,102 @@
   @keyframes wipPulse { 50% { box-shadow: 0 0 0 8px rgba(212, 165, 116, 0.05); } }
   .wip-item__title { font-size: 14px; font-weight: 600; color: var(--text, #e8e8ef); margin: 0 0 4px; }
   .wip-item__desc { font-size: 13px; color: var(--text-mute, #9999a8); margin: 0; line-height: 1.5; }
+
+  /* Locked client teaser */
+  .client-locked {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+  }
+  .locked-card {
+    position: relative;
+    background: linear-gradient(180deg, rgba(20, 20, 26, 0.7) 0%, rgba(20, 20, 26, 0.95) 100%);
+    border: 1px solid rgba(212, 165, 116, 0.2);
+    border-radius: 18px;
+    padding: 40px 32px 32px;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .locked-card:hover { border-color: rgba(212, 165, 116, 0.5); transform: translateY(-3px); }
+  .locked-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 18px, rgba(212, 165, 116, 0.025) 18px, rgba(212, 165, 116, 0.025) 19px);
+    pointer-events: none;
+  }
+  .locked-card__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold, #d4a574);
+    background: rgba(212, 165, 116, 0.1);
+    border: 1px solid rgba(212, 165, 116, 0.25);
+    padding: 5px 12px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .locked-card__title {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    color: #f5f0e8;
+    position: relative;
+  }
+  .locked-card__hint {
+    font-size: 13px;
+    color: rgba(245, 240, 232, 0.5);
+    margin: 0 0 18px;
+    font-style: italic;
+    position: relative;
+  }
+  .locked-card__desc {
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(245, 240, 232, 0.78);
+    margin: 0 0 22px;
+    position: relative;
+  }
+  .locked-card__chips {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-bottom: 22px;
+    position: relative;
+  }
+  .locked-card__chip {
+    font-size: 11px;
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    color: rgba(245, 240, 232, 0.55);
+  }
+  .locked-card__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gold, #d4a574);
+    text-decoration: none;
+    padding: 12px 22px;
+    border: 1px solid rgba(212, 165, 116, 0.4);
+    border-radius: 100px;
+    background: rgba(212, 165, 116, 0.04);
+    transition: background 0.2s, border-color 0.2s;
+    position: relative;
+  }
+  .locked-card__cta:hover {
+    background: rgba(212, 165, 116, 0.12);
+    border-color: var(--gold, #d4a574);
+  }
+  .locked-card__cta::after { content: '→'; transition: transform 0.3s; }
+  .locked-card__cta:hover::after { transform: translateX(4px); }
 </style>
 </head>
 <body>
@@ -139,7 +235,7 @@
 </section>
 
 <!-- ============================ SECTION 1: MARKI WŁASNE ============================ -->
-<section class="section fade-in" style="padding-top: 40px;">
+<section class="section fade-in" id="marki" style="padding-top: 40px;">
   <div class="container">
     <div class="section__head">
       <span class="eyebrow">01 · Marki własne</span>
@@ -248,90 +344,51 @@
   </div>
 </section>
 
-<!-- ============================ SECTION 2: KLIENCI BRANDOWI ============================ -->
-<section class="section fade-in" style="background: var(--bg-raised); padding-top: 60px;">
-  <div class="container">
+<!-- ============================ SECTION 2: KLIENCI BRANDOWI (TEASER) ============================ -->
+<section class="section fade-in" id="klienci" style="background: var(--bg-raised); padding-top: 60px;">
+  <div class="container container-narrow">
     <div class="section__head">
       <span class="eyebrow">02 · Pierwsi klienci brandowi</span>
-      <h2 class="section__title">Marka osobista <em>pod klucz</em>.</h2>
-      <p class="section__sub">Buduję markę od strony, przez storytelling, po lejek. Każdy klient = osobny brand brain 4-filarowy, osobna subdomena, osobny plan na 90 dni.</p>
+      <h2 class="section__title">Dwa profile <em>w prywatnej szufladzie</em>.</h2>
+      <p class="section__sub">Buduję markę osobistą od zera — strona, storytelling, lejek, brand brain. Imiona i case studies opowiadam tylko na rozmowie 1:1. Tu zostawiam dwie namiastki, żebyś wiedział z jakimi historiami pracuję.</p>
     </div>
-    <div class="projects-grid">
+    <div class="client-locked">
 
-      <!-- MARIUSZ GĘBSKI -->
-      <article class="project">
-        <div class="project__visual" style="background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); display: flex; align-items: center; justify-content: center; position: relative;">
-          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 30% 30%, rgba(212, 165, 116, 0.15), transparent 60%);"></div>
-          <div style="position: relative; font-family: 'Fraunces', serif; font-size: 38px; font-weight: 700; color: var(--gold, #d4a574); letter-spacing: 0.02em; text-align: center; line-height: 1.05;">PRZEKRACZAJ<br>GRANICE</div>
+      <div class="locked-card">
+        <span class="locked-card__badge">🔒 Profil #1 · Sport · mentoring</span>
+        <h3 class="locked-card__title">Polski olimpijczyk</h3>
+        <p class="locked-card__hint">Drugie życie po medalach.</p>
+        <p class="locked-card__desc">Pięciobój, kariera w wojsku, scena międzynarodowa. Po sportowym etapie zostaje historia, dyscyplina i tysiąc godzin mówienia do mikrofonu — z czego trzeba zbudować markę, która sprzedaje mentoring, a nie wspomnienia.</p>
+        <div class="locked-card__chips">
+          <span class="locked-card__chip">Brand brain 4 filary</span>
+          <span class="locked-card__chip">Mini-strona</span>
+          <span class="locked-card__chip">Ankieta diagnozująca</span>
         </div>
-        <span class="project__status project__status--active">Aktywny</span>
-        <h3 class="project__name">Mariusz Gębski</h3>
-        <p class="project__tagline">Pięcioboista, oficer, polski olimpijczyk — w drugim życiu mówca i mentor.</p>
-        <div class="project__meta-row">
-          <span><strong>Od:</strong> 05.2026</span>
-          <span><strong>Branża:</strong> Sport · mentoring</span>
-          <span><strong>Status:</strong> Faza 2</span>
-        </div>
-        <div class="project__meta">
-          <span class="project__tag">Brand brain</span>
-          <span class="project__tag">GitHub Pages</span>
-          <span class="project__tag">OVH DNS</span>
-          <span class="project__tag">Teable ankieta</span>
-        </div>
-        <div class="project__deliver">
-          <h4>Co dostarczone</h4>
-          <ul>
-            <li>Brand brain 4-filarowy (positioning, voice, visual, story)</li>
-            <li>Mini-strona z hero + tagline "PRZEKRACZAJ GRANICE"</li>
-            <li>Ankieta diagnozująca 16 pytań → baza Teable</li>
-            <li>Pierwszy Ambasador Metropolix</li>
-          </ul>
-        </div>
-        <div style="padding-top: 12px;">
-          <a href="https://gebski.muszynski.online" target="_blank" class="project__url">gebski.muszynski.online →</a>
-        </div>
-      </article>
+        <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="locked-card__cta">Umów 15 min · poznasz</a>
+      </div>
 
-      <!-- AMELIA BŁAŻEJEWSKA -->
-      <article class="project">
-        <div class="project__visual" style="background: linear-gradient(135deg, #2a1f1a 0%, #1a1a0a 100%); display: flex; align-items: center; justify-content: center; position: relative;">
-          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 40%, rgba(212, 165, 116, 0.18), transparent 60%);"></div>
-          <div style="position: relative; font-family: 'Fraunces', serif; font-size: 38px; font-weight: 700; color: var(--gold, #d4a574); letter-spacing: 0.02em; text-align: center; line-height: 1.05;">CHODZIĆ<br>WYŻEJ</div>
+      <div class="locked-card">
+        <span class="locked-card__badge">🔒 Profil #2 · Sport · młodzi</span>
+        <h3 class="locked-card__title">Wicemistrz Polski</h3>
+        <p class="locked-card__hint">Kadra narodowa, 23 lata.</p>
+        <p class="locked-card__desc">Wschodząca gwiazda dyscypliny olimpijskiej, świeży medal mistrzostw, jeszcze nie zna swojego głosu marketingowego. Buduję od zera: pozycjonowanie, jak mówić, do kogo mówić — i co robić, gdy media zaczną dzwonić same.</p>
+        <div class="locked-card__chips">
+          <span class="locked-card__chip">Research 9 źródeł</span>
+          <span class="locked-card__chip">Brand skeleton</span>
+          <span class="locked-card__chip">Faza 2 walidacji</span>
         </div>
-        <span class="project__status project__status--progress">W trakcie</span>
-        <h3 class="project__name">Amelia Błażejewska</h3>
-        <p class="project__tagline">Wicemistrz Polski 2025 w chodzie sportowym, 23 lata, kadra narodowa.</p>
-        <div class="project__meta-row">
-          <span><strong>Od:</strong> 05.2026</span>
-          <span><strong>Branża:</strong> Sport · młodzi</span>
-          <span><strong>Status:</strong> Faza 1 done</span>
-        </div>
-        <div class="project__meta">
-          <span class="project__tag">Research 9 źródeł</span>
-          <span class="project__tag">Brand skeleton</span>
-          <span class="project__tag">Most do FB ojca</span>
-          <span class="project__tag">Drugi Ambasador MX</span>
-        </div>
-        <div class="project__deliver">
-          <h4>Co w toku</h4>
-          <ul>
-            <li>Pełen research dossier (9 źródeł, World Athletics ID)</li>
-            <li>Brand skeleton 4-filarowy do walidacji z Amelią</li>
-            <li>Wizytówka /dla-ambasadorow gotowa do pokazu</li>
-            <li>Strona dedykowana + lejek — faza 3, w drodze</li>
-          </ul>
-        </div>
-        <div style="padding-top: 12px; color: var(--text-mute, #9999a8); font-size: 13px;">
-          Strona w produkcji — wkrótce link
-        </div>
-      </article>
+        <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="locked-card__cta">Umów 15 min · poznasz</a>
+      </div>
 
     </div>
+    <p style="text-align: center; margin-top: 28px; font-size: 13px; color: var(--text-mute, #9999a8); font-style: italic;">
+      Dlaczego bez nazwisk? Bo klienci wybierają mnie m.in. dlatego, że nie wystawiam ich na wystawę. Resztę opowiadam 1:1.
+    </p>
   </div>
 </section>
 
 <!-- ============================ SECTION 3: STRONY WWW LIVE ============================ -->
-<section class="section fade-in" style="padding-top: 60px;">
+<section class="section fade-in" id="strony" style="padding-top: 60px;">
   <div class="container">
     <div class="section__head">
       <span class="eyebrow">03 · Strony WWW</span>
@@ -427,24 +484,6 @@
         </div>
         <div style="padding-top: 10px;">
           <a href="https://mertopolix.com" target="_blank" class="project__url">mertopolix.com →</a>
-        </div>
-      </article>
-
-      <!-- GĘBSKI -->
-      <article class="project">
-        <div class="project__visual" style="background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); display: flex; align-items: center; justify-content: center; position: relative;">
-          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 40%, rgba(212, 165, 116, 0.15), transparent 65%);"></div>
-          <div style="position: relative; font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 600; color: var(--gold, #d4a574); text-align: center;">Mariusz Gębski<br><span style="font-size: 14px; opacity: 0.7;">brand + ankieta</span></div>
-        </div>
-        <span class="project__status project__status--active">Live</span>
-        <h3 class="project__name">gebski.muszynski.online</h3>
-        <p class="project__tagline">Mini-strona dla pierwszego klienta brandowego. Hero + ankieta 16 pytań → baza Teable.</p>
-        <div class="project__meta-row">
-          <span><strong>Live od:</strong> 05.2026</span>
-          <span><strong>Stack:</strong> HTML/CSS · OVH</span>
-        </div>
-        <div style="padding-top: 10px;">
-          <a href="https://gebski.muszynski.online" target="_blank" class="project__url">otwórz →</a>
         </div>
       </article>
 
@@ -557,17 +596,17 @@
       </div>
 
       <div class="partner">
-        <div class="partner__avatar">MG</div>
-        <h3 class="partner__name">Mariusz Gębski</h3>
-        <p class="partner__role">Pierwszy Ambasador Metropolix · klient brandowy</p>
-        <p class="partner__text">Pięcioboista, olimpijczyk, oficer Wojska Polskiego. Współpracujemy nad jego marką osobistą po sportowym życiu. Tagline "Przekraczaj granice" — i strona, ankieta, plan na 90 dni.</p>
+        <div class="partner__avatar">🔒</div>
+        <h3 class="partner__name">Klient brandowy · profil #1</h3>
+        <p class="partner__role">Sport · mentoring · Polonia</p>
+        <p class="partner__text">Pełna historia, imię i logika decyzji — tylko na rozmowie 1:1. Część <a href="#klienci" style="color: var(--gold, #d4a574); border-bottom: 1px solid rgba(212, 165, 116, 0.3);">prywatnej szuflady</a> wyżej.</p>
       </div>
 
       <div class="partner">
-        <div class="partner__avatar">AB</div>
-        <h3 class="partner__name">Amelia Błażejewska</h3>
-        <p class="partner__role">Drugi Ambasador Metropolix · klient brandowy</p>
-        <p class="partner__text">Wicemistrz Polski 2025 w chodzie sportowym, kadra narodowa, 23 lata. Most do młodszej Polonii i sportu kobiet. Aktualnie faza 2 — walidacja brand skeleton.</p>
+        <div class="partner__avatar">🔒</div>
+        <h3 class="partner__name">Klient brandowy · profil #2</h3>
+        <p class="partner__role">Sport · młodzi · kadra narodowa</p>
+        <p class="partner__text">Jak wyżej — namiastka jest, resztę opowiadam <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" style="color: var(--gold, #d4a574); border-bottom: 1px solid rgba(212, 165, 116, 0.3);">na 15-minutowej rozmowie</a>.</p>
       </div>
 
     </div>
