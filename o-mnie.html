@@ -99,6 +99,98 @@
   .principle__text { font-size: 14.5px; line-height: 1.65; color: var(--text-mute); }
   .principle__text em { color: var(--gold); font-style: italic; }
 
+  /* 8 odslon gallery */
+  .gallery-section { padding: 110px 0; background: var(--bg-base); border-top: 1px solid var(--border-soft); position: relative; overflow: hidden; }
+  .gallery-section::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 15% 30%, rgba(212, 137, 10, 0.06), transparent 40%),
+      radial-gradient(circle at 85% 70%, rgba(212, 137, 10, 0.05), transparent 45%);
+    pointer-events: none;
+  }
+  .gallery-section > .container { position: relative; z-index: 1; }
+  .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 50px; }
+  @media (max-width: 980px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } }
+  @media (max-width: 520px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
+  .gallery-card {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center 15%;
+    background-repeat: no-repeat;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--border-soft);
+  }
+  .gallery-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(5, 4, 2, 0.55) 75%, rgba(5, 4, 2, 0.9) 100%);
+    z-index: 1;
+    transition: opacity 0.3s ease;
+  }
+  .gallery-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 0 2px var(--gold), 0 0 40px rgba(212, 137, 10, 0.3);
+  }
+  .gallery-card__num {
+    position: absolute;
+    top: 14px; left: 14px;
+    z-index: 2;
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--gold);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  }
+  .gallery-card__caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    z-index: 2;
+    padding: 18px 16px;
+    transform: translateY(8px);
+    opacity: 0.85;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .gallery-card:hover .gallery-card__caption { transform: translateY(0); opacity: 1; }
+  .gallery-card__label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .gallery-card__title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-main);
+    line-height: 1.3;
+  }
+  .gallery-card--1 { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-av-7-blazer.png?w=600&format=auto&quality=85'); }
+  .gallery-card--2 { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-av-4-outdoor.png?w=600&format=auto&quality=85'); }
+  .gallery-card--3 { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-av-8-window.png?w=600&format=auto&quality=85'); }
+  .gallery-card--4 { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-portrait-hero.png?w=600&format=auto&quality=85'); background-position: center 8%; }
+  .gallery-card--5 { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-cinematic-hero.png?w=600&format=auto&quality=85'); }
+  .gallery-card--6 { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-av-5-navy.png?w=600&format=auto&quality=85'); }
+  .gallery-card--7 { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png?w=600&format=auto&quality=85'); }
+  .gallery-card--8 { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-av-6-spotlight.png?w=600&format=auto&quality=85'); }
+  .gallery-footnote {
+    text-align: center;
+    margin-top: 36px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--text-mute);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .gallery-footnote span { color: var(--gold); }
+
   /* CTA section */
   .cta-section { padding: 110px 0; background: radial-gradient(ellipse at center, rgba(212, 137, 10, 0.12), transparent 65%), var(--bg-base); border-top: 1px solid var(--border-soft); text-align: center; }
   .cta-section .container { max-width: 720px; }
@@ -274,6 +366,89 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- 8 ODSŁON GALERIA -->
+<section class="gallery-section">
+  <div class="container">
+    <div style="text-align: center; max-width: 760px; margin: 0 auto;">
+      <span class="section-eyebrow">Osiem odsłon</span>
+      <h2 class="section-title">Tak wyglądam w pracy. <em>Tak samo na rozmowie.</em></h2>
+      <p class="section-sub">Każde z tych ujęć — inna scena, inne światło, inny dzień. Ale to ten sam człowiek, który odezwie się do Ciebie po rezerwacji. Bez modeli ze stocka, bez aktorów. Tylko ja, w różnych okolicznościach.</p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-card gallery-card--1">
+        <span class="gallery-card__num">01</span>
+        <div class="gallery-card__caption">
+          <div class="gallery-card__label">Klasycznie</div>
+          <div class="gallery-card__title">Przed spotkaniem z klientem korporacyjnym</div>
+        </div>
+      </div>
+
+      <div class="gallery-card gallery-card--2">
+        <span class="gallery-card__num">02</span>
+        <div class="gallery-card__caption">
+          <div class="gallery-card__label">Outdoor · weekend</div>
+          <div class="gallery-card__title">Tam, gdzie najlepiej myśli się o nowych pomysłach</div>
+        </div>
+      </div>
+
+      <div class="gallery-card gallery-card--3">
+        <span class="gallery-card__num">03</span>
+        <div class="gallery-card__caption">
+          <div class="gallery-card__label">Przy oknie</div>
+          <div class="gallery-card__title">Ciche poranne planowanie tygodnia</div>
+        </div>
+      </div>
+
+      <div class="gallery-card gallery-card--4">
+        <span class="gallery-card__num">04</span>
+        <div class="gallery-card__caption">
+          <div class="gallery-card__label">Studio · oryginał</div>
+          <div class="gallery-card__title">Pierwsze zdjęcie do mojej marki, 2024</div>
+        </div>
+      </div>
+
+      <div class="gallery-card gallery-card--5">
+        <span class="gallery-card__num">05</span>
+        <div class="gallery-card__caption">
+          <div class="gallery-card__label">Cinematic</div>
+          <div class="gallery-card__title">Po godzinach, gdy zaczyna się prawdziwa praca</div>
+        </div>
+      </div>
+
+      <div class="gallery-card gallery-card--6">
+        <span class="gallery-card__num">06</span>
+        <div class="gallery-card__caption">
+          <div class="gallery-card__label">Profil · navy</div>
+          <div class="gallery-card__title">Skupiony, gdy słucham klienta</div>
+        </div>
+      </div>
+
+      <div class="gallery-card gallery-card--7">
+        <span class="gallery-card__num">07</span>
+        <div class="gallery-card__caption">
+          <div class="gallery-card__label">Editorial · amber</div>
+          <div class="gallery-card__title">Tak wyglądam, gdy mówię o tym, co buduję</div>
+        </div>
+      </div>
+
+      <div class="gallery-card gallery-card--8">
+        <span class="gallery-card__num">08</span>
+        <div class="gallery-card__caption">
+          <div class="gallery-card__label">Spotlight</div>
+          <div class="gallery-card__title">Wystąpienie publiczne, prywatna chwila</div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="gallery-footnote">
+      To są <span>ujęcia</span>, nie zdjęcia z agencji modeli. <span>Ten sam człowiek, ta sama energia</span> — niezależnie od światła i ubrania.
+    </p>
   </div>
 </section>
 
