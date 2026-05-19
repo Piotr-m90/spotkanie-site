@@ -201,6 +201,90 @@
     color: var(--gold, #d4a574);
     font-size: 12px;
   }
+
+  /* Devices showcase section */
+  .showcase {
+    position: relative;
+    padding: 100px 0 110px;
+    background:
+      radial-gradient(ellipse at 50% 50%, rgba(212, 165, 116, 0.05), transparent 70%),
+      #050505;
+    overflow: hidden;
+  }
+  .showcase__inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  @media (max-width: 880px) {
+    .showcase__inner { grid-template-columns: 1fr; gap: 32px; }
+  }
+  .showcase__image {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  }
+  .showcase__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .showcase__image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    border: 1px solid rgba(212, 165, 116, 0.15);
+    pointer-events: none;
+  }
+  .showcase__copy h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(36px, 4.2vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: #f5f0e8;
+    margin: 0 0 22px;
+  }
+  .showcase__copy h2 em {
+    font-style: italic;
+    color: var(--gold, #d4a574);
+    font-weight: 400;
+  }
+  .showcase__copy p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(245, 240, 232, 0.72);
+    margin: 0 0 18px;
+  }
+  .showcase__copy p:last-of-type { margin-bottom: 30px; }
+  .showcase__eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--gold, #d4a574);
+    margin-bottom: 18px;
+  }
+  .showcase__signature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 13px;
+    color: rgba(245, 240, 232, 0.55);
+    font-style: italic;
+  }
+  .showcase__signature::before {
+    content: '';
+    width: 32px; height: 1px;
+    background: var(--gold, #d4a574);
+  }
 </style>
 </head>
 <body>
@@ -244,6 +328,24 @@
       <div><strong>Trzy marki własne</strong> w produkcji</div>
       <div><strong>Pierwsi klienci brandowi</strong> w realizacji</div>
       <div><strong>Polska + Niemcy</strong> · po polsku</div>
+    </div>
+  </div>
+</section>
+
+<!-- DEVICES SHOWCASE -->
+<section class="showcase fade-in">
+  <div class="showcase__inner">
+    <div class="showcase__image">
+      <img src="https://muszynski-media.gumlet.io/muszynski-online/spotkanie-devices-mockup.png?w=1400&format=auto&quality=85" alt="Strona spotkanie.muszynski.online na MacBooku i iPhonie — premium dark mode z amber accentem" loading="lazy">
+    </div>
+    <div class="showcase__copy">
+      <span class="showcase__eyebrow">To, na co właśnie patrzysz</span>
+      <h2>Strona <em>buduje sama siebie</em>.</h2>
+      <p>Powstała w jeden weekend tego tygodnia. Bez agencji, bez zespołu, bez pół roku iteracji. Sam ją zaprojektowałem, sam napisałem, sam wdrożyłem.</p>
+      <p>Mockup po lewej nie jest zrobiony w Figmie. Wygenerowała go ta sama maszyna, której używam codziennie do pracy dla siebie i klientów. To nie demo — to standard.</p>
+      <div class="showcase__signature">
+        Tak wygląda tydzień operacyjny, gdy struktura już stoi.
+      </div>
     </div>
   </div>
 </section>
