@@ -17,98 +17,236 @@
 <link rel="apple-touch-icon" href="https://res.cloudinary.com/dyw1pi3nt/image/upload/w_180,h_180,c_pad,b_rgb:0a0a0a/f_png/v1776859674/sygnet_e5yq6n.svg">
 <link rel="stylesheet" href="styles.css">
 <style>
-  /* Cinematic hero — portrait edition */
+  /* Marcus.T-style hero */
   .hero-cine {
     position: relative;
-    min-height: 92vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     overflow: hidden;
     background:
-      radial-gradient(ellipse at 75% 50%, rgba(212, 165, 116, 0.08), transparent 55%),
-      linear-gradient(135deg, #0a0a0e 0%, #050505 50%, #0a0a0e 100%);
-  }
-  .hero-cine__bg {
-    position: absolute;
-    inset: 0;
-    background-image: url('https://muszynski-media.gumlet.io/muszynski-online/spotkanie-hero-workspace.png?w=2200&format=auto&quality=85');
-    background-size: cover;
-    background-position: center;
-    z-index: 0;
-    opacity: 0.18;
-    animation: heroSlow 30s ease-in-out infinite alternate;
-    filter: blur(2px);
-  }
-  @keyframes heroSlow { to { transform: scale(1.04) translateY(-1%); } }
-  .hero-cine__veil {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(5,5,5,0.3) 0%, rgba(5,5,5,0.6) 100%);
-    z-index: 1;
+      radial-gradient(circle at 80% 30%, rgba(212, 137, 10, 0.12), transparent 45%),
+      radial-gradient(circle at 90% 70%, rgba(212, 137, 10, 0.08), transparent 50%),
+      radial-gradient(circle at 60% 90%, rgba(212, 137, 10, 0.06), transparent 55%),
+      linear-gradient(135deg, #0d0a08 0%, #050402 100%);
   }
   .hero-cine__inner {
     position: relative;
     z-index: 2;
     width: 100%;
-    max-width: 1320px;
+    max-width: 1380px;
     margin: 0 auto;
-    padding: 80px 32px;
+    padding: 110px 40px 70px;
     display: grid;
-    grid-template-columns: 1.15fr 1fr;
-    gap: 60px;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 70px;
     align-items: center;
   }
-  @media (max-width: 920px) {
-    .hero-cine__inner { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px; }
+  @media (max-width: 980px) {
+    .hero-cine__inner { grid-template-columns: 1fr; gap: 50px; padding: 80px 24px 50px; }
+  }
+  .hero-cine__eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: rgba(245, 240, 232, 0.7);
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+  .hero-cine__eyebrow span { color: var(--gold, #d4890a); }
+  .hero-cine__title {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: clamp(48px, 7.5vw, 96px);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    color: #f5f0e8;
+    margin: 0 0 8px;
+  }
+  .hero-cine__title-script {
+    display: block;
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(46px, 6.8vw, 88px);
+    text-transform: none;
+    line-height: 1.05;
+    color: var(--gold, #d4890a);
+    letter-spacing: -0.01em;
+    margin-top: -8px;
+  }
+  .hero-cine__sub {
+    font-size: clamp(15px, 1.3vw, 17px);
+    line-height: 1.65;
+    color: rgba(245, 240, 232, 0.72);
+    max-width: 520px;
+    margin: 28px 0 36px;
+  }
+  .hero-cine__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+  .btn-amber {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--gold, #d4890a);
+    color: #0d0a08;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 16px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: 0;
+    border: 1px solid var(--gold, #d4890a);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 24px rgba(212, 137, 10, 0.25);
+  }
+  .btn-amber:hover {
+    background: #f0a020;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 32px rgba(212, 137, 10, 0.4);
+  }
+  .btn-outline-amber {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: var(--gold, #d4890a);
+    font-weight: 500;
+    font-size: 14px;
+    padding: 16px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid rgba(212, 137, 10, 0.5);
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .btn-outline-amber:hover {
+    background: rgba(212, 137, 10, 0.08);
+    border-color: var(--gold, #d4890a);
+  }
+  .hero-cine__social-proof {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .hero-cine__avatars {
+    display: flex;
+  }
+  .hero-cine__avatars span {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #0d0a08;
+    margin-left: -10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #0d0a08;
+    font-family: 'Fraunces', serif;
+  }
+  .hero-cine__avatars span:nth-child(1) { background: linear-gradient(135deg, #d4890a, #b87005); margin-left: 0; }
+  .hero-cine__avatars span:nth-child(2) { background: linear-gradient(135deg, #c98555, #a86b3f); }
+  .hero-cine__avatars span:nth-child(3) { background: linear-gradient(135deg, #e8b87a, #c08a4a); }
+  .hero-cine__avatars span:nth-child(4) { background: linear-gradient(135deg, #8b6f4f, #5e4a35); color: rgba(255,255,255,0.85); }
+  .hero-cine__proof-text {
+    font-size: 13px;
+    color: rgba(245, 240, 232, 0.72);
+    line-height: 1.45;
+  }
+  .hero-cine__proof-text strong {
+    color: var(--gold, #d4890a);
+    font-weight: 600;
+  }
+
+  /* Portrait + tagged labels (Marcus.T style) */
+  .hero-cine__portrait-wrap {
+    position: relative;
   }
   .hero-cine__portrait {
     position: relative;
     aspect-ratio: 3 / 4;
-    border-radius: 24px;
+    border-radius: 14px;
     overflow: hidden;
-    background:
-      radial-gradient(circle at 30% 20%, rgba(212, 165, 116, 0.18), transparent 60%),
-      #0e0e14;
     box-shadow:
-      0 40px 100px rgba(0, 0, 0, 0.6),
-      0 0 0 1px rgba(212, 165, 116, 0.2);
+      0 50px 120px rgba(0, 0, 0, 0.7),
+      0 0 80px rgba(212, 137, 10, 0.15);
   }
   .hero-cine__portrait img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
-    filter: contrast(1.05) saturate(0.95);
+    object-position: center 12%;
+    filter: contrast(1.06) saturate(1.02);
   }
-  .hero-cine__portrait::after {
-    content: '';
+  .hero-cine__handwritten {
     position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 50%, rgba(5, 5, 5, 0.4) 100%);
+    bottom: -8px;
+    right: -28px;
+    max-width: 220px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.4;
+    color: var(--gold, #d4890a);
+    transform: rotate(-3deg);
+    text-align: left;
+    z-index: 3;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+  }
+  @media (max-width: 980px) {
+    .hero-cine__handwritten { position: static; transform: none; max-width: 100%; margin-top: 20px; text-align: center; right: 0; }
+  }
+  .hero-cine__labels {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -120px;
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     pointer-events: none;
   }
-  .hero-cine__portrait-tag {
-    position: absolute;
-    bottom: 24px;
-    left: 24px;
-    right: 24px;
-    z-index: 2;
+  @media (max-width: 980px) {
+    .hero-cine__labels { display: none; }
+  }
+  .hero-cine__label {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 12px;
+    gap: 10px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
     color: rgba(245, 240, 232, 0.85);
-    letter-spacing: 0.04em;
+    font-weight: 500;
+    position: relative;
   }
-  .hero-cine__portrait-dot {
-    width: 8px; height: 8px;
+  .hero-cine__label::after {
+    content: '';
+    position: absolute;
+    right: -120px;
+    top: 50%;
+    width: 110px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(212, 137, 10, 0.6), transparent);
+  }
+  .hero-cine__label-dot {
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    background: var(--gold, #d4a574);
-    box-shadow: 0 0 12px rgba(212, 165, 116, 0.8);
-    animation: liveDot 2s ease-in-out infinite;
+    background: var(--gold, #d4890a);
+    box-shadow: 0 0 10px rgba(212, 137, 10, 0.8);
+    flex-shrink: 0;
   }
-  @keyframes liveDot { 50% { opacity: 0.5; } }
   .hero-cine__eyebrow {
     display: inline-block;
     font-size: 11px;
@@ -368,30 +506,43 @@
   </div>
 </nav>
 
-<!-- HERO CINEMATIC -->
+<!-- HERO CINEMATIC (Marcus.T style) -->
 <section class="hero-cine">
-  <div class="hero-cine__bg" aria-hidden="true"></div>
-  <div class="hero-cine__veil" aria-hidden="true"></div>
   <div class="hero-cine__inner">
     <div class="hero-cine__copy">
-      <span class="hero-cine__eyebrow">15 minut · bez slajdów · bez handlu</span>
-      <h1 class="hero-cine__title">Zostaw mi piętnaście minut.<br><em>Resztę robię sam.</em></h1>
-      <p class="hero-cine__sub">Cześć, Piotr Muszyński. Buduję marki, strony i agentów AI dla ludzi, którzy nie chcą czekać miesiąca na ofertę. Wpadnij na rozmowę — sprawdzimy, czy nasze drogi mają sens, żeby się przeciąć.</p>
+      <span class="hero-cine__eyebrow">SPOTKAJ. POZNAJ. <span>ZADECYDUJ.</span></span>
+      <h1 class="hero-cine__title">
+        Zostaw mi
+        <br>piętnaście minut.
+        <span class="hero-cine__title-script">Resztę robię sam.</span>
+      </h1>
+      <p class="hero-cine__sub">Buduję marki, strony i agentów AI dla ludzi, którzy nie chcą czekać miesiąca na ofertę. Wpadnij na rozmowę — sprawdzimy, czy nasze drogi mają sens, żeby się przeciąć.</p>
       <div class="hero-cine__actions">
-        <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="btn btn-primary btn-lg btn-arrow" data-magnetic data-strength="0.25">Zarezerwuj 15 minut</a>
-        <a href="#co-tu-jest" class="btn btn-ghost btn-lg">Co tu znajdziesz</a>
+        <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="btn-amber">Zarezerwuj 15 minut</a>
+        <a href="#co-tu-jest" class="btn-outline-amber">Zobacz portfolio</a>
       </div>
-      <div class="hero-cine__trust">
-        <div><strong>Trzy marki własne</strong> w produkcji</div>
-        <div><strong>Pierwsi klienci brandowi</strong> w realizacji</div>
-        <div><strong>Polska + Niemcy</strong> · po polsku</div>
+      <div class="hero-cine__social-proof">
+        <div class="hero-cine__avatars">
+          <span>M</span><span>C</span><span>G</span><span>+</span>
+        </div>
+        <div class="hero-cine__proof-text">
+          <strong>3 marki własne</strong> · <strong>2 pierwsi klienci brandowi</strong><br>
+          rozwijają swoje historie tym samym fundamentem.
+        </div>
       </div>
     </div>
-    <div class="hero-cine__portrait">
-      <img src="https://muszynski-media.gumlet.io/muszynski-online/piotr-cinematic-hero.png?w=900&format=auto&quality=88" alt="Piotr Muszyński — AI Architect" loading="eager">
-      <div class="hero-cine__portrait-tag">
-        <span class="hero-cine__portrait-dot"></span>
-        Piotr Muszyński · z Tobą na rozmowie
+    <div class="hero-cine__portrait-wrap">
+      <div class="hero-cine__labels" aria-hidden="true">
+        <div class="hero-cine__label"><span class="hero-cine__label-dot"></span>STRUKTURA</div>
+        <div class="hero-cine__label"><span class="hero-cine__label-dot"></span>SZYBKOŚĆ</div>
+        <div class="hero-cine__label"><span class="hero-cine__label-dot"></span>BEZ HANDLU</div>
+        <div class="hero-cine__label"><span class="hero-cine__label-dot"></span>OD ZARAZ</div>
+      </div>
+      <div class="hero-cine__portrait">
+        <img src="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png?w=900&format=auto&quality=88" alt="Piotr Muszyński — AI Architect dla MŚP" loading="eager">
+      </div>
+      <div class="hero-cine__handwritten">
+        Nie obiecuję Ci kursu na pół roku.<br>Obiecuję Ci 15 minut.
       </div>
     </div>
   </div>
