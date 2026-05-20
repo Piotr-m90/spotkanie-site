@@ -138,6 +138,26 @@
   .wip__title { font-size: 14px; font-weight: 700; color: var(--text-main); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.3; }
   .wip__desc { font-size: 12.5px; line-height: 1.55; color: var(--text-mute); }
 
+  /* Produkty & partnerstwa — tiles */
+  .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 38px; }
+  @media (max-width: 760px) { .product-grid { grid-template-columns: 1fr; } }
+  .product-tile { position: relative; overflow: hidden; background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 12px; padding: 28px 26px; transition: border-color 0.25s, transform 0.25s; }
+  .product-tile:hover { border-color: var(--gold); transform: translateY(-3px); }
+  .product-tile::before { content: ''; position: absolute; top: -45%; right: -18%; width: 230px; height: 230px; background: radial-gradient(circle, rgba(212,137,10,0.16), transparent 70%); pointer-events: none; }
+  .product-tile--partner::before { background: radial-gradient(circle, rgba(224,52,44,0.15), transparent 70%); }
+  .product-tile__top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 18px; position: relative; }
+  .product-tile__icon { width: 52px; height: 52px; border-radius: 13px; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 19px; font-weight: 600; letter-spacing: 0.02em; color: var(--gold); background: linear-gradient(135deg, rgba(212,137,10,0.24), rgba(212,137,10,0.05)); border: 1px solid rgba(212,137,10,0.32); }
+  .product-tile--partner .product-tile__icon { color: #f0796f; background: linear-gradient(135deg, rgba(224,52,44,0.22), rgba(224,52,44,0.05)); border-color: rgba(224,52,44,0.4); }
+  .product-tile__badge { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; padding: 5px 11px; border-radius: 100px; white-space: nowrap; }
+  .product-tile__badge--own { background: rgba(212,137,10,0.16); color: var(--gold); border: 1px solid rgba(212,137,10,0.35); }
+  .product-tile__badge--partner { background: rgba(224,52,44,0.13); color: #f0796f; border: 1px solid rgba(224,52,44,0.4); }
+  .product-tile__name { font-size: 18px; font-weight: 700; color: var(--text-main); margin-bottom: 4px; letter-spacing: 0.01em; }
+  .product-tile__role { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); font-weight: 600; margin-bottom: 12px; }
+  .product-tile--partner .product-tile__role { color: #f0796f; }
+  .product-tile__desc { font-size: 13.5px; line-height: 1.6; color: var(--text-mute); margin-bottom: 16px; }
+  .product-tile__link { font-size: 13px; color: var(--gold); font-weight: 600; border-bottom: 1px solid rgba(212,137,10,0.3); }
+  .product-tile__note { display: block; font-size: 11.5px; color: var(--text-dim); font-style: italic; margin-top: 12px; }
+
   /* Solo network — Piotr left + 4 partners right grid */
   .solo-network { display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; align-items: start; margin-top: 40px; }
   @media (max-width: 980px) { .solo-network { grid-template-columns: 1fr; gap: 32px; } }
@@ -381,11 +401,68 @@
   </div>
 </section>
 
-<!-- 04 — LIVE W TYM TYGODNIU -->
+<!-- 04 — PRODUKTY & PARTNERSTWA -->
+<section class="section section--deep" id="produkty">
+  <div class="container">
+    <div class="section__head">
+      <span class="section-eyebrow">04 · Produkty &amp; partnerstwa</span>
+      <h2 class="section-title">Cztery produkty. <em>Dwie role.</em></h2>
+      <p class="section-sub">Dwa zbudowałem sam i sprzedaję pod swoją marką. Dwa prowadzę jako klubowicz i partner — kupujesz produkt, a materiały i wsparcie dostajesz ode mnie.</p>
+    </div>
+
+    <div class="product-grid">
+      <div class="product-tile">
+        <div class="product-tile__top">
+          <div class="product-tile__icon">FT</div>
+          <span class="product-tile__badge product-tile__badge--own">Produkt</span>
+        </div>
+        <div class="product-tile__name">Fabryka Treści</div>
+        <div class="product-tile__role">Muszyński.online · Social</div>
+        <p class="product-tile__desc">Gotowe pakiety postów na social media — codziennie, automatycznie, po polsku. Kupujesz pakiet, dostajesz treści gotowe do publikacji.</p>
+        <a href="https://fabryka.muszynski.online" target="_blank" class="product-tile__link">fabryka.muszynski.online →</a>
+      </div>
+
+      <div class="product-tile">
+        <div class="product-tile__top">
+          <div class="product-tile__icon">CP</div>
+          <span class="product-tile__badge product-tile__badge--own">Produkt</span>
+        </div>
+        <div class="product-tile__name">Claude Pack</div>
+        <div class="product-tile__role">Muszyński.online · Skille AI</div>
+        <p class="product-tile__desc">Nasze gotowe umiejętności AI spakowane do kupienia — wrzucasz do swojego asystenta i od razu działa. To, co sami zbudowaliśmy, gotowe dla Ciebie.</p>
+        <a href="https://claudepack.tech" target="_blank" class="product-tile__link">claudepack.tech →</a>
+      </div>
+
+      <div class="product-tile product-tile--partner">
+        <div class="product-tile__top">
+          <div class="product-tile__icon">LF</div>
+          <span class="product-tile__badge product-tile__badge--partner">Partner · Klub</span>
+        </div>
+        <div class="product-tile__name">LumaFlex</div>
+        <div class="product-tile__role">Terapia światłem</div>
+        <p class="product-tile__desc">Domowe urządzenie do terapii światłem z nurtu wellness. Prowadzę jako klubowicz i partner — kupując przez nas, dostajesz produkt plus moje wsparcie.</p>
+        <a href="https://lumaflex.muszynski.online" target="_blank" class="product-tile__link">lumaflex.muszynski.online →</a>
+      </div>
+
+      <div class="product-tile product-tile--partner">
+        <div class="product-tile__top">
+          <div class="product-tile__icon">X39</div>
+          <span class="product-tile__badge product-tile__badge--partner">Partner · Klub</span>
+        </div>
+        <div class="product-tile__name">X39 LifeWave</div>
+        <div class="product-tile__role">Fototerapia · biohacking</div>
+        <p class="product-tile__desc">Plastry fototerapii LifeWave znane z nurtu biohackingu. Jako klub i partner: kupujesz produkt, a do tego dajemy materiały i wsparcie zespołu.</p>
+        <a href="https://x39.fabrykatresci.tech" target="_blank" class="product-tile__link">x39.fabrykatresci.tech →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 — LIVE W TYM TYGODNIU -->
 <section class="section section--deep">
   <div class="container">
     <div class="section__head">
-      <span class="section-eyebrow">04 · Live w tym tygodniu</span>
+      <span class="section-eyebrow">05 · Live w tym tygodniu</span>
       <h2 class="section-title">Co dzieje się <em>teraz.</em></h2>
       <p class="section-sub">Portfolio rośnie tygodniowo. Kawałek bieżącej pracy — żeby było widać, że to nie zamknięta lista.</p>
     </div>
@@ -399,11 +476,11 @@
   </div>
 </section>
 
-<!-- 05 — Z KIM WSPÓŁPRACUJĘ -->
+<!-- 06 — Z KIM WSPÓŁPRACUJĘ -->
 <section class="section">
   <div class="container">
     <div class="section__head">
-      <span class="section-eyebrow">05 · Z kim współpracuję</span>
+      <span class="section-eyebrow">06 · Z kim współpracuję</span>
       <h2 class="section-title">Sam ale <em>nie sam.</em></h2>
       <p class="section-sub">Solo-founder po polsku znaczy: jedna osoba prowadzi sprzedaż i dostawę, ale ma za sobą sieć ludzi, z którymi buduje konkretne projekty.</p>
     </div>
