@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# AI / GEO crawlers — explicit allow
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://spotkanie.muszynski.online/sitemap.xml
