@@ -515,24 +515,27 @@
     border: 1px solid var(--border-soft);
     border-radius: 10px;
     overflow: hidden;
-    transition: border-color 0.3s, transform 0.3s;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
     position: relative;
+    display: block;
+    color: inherit;
+    text-decoration: none;
   }
-  .project-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+  .project-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 28px rgba(212,137,10,0.18); }
   .project-card__thumb {
     aspect-ratio: 16 / 10;
-    background:
-      radial-gradient(ellipse at 30% 40%, rgba(212, 137, 10, 0.4), transparent 60%),
-      radial-gradient(ellipse at 70% 60%, rgba(212, 137, 10, 0.2), transparent 60%),
-      linear-gradient(135deg, #1a1108 0%, #0d0a08 100%);
     position: relative;
-    display: flex; align-items: center; justify-content: center;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
   }
-  .project-card__thumb-icon {
-    width: 56px; height: 56px;
-    color: var(--gold);
-    filter: drop-shadow(0 0 20px rgba(212, 137, 10, 0.6));
+  .project-card__thumb::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 55%, rgba(13,10,8,0.85) 100%);
+    transition: opacity 0.3s;
   }
+  .project-card:hover .project-card__thumb { transform: scale(1.03); transition: transform 0.5s ease; }
   .project-card__badge {
     position: absolute;
     top: 12px; right: 12px;
@@ -1066,41 +1069,38 @@
 
       <div class="project-cards">
 
-        <article class="project-card">
-          <div class="project-card__thumb">
+        <a href="https://muszynski.online" target="_blank" class="project-card">
+          <div class="project-card__thumb" style="background-image: url('https://muszynski-media.gumlet.io/muszynski-online/brand-thumb-mo.png?w=700&format=auto&quality=85');">
             <span class="project-card__badge">Aktywny</span>
-            <svg class="project-card__thumb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17l6-6 4 4 8-8" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 7h7v7" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">Muszyński.online</h3>
             <p class="project-card__desc">Moja główna marka. Uczę właścicieli małych firm, jak używać AI, żeby zarabiać więcej.</p>
-            <div class="project-card__meta">Od 2024 · po polsku</div>
+            <div class="project-card__meta">Od 2024 · po polsku &nbsp;→</div>
           </div>
-        </article>
+        </a>
 
-        <article class="project-card">
-          <div class="project-card__thumb">
-            <span class="project-card__badge">Aktywny</span>
-            <svg class="project-card__thumb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M2 12h20" stroke-linecap="round"/><circle cx="12" cy="12" r="9"/></svg>
+        <a href="https://commonroots.life" target="_blank" class="project-card">
+          <div class="project-card__thumb" style="background-image: url('https://muszynski-media.gumlet.io/muszynski-online/brand-thumb-cr.png?w=700&format=auto&quality=85');">
+            <span class="project-card__badge">Preorder</span>
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">Common Roots</h3>
             <p class="project-card__desc">Marka o zdrowiu, pracy i rozwoju — w sześciu językach, z własnym portalem klienta.</p>
-            <div class="project-card__meta">Z Marcinem Koreckim</div>
+            <div class="project-card__meta">Z Marcinem Koreckim &nbsp;→</div>
           </div>
-        </article>
+        </a>
 
-        <article class="project-card">
-          <div class="project-card__thumb">
+        <a href="https://mertopolix.com" target="_blank" class="project-card">
+          <div class="project-card__thumb" style="background-image: url('https://muszynski-media.gumlet.io/muszynski-online/brand-thumb-mx.png?w=700&format=auto&quality=85');">
             <span class="project-card__badge project-card__badge--progress">W trakcie</span>
-            <svg class="project-card__thumb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-12V5l-8-3-8 3v5c0 8 8 12 8 12z" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">Metropolix</h3>
             <p class="project-card__desc">Klub polskich przedsiębiorców mieszkających za granicą. Mapa firm, polecenia, kontakty.</p>
-            <div class="project-card__meta">Z Magdaleną</div>
+            <div class="project-card__meta">Z Magdaleną &nbsp;→</div>
           </div>
-        </article>
+        </a>
 
       </div>
     </div>
