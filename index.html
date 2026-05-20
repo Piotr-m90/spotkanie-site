@@ -682,24 +682,24 @@
   .together-image {
     aspect-ratio: 4 / 5;
     border-radius: 14px;
-    background:
-      radial-gradient(ellipse at 50% 20%, rgba(212, 137, 10, 0.3), transparent 55%),
-      radial-gradient(ellipse at 30% 80%, rgba(212, 137, 10, 0.2), transparent 50%),
-      linear-gradient(180deg, #1a1108 0%, #0a0705 100%);
+    background-image: url('https://muszynski-media.gumlet.io/muszynski-online/together-collab.png?w=900&format=auto&quality=88');
+    background-size: cover;
+    background-position: center;
     border: 1px solid var(--border-soft);
     position: relative;
     overflow: hidden;
-    display: flex; align-items: center; justify-content: center;
+    display: flex; align-items: flex-end;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.5), 0 0 50px rgba(212,137,10,0.12);
+  }
+  .together-image::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 35%, rgba(10,7,5,0.55) 65%, rgba(10,7,5,0.95) 100%);
   }
   .together-image__inner {
-    text-align: center;
-    padding: 40px;
-  }
-  .together-image__icon {
-    width: 80px; height: 80px;
-    color: var(--gold);
-    margin: 0 auto 20px;
-    filter: drop-shadow(0 0 30px rgba(212, 137, 10, 0.5));
+    position: relative;
+    z-index: 1;
+    padding: 36px 32px 34px;
   }
   .together-image__quote {
     font-family: 'Fraunces', Georgia, serif;
@@ -707,7 +707,8 @@
     font-size: 22px;
     line-height: 1.4;
     color: var(--text-main);
-    margin-bottom: 14px;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.7);
   }
   .together-image__quote em { color: var(--gold); }
   .together-image__caption {
@@ -1164,7 +1165,6 @@
 
       <div class="together-image">
         <div class="together-image__inner">
-          <svg class="together-image__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10"/></svg>
           <p class="together-image__quote">Nie potrzebujesz <em>dziesięciu narzędzi</em>.<br>Potrzebujesz <em>jednego, które działa</em>.</p>
           <div class="together-image__caption">Pierwsza zasada przy AI w firmie</div>
         </div>
