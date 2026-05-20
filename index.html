@@ -76,15 +76,11 @@
     color: var(--text-main);
   }
   .nav__logo-icon {
-    width: 32px; height: 32px;
+    width: 40px; height: 40px;
     display: flex; align-items: center; justify-content: center;
-    background: linear-gradient(135deg, var(--gold), #b87005);
-    border-radius: 6px;
-    color: var(--bg-base);
-    font-weight: 800;
-    font-family: 'Fraunces', serif;
-    font-size: 16px;
+    flex-shrink: 0;
   }
+  .nav__logo-icon img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0 8px rgba(212, 137, 10, 0.35)); }
   .nav__logo-text {
     display: flex; flex-direction: column;
     line-height: 1;
@@ -131,21 +127,21 @@
     inset: 0;
     background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-bg.png?w=2000&format=auto&quality=90');
     background-size: cover;
-    background-position: center right;
+    background-position: 72% center;
     z-index: 0;
   }
-  /* Dark gradient from left so text is readable, photo (person+lamps) stays visible on the right */
+  /* Dark gradient from left so text is readable; person + lamps stay visible on the right */
   .hero-cine__veil {
     position: absolute;
     inset: 0;
     z-index: 1;
     background:
-      linear-gradient(90deg, rgba(5,4,2,0.96) 0%, rgba(5,4,2,0.88) 28%, rgba(5,4,2,0.5) 52%, rgba(5,4,2,0.15) 72%, transparent 100%),
-      linear-gradient(180deg, transparent 60%, rgba(5,4,2,0.6) 100%);
+      linear-gradient(90deg, rgba(5,4,2,0.95) 0%, rgba(5,4,2,0.8) 32%, rgba(5,4,2,0.35) 55%, rgba(5,4,2,0.08) 75%, transparent 100%),
+      linear-gradient(180deg, transparent 65%, rgba(5,4,2,0.55) 100%);
   }
   @media (max-width: 980px) {
-    .hero-cine__photo { background-position: center 20%; opacity: 0.5; }
-    .hero-cine__veil { background: linear-gradient(180deg, rgba(5,4,2,0.75) 0%, rgba(5,4,2,0.92) 100%); }
+    .hero-cine__photo { background-position: 65% 20%; opacity: 0.55; }
+    .hero-cine__veil { background: linear-gradient(180deg, rgba(5,4,2,0.7) 0%, rgba(5,4,2,0.92) 100%); }
   }
   .hero-cine__inner {
     position: relative;
@@ -174,23 +170,23 @@
     font-family: 'Inter', system-ui, sans-serif;
     font-weight: 800;
     text-transform: uppercase;
-    font-size: clamp(48px, 7.5vw, 96px);
-    line-height: 0.95;
+    font-size: clamp(38px, 4.8vw, 66px);
+    line-height: 0.98;
     letter-spacing: -0.02em;
     color: var(--text-main);
-    margin: 0 0 8px;
+    margin: 0 0 6px;
   }
   .hero-cine__title-script {
     display: block;
     font-family: 'Fraunces', Georgia, serif;
     font-style: italic;
     font-weight: 400;
-    font-size: clamp(46px, 6.8vw, 88px);
+    font-size: clamp(34px, 4.2vw, 58px);
     text-transform: none;
     line-height: 1.05;
     color: var(--gold);
     letter-spacing: -0.01em;
-    margin-top: -8px;
+    margin-top: 2px;
   }
   .hero-cine__sub {
     font-size: clamp(15px, 1.3vw, 17px);
@@ -294,7 +290,7 @@
   /* Handwritten note — bottom-right near subject */
   .hero-cine__handwritten {
     position: absolute;
-    bottom: 60px; right: 8%;
+    bottom: 120px; right: 7%;
     max-width: 250px;
     font-family: 'Fraunces', Georgia, serif;
     font-style: italic;
@@ -921,7 +917,7 @@
 <nav class="nav">
   <div class="nav__inner">
     <a href="index.html" class="nav__logo">
-      <span class="nav__logo-icon">P</span>
+      <span class="nav__logo-icon"><img src="https://res.cloudinary.com/dyw1pi3nt/image/upload/q_auto/f_auto/v1776859674/sygnet_e5yq6n.svg" alt="Logo Piotr Muszyński"></span>
       <span class="nav__logo-text">
         <strong>Piotr Muszyński</strong>
         <small>AI Architect · MŚP</small>
@@ -959,8 +955,7 @@
     <div class="hero-cine__copy">
       <span class="hero-cine__eyebrow">SPOTKAJ. POZNAJ. <span>ZADECYDUJ.</span></span>
       <h1 class="hero-cine__title">
-        Zostaw mi
-        <br>piętnaście minut.
+        Zostaw mi piętnaście minut.
         <span class="hero-cine__title-script">Resztę robię sam.</span>
       </h1>
       <p class="hero-cine__sub">Pomagam właścicielom małych i średnich firm zarabiać więcej, pracować mniej i wykorzystać AI tam, gdzie ma sens. Bez kursów na pół roku, bez agencji na pół roku, bez "to skomplikowane".</p>
