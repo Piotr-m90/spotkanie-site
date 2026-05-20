@@ -117,18 +117,35 @@
     .nav__menu { display: none; }
   }
 
-  /* ==================== HERO ==================== */
+  /* ==================== HERO (full-bleed photo bg, Marcus.T 1:1) ==================== */
   .hero-cine {
     position: relative;
     min-height: calc(100vh - 70px);
     display: flex;
     align-items: center;
     overflow: hidden;
+    background-color: #050402;
+  }
+  .hero-cine__photo {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-bg.png?w=2000&format=auto&quality=90');
+    background-size: cover;
+    background-position: center right;
+    z-index: 0;
+  }
+  /* Dark gradient from left so text is readable, photo (person+lamps) stays visible on the right */
+  .hero-cine__veil {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
     background:
-      radial-gradient(circle at 80% 30%, rgba(212, 137, 10, 0.12), transparent 45%),
-      radial-gradient(circle at 90% 70%, rgba(212, 137, 10, 0.08), transparent 50%),
-      radial-gradient(circle at 60% 90%, rgba(212, 137, 10, 0.06), transparent 55%),
-      linear-gradient(135deg, #0d0a08 0%, #050402 100%);
+      linear-gradient(90deg, rgba(5,4,2,0.96) 0%, rgba(5,4,2,0.88) 28%, rgba(5,4,2,0.5) 52%, rgba(5,4,2,0.15) 72%, transparent 100%),
+      linear-gradient(180deg, transparent 60%, rgba(5,4,2,0.6) 100%);
+  }
+  @media (max-width: 980px) {
+    .hero-cine__photo { background-position: center 20%; opacity: 0.5; }
+    .hero-cine__veil { background: linear-gradient(180deg, rgba(5,4,2,0.75) 0%, rgba(5,4,2,0.92) 100%); }
   }
   .hero-cine__inner {
     position: relative;
@@ -137,13 +154,11 @@
     max-width: 1380px;
     margin: 0 auto;
     padding: 80px 40px 60px;
-    display: grid;
-    grid-template-columns: 1.05fr 1fr;
-    gap: 70px;
-    align-items: center;
   }
+  .hero-cine__copy { max-width: 600px; }
   @media (max-width: 980px) {
-    .hero-cine__inner { grid-template-columns: 1fr; gap: 50px; padding: 60px 24px 40px; }
+    .hero-cine__inner { padding: 60px 24px 40px; }
+    .hero-cine__copy { max-width: 100%; }
   }
   .hero-cine__eyebrow {
     display: inline-block;
@@ -245,56 +260,30 @@
   .hero-cine__avatars .av:nth-child(8) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-av-6-spotlight.png?w=180&format=auto&quality=85'); }
   .hero-cine__proof-text { font-size: 13px; color: var(--text-mute); line-height: 1.45; }
   .hero-cine__proof-text strong { color: var(--gold); font-weight: 600; }
-  .hero-cine__portrait-wrap { position: relative; }
-  .hero-cine__portrait {
-    position: relative;
-    aspect-ratio: 3 / 4;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 50px 120px rgba(0, 0, 0, 0.7), 0 0 80px rgba(212, 137, 10, 0.15);
-  }
-  .hero-cine__portrait img {
-    display: block; width: 100%; height: 100%;
-    object-fit: cover; object-position: center 12%;
-    filter: contrast(1.06) saturate(1.02);
-  }
-  .hero-cine__handwritten {
-    position: absolute;
-    bottom: -8px;
-    right: -28px;
-    max-width: 220px;
-    font-family: 'Fraunces', Georgia, serif;
-    font-style: italic;
-    font-size: 17px;
-    line-height: 1.4;
-    color: var(--gold);
-    transform: rotate(-3deg);
-    text-align: left;
-    z-index: 3;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
-  }
-  @media (max-width: 980px) {
-    .hero-cine__handwritten { position: static; transform: none; max-width: 100%; margin-top: 20px; text-align: center; right: 0; }
-  }
+  /* Tagged labels — overlaid near the person (left edge of photo subject), Marcus.T style */
   .hero-cine__labels {
     position: absolute;
-    top: 0; bottom: 0; left: -120px;
-    width: 110px;
-    display: flex; flex-direction: column; justify-content: space-around;
+    top: 50%; left: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    display: flex; flex-direction: column; gap: 42px;
     pointer-events: none;
+    z-index: 2;
   }
+  @media (max-width: 1180px) { .hero-cine__labels { left: 46%; } }
   @media (max-width: 980px) { .hero-cine__labels { display: none; } }
   .hero-cine__label {
     display: flex; align-items: center; gap: 10px;
     font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em;
-    color: rgba(245, 240, 232, 0.85);
+    color: rgba(245, 240, 232, 0.9);
     font-weight: 500; position: relative;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
   }
-  .hero-cine__label::after {
+  .hero-cine__label::before {
     content: ''; position: absolute;
-    right: -120px; top: 50%;
-    width: 110px; height: 1px;
-    background: linear-gradient(90deg, rgba(212, 137, 10, 0.6), transparent);
+    left: -54px; top: 50%;
+    width: 48px; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 137, 10, 0.7));
   }
   .hero-cine__label-dot {
     width: 8px; height: 8px; border-radius: 50%;
@@ -302,6 +291,24 @@
     box-shadow: 0 0 10px rgba(212, 137, 10, 0.8);
     flex-shrink: 0;
   }
+  /* Handwritten note — bottom-right near subject */
+  .hero-cine__handwritten {
+    position: absolute;
+    bottom: 60px; right: 8%;
+    max-width: 250px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.45;
+    color: var(--gold);
+    transform: rotate(-3deg);
+    text-align: left;
+    z-index: 2;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+  }
+  @media (max-width: 1180px) { .hero-cine__handwritten { right: 4%; max-width: 200px; font-size: 16px; } }
+  @media (max-width: 980px) { .hero-cine__handwritten { display: none; } }
 
   /* ==================== SIX PILLARS (creative v7) ==================== */
   .pillars-section {
@@ -930,8 +937,24 @@
   </div>
 </nav>
 
-<!-- ==================== HERO ==================== -->
+<!-- ==================== HERO (full-bleed photo, Marcus.T 1:1) ==================== -->
 <section class="hero-cine">
+  <div class="hero-cine__photo" aria-hidden="true"></div>
+  <div class="hero-cine__veil" aria-hidden="true"></div>
+
+  <!-- Tagged labels near the person -->
+  <div class="hero-cine__labels" aria-hidden="true">
+    <div class="hero-cine__label"><span class="hero-cine__label-dot"></span>STRUKTURA</div>
+    <div class="hero-cine__label"><span class="hero-cine__label-dot"></span>SZYBKOŚĆ</div>
+    <div class="hero-cine__label"><span class="hero-cine__label-dot"></span>BEZ HANDLU</div>
+    <div class="hero-cine__label"><span class="hero-cine__label-dot"></span>OD ZARAZ</div>
+  </div>
+
+  <!-- Handwritten note near subject -->
+  <div class="hero-cine__handwritten" aria-hidden="true">
+    Nie obiecuję Ci kursu na pół roku.<br>Obiecuję Ci 15 minut.
+  </div>
+
   <div class="hero-cine__inner">
     <div class="hero-cine__copy">
       <span class="hero-cine__eyebrow">SPOTKAJ. POZNAJ. <span>ZADECYDUJ.</span></span>
@@ -960,20 +983,6 @@
           <strong>Osiem odsłon, jedna osoba.</strong><br>
           Tę samą energię dostają moi klienci na każdej rozmowie.
         </div>
-      </div>
-    </div>
-    <div class="hero-cine__portrait-wrap">
-      <div class="hero-cine__labels" aria-hidden="true">
-        <div class="hero-cine__label"><span class="hero-cine__label-dot"></span>STRUKTURA</div>
-        <div class="hero-cine__label"><span class="hero-cine__label-dot"></span>SZYBKOŚĆ</div>
-        <div class="hero-cine__label"><span class="hero-cine__label-dot"></span>BEZ HANDLU</div>
-        <div class="hero-cine__label"><span class="hero-cine__label-dot"></span>OD ZARAZ</div>
-      </div>
-      <div class="hero-cine__portrait">
-        <img src="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png?w=900&format=auto&quality=88" alt="Piotr Muszyński — AI Architect dla MŚP" loading="eager">
-      </div>
-      <div class="hero-cine__handwritten">
-        Nie obiecuję Ci kursu na pół roku.<br>Obiecuję Ci 15 minut.
       </div>
     </div>
   </div>
