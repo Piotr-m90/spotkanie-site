@@ -109,8 +109,16 @@
     transition: background 0.2s;
   }
   .nav__cta:hover { background: rgba(212, 137, 10, 0.12); }
+  .nav__burger { display: none; }
   @media (max-width: 880px) {
     .nav__menu { display: none; }
+    .nav__burger { display: inline-flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; width: 42px; height: 42px; background: transparent; border: 1px solid var(--border-soft); border-radius: 8px; cursor: pointer; margin-left: 4px; flex-shrink: 0; }
+    .nav__burger span { display: block; width: 20px; height: 2px; background: var(--gold); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+    .nav--open .nav__burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav--open .nav__burger span:nth-child(2) { opacity: 0; }
+    .nav--open .nav__burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav--open .nav__menu { display: flex; flex-direction: column; gap: 0; position: absolute; top: 100%; left: 0; right: 0; background: rgba(13, 10, 8, 0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-soft); padding: 6px 24px 14px; }
+    .nav--open .nav__menu a { padding: 14px 2px; font-size: 15px; border-bottom: 1px solid rgba(255,255,255,0.06); }
   }
 
   /* ==================== HERO (full-bleed photo bg, Marcus.T 1:1) ==================== */
@@ -935,6 +943,7 @@
       <a href="kontakt.html">Kontakt</a>
     </div>
     <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="nav__cta">Zarezerwuj 15 min</a>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false" onclick="var n=this.closest('.nav');var o=n.classList.toggle('nav--open');this.setAttribute('aria-expanded',o)"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -1179,8 +1188,8 @@
   <div class="container">
     <div style="text-align: center; max-width: 720px; margin: 0 auto;">
       <span class="section-eyebrow">Co mówią</span>
-      <h2 class="section-title">Słowa <em>partnerów</em>.</h2>
-      <p class="section-sub">Dopóki nie mam jeszcze pełnej kolekcji rekomendacji od klientów — oddaję głos partnerom, z którymi codziennie buduję.</p>
+      <h2 class="section-title">Słowa <em>z bliska</em>.</h2>
+      <p class="section-sub">Partnerzy, z którymi buduję marki, i pierwsi klienci, dla których zbudowałem markę osobistą — ich własnymi słowami.</p>
     </div>
 
     <div class="testimonials-grid">
@@ -1195,10 +1204,10 @@
         </div>
         <p class="testimonial__quote">"Piotr nie sprzedaje slajdów ani kursów. Mówi co działa, robi to ze mną, potem razem patrzymy co poprawić. Wszystko, co dziś jest na Common Roots, powstało w ten sposób."</p>
         <div class="testimonial__author">
-          <div class="testimonial__avatar">M</div>
+          <div class="testimonial__avatar" style="background-image: url('https://res.cloudinary.com/dyw1pi3nt/image/upload/c_fill,w_120,h_120,g_face/q_auto/f_auto/v1776744035/663296684_26275163195445889_7949057319107458728_n_1_nb6vhr.jpg'); background-size: cover; background-position: center; font-size: 0;"></div>
           <div class="testimonial__author-info">
-            <div class="testimonial__name">Marcin Korecki</div>
-            <div class="testimonial__role">Cofounder · Common Roots</div>
+            <div class="testimonial__name">Dr Marcin Korecki</div>
+            <div class="testimonial__role">Partner · Common Roots</div>
           </div>
         </div>
       </div>
@@ -1213,10 +1222,10 @@
         </div>
         <p class="testimonial__quote">"Mamy klub, mapę, ambasadorów i strony, które rzeczywiście pracują. Ja prowadzę rozmowy z partnerami, Piotr ogarnia całą stronę techniczną. Idealnie się uzupełniamy."</p>
         <div class="testimonial__author">
-          <div class="testimonial__avatar">M</div>
+          <div class="testimonial__avatar" style="background-image: url('https://res.cloudinary.com/dyw1pi3nt/image/upload/c_fill,w_120,h_120,g_face/q_auto/f_auto/v1776744263/677895330_122179732556942787_7246182715336793645_n_yus8uk.jpg'); background-size: cover; background-position: center; font-size: 0;"></div>
           <div class="testimonial__author-info">
-            <div class="testimonial__name">Magdalena</div>
-            <div class="testimonial__role">Cofounder · Metropolix</div>
+            <div class="testimonial__name">Magdalena Staniul</div>
+            <div class="testimonial__role">Partner · Metropolix</div>
           </div>
         </div>
       </div>
@@ -1231,10 +1240,10 @@
         </div>
         <p class="testimonial__quote">"15 minut z Piotrem to nie rozmowa handlowa. To moment, po którym naprawdę wiesz, czy warto iść dalej. U mnie było warto — dziś razem budujemy moją markę osobistą."</p>
         <div class="testimonial__author">
-          <div class="testimonial__avatar">G</div>
+          <div class="testimonial__avatar" style="background-image: url('https://muszynski-media.gumlet.io/muszynski-online/av-gebski?w=120&format=auto&quality=90'); background-size: cover; background-position: center; font-size: 0;"></div>
           <div class="testimonial__author-info">
-            <div class="testimonial__name">Klient brandowy #1</div>
-            <div class="testimonial__role">Sport · mentoring</div>
+            <div class="testimonial__name">Mariusz Gębski</div>
+            <div class="testimonial__role">Klient · sport &amp; mentoring</div>
           </div>
         </div>
       </div>
@@ -1249,10 +1258,10 @@
         </div>
         <p class="testimonial__quote">"Pierwsze 15 minut wystarczyło, żeby zobaczyć, że Piotr słucha, a nie sprzedaje. Druga rozmowa była już o konkretnym planie. Polecam każdemu, kto myśli o swojej marce."</p>
         <div class="testimonial__author">
-          <div class="testimonial__avatar">B</div>
+          <div class="testimonial__avatar">AB</div>
           <div class="testimonial__author-info">
-            <div class="testimonial__name">Klient brandowy #2</div>
-            <div class="testimonial__role">Sport · młodzi</div>
+            <div class="testimonial__name">Amelia Błażejewska</div>
+            <div class="testimonial__role">Klient · sport &amp; dietetyka</div>
           </div>
         </div>
       </div>
