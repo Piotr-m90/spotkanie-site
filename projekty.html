@@ -126,6 +126,12 @@
   .locked:hover { border-color: var(--gold); transform: translateY(-3px); }
   .locked::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 18px, rgba(212, 137, 10, 0.02) 18px, rgba(212, 137, 10, 0.02) 19px); pointer-events: none; }
   .locked__badge { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold); background: rgba(212, 137, 10, 0.1); border: 1px solid rgba(212, 137, 10, 0.25); padding: 5px 12px; border-radius: 100px; margin-bottom: 22px; position: relative; }
+  .locked__head { display: flex; align-items: center; gap: 18px; margin-bottom: 22px; position: relative; }
+  .locked__photo { width: 76px; height: 76px; border-radius: 50%; background-size: cover; background-position: center; border: 2px solid var(--gold-soft); flex-shrink: 0; }
+  .locked__head-text { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; }
+  .locked__head-text .locked__badge { margin-bottom: 8px; }
+  .locked__head-text .locked__title { margin-bottom: 2px; }
+  .locked__head-text .locked__hint { margin-bottom: 0; }
   .locked__title { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em; margin: 0 0 6px; color: var(--text-main); position: relative; }
   .locked__hint { font-family: 'Fraunces', serif; font-style: italic; font-size: 14px; color: var(--gold); margin: 0 0 18px; position: relative; }
   .locked__desc { font-size: 14.5px; line-height: 1.65; color: var(--text-mute); margin: 0 0 22px; position: relative; }
@@ -335,40 +341,50 @@
   <div class="container">
     <div class="section__head">
       <span class="section-eyebrow">02 · Pierwsi klienci brandowi</span>
-      <h2 class="section-title">Dwa profile <em>w prywatnej szufladzie.</em></h2>
-      <p class="section-sub">Buduję markę osobistą od zera — strona, storytelling, lejek, brand brain. Imiona i case studies opowiadam tylko na rozmowie 1:1. Tu zostawiam dwie namiastki.</p>
+      <h2 class="section-title">Dwie marki, <em>zbudowane od zera.</em></h2>
+      <p class="section-sub">Buduję markę osobistą od zera — strona, storytelling, lejek, brand brain. Oto dwoje pierwszych, dla których to zrobiłem.</p>
     </div>
 
     <div class="clients-grid">
       <div class="locked">
-        <span class="locked__badge">🔒 Profil #1 · Sport · mentoring</span>
-        <h3 class="locked__title">Polski olimpijczyk</h3>
-        <p class="locked__hint">Drugie życie po medalach.</p>
-        <p class="locked__desc">Pięciobój, kariera w wojsku, scena międzynarodowa. Po sportowym etapie zostaje historia, dyscyplina i tysiąc godzin mówienia do mikrofonu — z czego trzeba zbudować markę, która sprzedaje mentoring, a nie wspomnienia.</p>
+        <div class="locked__head">
+          <div class="locked__photo" style="background-image: url('https://muszynski-media.gumlet.io/muszynski-online/av-gebski?w=200&format=auto&quality=90');"></div>
+          <div class="locked__head-text">
+            <span class="locked__badge">Sport · mentoring</span>
+            <h3 class="locked__title">Mariusz Gębski</h3>
+            <p class="locked__hint">Sportowiec → mentor.</p>
+          </div>
+        </div>
+        <p class="locked__desc">Pięciobój, kariera w wojsku, scena międzynarodowa. Po sportowym etapie zostaje historia, dyscyplina i tysiąc godzin mówienia do mikrofonu — z czego zbudowaliśmy markę „Przekraczaj granice", która sprzedaje mentoring, a nie wspomnienia.</p>
         <div class="locked__chips">
           <span class="locked__chip">Brand brain 4 filary</span>
-          <span class="locked__chip">Mini-strona</span>
+          <span class="locked__chip">Strona osobista</span>
           <span class="locked__chip">Ankieta diagnozująca</span>
         </div>
-        <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="locked__cta">Umów 15 min · poznasz</a>
+        <a href="https://gebski.muszynski.online" target="_blank" class="locked__cta">Zobacz stronę · gebski.muszynski.online</a>
       </div>
 
       <div class="locked">
-        <span class="locked__badge">🔒 Profil #2 · Sport · młodzi</span>
-        <h3 class="locked__title">Wicemistrz Polski</h3>
-        <p class="locked__hint">Kadra narodowa, 23 lata.</p>
-        <p class="locked__desc">Wschodząca gwiazda dyscypliny olimpijskiej, świeży medal mistrzostw, jeszcze nie zna swojego głosu marketingowego. Buduję od zera: pozycjonowanie, jak mówić, do kogo mówić — i co robić, gdy media zaczną dzwonić same.</p>
+        <div class="locked__head">
+          <div class="locked__photo" style="background-image: url('https://res.cloudinary.com/dyw1pi3nt/image/upload/c_thumb,w_240,h_240,g_face,z_0.8/q_auto/f_auto/v1779286250/WhatsApp_Image_2026-05-17_at_16.00.41_jfaq22.jpg');"></div>
+          <div class="locked__head-text">
+            <span class="locked__badge">Sport · młodzi</span>
+            <h3 class="locked__title">Amelia Błażejewska</h3>
+            <p class="locked__hint">Kadra narodowa, 23 lata.</p>
+          </div>
+        </div>
+        <p class="locked__desc">Wicemistrzyni Polski w chodzie i dietetyk kliniczny. Zbudowaliśmy od zera: pozycjonowanie, jak mówić i do kogo — oraz stronę, która łączy sportową historię z wiedzą o żywieniu.</p>
         <div class="locked__chips">
           <span class="locked__chip">Research 9 źródeł</span>
           <span class="locked__chip">Brand skeleton</span>
-          <span class="locked__chip">Faza 2 walidacji</span>
+          <span class="locked__chip">Strona osobista</span>
         </div>
-        <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="locked__cta">Umów 15 min · poznasz</a>
+        <a href="https://amelia.muszynski.online" target="_blank" class="locked__cta">Zobacz stronę · amelia.muszynski.online</a>
       </div>
     </div>
 
     <p style="text-align: center; margin-top: 32px; font-size: 13px; color: var(--text-dim); font-style: italic; font-family: 'Fraunces', serif;">
-      Dlaczego bez nazwisk? Bo klienci wybierają mnie m.in. dlatego, że nie wystawiam ich na wystawę.
+      Pełną historię — co dokładnie zbudowaliśmy i dlaczego tak — opowiadam na 15-minutowej rozmowie.
     </p>
   </div>
 </section>
