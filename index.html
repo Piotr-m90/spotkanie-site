@@ -157,18 +157,21 @@
       linear-gradient(90deg, rgba(5,4,2,0.85) 0%, rgba(5,4,2,0.45) 22%, rgba(5,4,2,0.05) 38%, transparent 50%),
       linear-gradient(180deg, transparent 70%, rgba(5,4,2,0.4) 100%);
   }
-  /* Tablet: dosuń sylwetkę w prawo, lewa czerń zostaje pod tekstem */
+  /* Tablet: czyste zdjecie bez napisow, sylwetka w prawo, czern pod tekstem */
   @media (min-width: 981px) and (max-width: 1180px) {
-    .hero-cine__photo { background-position: 40% center; }
+    .hero-cine__photo {
+      background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-clean?w=1800&format=auto&quality=88');
+      background-position: 28% center;
+    }
   }
   @media (max-width: 980px) {
-    /* Telefon: czysty portret bez wtopionych napisow */
+    /* Telefon: czyste zdjecie bez wtopionych napisow, sylwetka w prawo */
     .hero-cine__photo {
-      background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-cinematic-hero.png?w=1000&format=auto&quality=85');
-      background-position: center 16%;
+      background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-clean?w=1200&format=auto&quality=85');
+      background-position: 40% center;
       opacity: 1;
     }
-    .hero-cine__veil { background: linear-gradient(180deg, rgba(5,4,2,0.42) 0%, rgba(5,4,2,0.28) 34%, rgba(5,4,2,0.68) 76%, rgba(5,4,2,0.93) 100%); }
+    .hero-cine__veil { background: linear-gradient(180deg, rgba(5,4,2,0.5) 0%, rgba(5,4,2,0.32) 40%, rgba(5,4,2,0.72) 80%, rgba(5,4,2,0.94) 100%); }
   }
   .hero-cine__inner {
     position: relative;
