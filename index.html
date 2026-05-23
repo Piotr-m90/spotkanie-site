@@ -157,9 +157,13 @@
       linear-gradient(90deg, rgba(5,4,2,0.85) 0%, rgba(5,4,2,0.45) 22%, rgba(5,4,2,0.05) 38%, transparent 50%),
       linear-gradient(180deg, transparent 70%, rgba(5,4,2,0.4) 100%);
   }
+  /* Tablet: dosuń sylwetkę w prawo, lewa czerń zostaje pod tekstem */
+  @media (min-width: 981px) and (max-width: 1180px) {
+    .hero-cine__photo { background-position: 40% center; }
+  }
   @media (max-width: 980px) {
-    .hero-cine__photo { background-position: 68% center; opacity: 0.6; }
-    .hero-cine__veil { background: linear-gradient(180deg, rgba(5,4,2,0.72) 0%, rgba(5,4,2,0.92) 100%); }
+    .hero-cine__photo { background-position: 64% center; opacity: 0.85; }
+    .hero-cine__veil { background: linear-gradient(180deg, rgba(5,4,2,0.5) 0%, rgba(5,4,2,0.78) 55%, rgba(5,4,2,0.94) 100%); }
   }
   .hero-cine__inner {
     position: relative;
@@ -265,14 +269,12 @@
     z-index: 10;
     box-shadow: 0 8px 24px rgba(212, 137, 10, 0.5), 0 0 0 2px var(--gold);
   }
-  .hero-cine__avatars .av:nth-child(1) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-av-7-blazer.png?w=180&format=auto&quality=85'); margin-left: 0; }
-  .hero-cine__avatars .av:nth-child(2) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-av-4-outdoor.png?w=180&format=auto&quality=85'); }
-  .hero-cine__avatars .av:nth-child(3) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-av-8-window.png?w=180&format=auto&quality=85'); }
-  .hero-cine__avatars .av:nth-child(4) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-portrait-hero.png?w=180&format=auto&quality=85'); background-position: center 8%; }
-  .hero-cine__avatars .av:nth-child(5) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-cinematic-hero.png?w=180&format=auto&quality=85'); }
-  .hero-cine__avatars .av:nth-child(6) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-av-5-navy.png?w=180&format=auto&quality=85'); }
-  .hero-cine__avatars .av:nth-child(7) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png?w=180&format=auto&quality=85'); }
-  .hero-cine__avatars .av:nth-child(8) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-av-6-spotlight.png?w=180&format=auto&quality=85'); }
+  .hero-cine__avatars .av:nth-child(1) { background-image: url('https://res.cloudinary.com/dyw1pi3nt/image/upload/c_fill,w_120,h_120,g_face/q_auto/f_auto/v1776744035/663296684_26275163195445889_7949057319107458728_n_1_nb6vhr.jpg'); background-position: center; margin-left: 0; }
+  .hero-cine__avatars .av:nth-child(2) { background-image: url('https://res.cloudinary.com/dyw1pi3nt/image/upload/c_fill,w_120,h_120,g_face/q_auto/f_auto/v1776744263/677895330_122179732556942787_7246182715336793645_n_yus8uk.jpg'); background-position: center; }
+  .hero-cine__avatars .av:nth-child(3) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/av-gebski?w=160&format=auto&quality=90'); background-position: center; }
+  .hero-cine__avatars .av:nth-child(4) { background-image: url('https://res.cloudinary.com/dyw1pi3nt/image/upload/c_thumb,w_200,h_200,g_face,z_0.8/q_auto/f_auto/v1779286250/WhatsApp_Image_2026-05-17_at_16.00.41_jfaq22.jpg'); background-position: center; }
+  .hero-cine__avatars .av:nth-child(5) { background-image: url('https://res.cloudinary.com/dyw1pi3nt/image/upload/q_auto,f_auto,c_fill,w_160,h_160,g_face/v1777460193/WhatsApp_Image_2026-04-29_at_12.41.25_d6pxha.jpg'); background-position: center; }
+  .hero-cine__avatars .av:nth-child(6) { background-image: url('https://muszynski-media.gumlet.io/muszynski-online/av-szpakowski?w=160&format=auto&quality=90'); background-position: center; }
   .hero-cine__proof-text { font-size: 13px; color: var(--text-mute); line-height: 1.45; }
   .hero-cine__proof-text strong { color: var(--gold); font-weight: 600; }
   /* Tagged labels — overlaid near the person (left edge of photo subject), Marcus.T style */
@@ -975,19 +977,17 @@
         <a href="#projekty" class="btn-outline-amber">Zobacz portfolio</a>
       </div>
       <div class="hero-cine__social-proof">
-        <div class="hero-cine__avatars" aria-label="Piotr Muszyński w różnych odsłonach">
-          <span class="av" title="Klasyczny portret biznesowy"></span>
-          <span class="av" title="Outdoor, golden hour"></span>
-          <span class="av" title="Przy oknie, denim"></span>
-          <span class="av" title="Studio shot, oryginał"></span>
-          <span class="av" title="Cinematic granat"></span>
-          <span class="av" title="Profil bok, navy"></span>
-          <span class="av" title="Czarna koszula, amber bokeh"></span>
-          <span class="av" title="Spotlight editorial"></span>
+        <div class="hero-cine__avatars" aria-label="Ludzie, z którymi współpracuję">
+          <span class="av" title="Dr Marcin Korecki · Common Roots"></span>
+          <span class="av" title="Magdalena Staniul · Metropolix"></span>
+          <span class="av" title="Mariusz Gębski · sport i mentoring"></span>
+          <span class="av" title="Amelia Błażejewska · sport i dietetyka"></span>
+          <span class="av" title="Rafał Błażejewski · medycyna naturalna"></span>
+          <span class="av" title="Artur Szpakowski · BauKalk"></span>
         </div>
         <div class="hero-cine__proof-text">
-          <strong>Jedna osoba — od pomysłu po wdrożenie.</strong><br>
-          3 własne marki, pierwsi klienci brandowi, kilkanaście stron, które dziś pracują.
+          <strong>Nie pracuję sam.</strong><br>
+          3 własne marki i sieć ludzi, z którymi buduję — partnerzy i pierwsi klienci.
         </div>
       </div>
     </div>
