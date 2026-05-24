@@ -165,13 +165,18 @@
     }
   }
   @media (max-width: 980px) {
-    /* Telefon: czyste zdjecie bez wtopionych napisow, sylwetka w prawo */
+    /* Telefon: zdjecie jako czysty banner u gory, tekst pod spodem na ciemnym (zero tekstu na twarzy) */
+    .hero-cine { min-height: auto; display: block; }
     .hero-cine__photo {
+      inset: auto; top: 0; left: 0; right: 0; height: 50vh;
       background-image: url('https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-clean?w=2000&format=auto&quality=90');
-      background-position: 40% center;
+      background-position: center 28%;
       opacity: 1;
     }
-    .hero-cine__veil { background: linear-gradient(180deg, rgba(5,4,2,0.5) 0%, rgba(5,4,2,0.32) 40%, rgba(5,4,2,0.72) 80%, rgba(5,4,2,0.94) 100%); }
+    .hero-cine__veil {
+      inset: auto; top: 0; left: 0; right: 0; height: 50vh;
+      background: linear-gradient(180deg, transparent 0%, transparent 62%, rgba(5,4,2,0.5) 82%, #050402 100%);
+    }
   }
   .hero-cine__inner {
     position: relative;
@@ -183,7 +188,7 @@
   }
   .hero-cine__copy { max-width: 600px; }
   @media (max-width: 980px) {
-    .hero-cine__inner { padding: 60px 24px 40px; }
+    .hero-cine__inner { padding: 50vh 24px 48px; }
     .hero-cine__copy { max-width: 100%; }
   }
   .hero-cine__eyebrow {
