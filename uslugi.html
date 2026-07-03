@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usługi — Piotr Muszyński · rozwiązania na problemy w firmie</title>
+<link rel="canonical" href="https://spotkanie.muszynski.online/uslugi.html">
+<meta property="og:url" content="https://spotkanie.muszynski.online/uslugi.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"CollectionPage","@id":"https://spotkanie.muszynski.online/uslugi.html#webpage","url":"https://spotkanie.muszynski.online/uslugi.html","name":"Usługi — Piotr Muszyński","inLanguage":"pl","about":{"@id":"https://spotkanie.muszynski.online/#piotr"}},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://spotkanie.muszynski.online/"},{"@type":"ListItem","position":2,"name":"Usługi","item":"https://spotkanie.muszynski.online/uslugi.html"}]},
+{"@type":"ItemList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Konsultacje","url":"https://spotkanie.muszynski.online/uslugi-konsultacje.html"},
+{"@type":"ListItem","position":2,"name":"Strony internetowe","url":"https://spotkanie.muszynski.online/uslugi-strony.html"},
+{"@type":"ListItem","position":3,"name":"Moduły AI","url":"https://spotkanie.muszynski.online/uslugi-moduly.html"},
+{"@type":"ListItem","position":4,"name":"Szkolenia","url":"https://spotkanie.muszynski.online/uslugi-szkolenia.html"}]}
+]}
+</script>
+<meta name="description" content="Masz problem w firmie? Cztery drogi rozwiązania: konsultacje, strony internetowe, moduły AI i szkolenia. Wdrażam sztuczną inteligencję w firmach w Niemczech, Austrii i Szwajcarii.">
+<meta property="og:title" content="Usługi — Piotr Muszyński">
+<meta property="og:description" content="Masz problem w firmie? Rozwiązanie jest bliżej, niż myślisz. Konsultacje, strony, moduły AI, szkolenia.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png">
+<link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dyw1pi3nt/image/upload/q_auto/f_auto/v1776859674/sygnet_e5yq6n.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #d4890a; --gold-light: #f0a020; --gold-soft: rgba(212, 137, 10, 0.2);
+    --bg-base: #0d0a08; --bg-deep: #050402; --bg-card: #16110b;
+    --text-main: #f5f0e8; --text-mute: rgba(245, 240, 232, 0.65); --text-dim: rgba(245, 240, 232, 0.4);
+    --border-soft: rgba(212, 137, 10, 0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg-base); color: var(--text-main); -webkit-font-smoothing: antialiased; line-height: 1.55; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .container { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+  @media (max-width: 720px) { .container { padding: 0 20px; } }
+
+  /* Navbar (shared) */
+  .nav { position: sticky; top: 0; z-index: 100; background: rgba(13, 10, 8, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-soft); }
+  .nav__inner { display: flex; align-items: center; justify-content: space-between; padding: 18px 32px; max-width: 1380px; margin: 0 auto; }
+  .nav__logo { display: flex; align-items: center; gap: 10px; font-family: 'Fraunces', serif; font-weight: 600; color: var(--text-main); }
+  .nav__logo-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .nav__logo-icon img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0 8px rgba(212, 137, 10, 0.35)); }
+  .nav__logo-text { display: flex; flex-direction: column; line-height: 1; }
+  .nav__logo-text strong { font-size: 17px; letter-spacing: -0.01em; }
+  .nav__logo-text small { font-size: 10px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--text-dim); margin-top: 4px; }
+  .nav__menu { display: flex; gap: 36px; }
+  .nav__menu a { font-size: 13px; font-weight: 500; color: var(--text-mute); transition: color 0.2s; }
+  .nav__menu a:hover, .nav__menu a.active { color: var(--gold); }
+  .nav__cta { display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 11px 22px; border-radius: 6px; font-size: 13px; font-weight: 600; transition: background 0.2s; }
+  .nav__cta:hover { background: rgba(212, 137, 10, 0.12); }
+  .nav__burger { display: none; }
+  @media (max-width: 880px) {
+    .nav__menu { display: none; }
+    .nav__inner { padding: 12px 18px; }
+    .nav__logo { gap: 8px; }
+    .nav__logo-icon { width: 32px; height: 32px; }
+    .nav__logo-text strong { font-size: 15px; }
+    .nav__logo-text small { font-size: 8.5px; letter-spacing: 0.14em; white-space: nowrap; margin-top: 3px; }
+    .nav__cta { padding: 9px 15px; font-size: 12px; white-space: nowrap; }
+    .nav__burger { display: inline-flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; width: 38px; height: 38px; background: transparent; border: 1px solid var(--border-soft); border-radius: 8px; cursor: pointer; margin-left: 6px; flex-shrink: 0; }
+    .nav__burger span { display: block; width: 20px; height: 2px; background: var(--gold); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+    .nav--open .nav__burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav--open .nav__burger span:nth-child(2) { opacity: 0; }
+    .nav--open .nav__burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav--open .nav__menu { display: flex; flex-direction: column; gap: 0; position: absolute; top: 100%; left: 0; right: 0; background: rgba(13, 10, 8, 0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-soft); padding: 6px 24px 14px; }
+    .nav--open .nav__menu a { padding: 14px 2px; font-size: 15px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  }
+
+  /* Buttons */
+  .btn-amber { display: inline-flex; align-items: center; gap: 10px; background: var(--gold); color: var(--bg-base); font-weight: 600; font-size: 14px; padding: 16px 28px; border-radius: 8px; border: 1px solid var(--gold); transition: background 0.2s, transform 0.2s, box-shadow 0.2s; box-shadow: 0 8px 24px rgba(212, 137, 10, 0.25); }
+  .btn-amber:hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 12px 32px rgba(212, 137, 10, 0.4); }
+  .btn-outline-amber { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: var(--gold); font-weight: 500; font-size: 14px; padding: 16px 26px; border-radius: 8px; border: 1px solid rgba(212, 137, 10, 0.5); transition: background 0.2s, border-color 0.2s; }
+  .btn-outline-amber:hover { background: rgba(212, 137, 10, 0.08); border-color: var(--gold); }
+
+  /* Page hero (problem-first, centered) */
+  .page-hero { padding: 100px 0 80px; position: relative; overflow: hidden; background: radial-gradient(circle at 80% 30%, rgba(212, 137, 10, 0.1), transparent 50%), radial-gradient(circle at 20% 70%, rgba(212, 137, 10, 0.06), transparent 50%), var(--bg-base); border-bottom: 1px solid var(--border-soft); }
+  .page-hero__inner { max-width: 860px; margin: 0 auto; text-align: center; }
+  .page-hero__eyebrow { display: inline-block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.4em; color: rgba(245, 240, 232, 0.7); font-weight: 500; margin-bottom: 24px; }
+  .page-hero__eyebrow span { color: var(--gold); }
+  .page-hero__title { font-family: 'Inter', sans-serif; font-weight: 800; text-transform: uppercase; font-size: clamp(38px, 5.2vw, 70px); line-height: 0.98; letter-spacing: -0.02em; color: var(--text-main); margin: 0 0 8px; }
+  .page-hero__title-script { display: block; font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(32px, 4.4vw, 54px); text-transform: none; line-height: 1.05; color: var(--gold); letter-spacing: -0.01em; margin-top: 6px; }
+  .page-hero__sub { font-size: 16px; line-height: 1.7; color: var(--text-mute); max-width: 620px; margin: 24px auto 34px; }
+  .page-hero__actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+
+  /* Section common */
+  .section-eyebrow { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.3em; color: var(--gold); margin-bottom: 18px; font-weight: 600; }
+  .section-title { font-family: 'Inter', sans-serif; font-weight: 800; text-transform: uppercase; font-size: clamp(34px, 4.5vw, 56px); line-height: 1.02; letter-spacing: -0.015em; color: var(--text-main); margin-bottom: 22px; }
+  .section-title em { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 400; color: var(--gold); text-transform: none; }
+  .section-sub { font-size: 16px; line-height: 1.65; color: var(--text-mute); margin-bottom: 30px; }
+
+  /* Service cards (project-card pattern, text-first variant) */
+  .services-section { padding: 100px 0; background: var(--bg-deep); border-top: 1px solid var(--border-soft); }
+  .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 50px; }
+  @media (max-width: 880px) { .services-grid { grid-template-columns: 1fr; } }
+  .project-card { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 10px; overflow: hidden; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s; position: relative; display: block; color: inherit; text-decoration: none; }
+  .project-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 28px rgba(212,137,10,0.18); }
+  .project-card__title { font-size: 17px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; color: var(--text-main); }
+  .project-card__desc { font-size: 14px; line-height: 1.65; color: var(--text-mute); margin-bottom: 14px; }
+  .project-card__meta { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); font-weight: 600; }
+  .service-card { padding: 34px 30px 30px; display: flex; flex-direction: column; }
+  .service-card__head { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+  .service-card__head .project-card__title { margin-bottom: 0; }
+  .service-card__icon { width: 46px; height: 46px; color: var(--gold); flex-shrink: 0; filter: drop-shadow(0 0 8px rgba(212, 137, 10, 0.3)); }
+  .service-card__icon svg { width: 100%; height: 100%; }
+  .service-card__problem { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 16.5px; line-height: 1.55; color: var(--text-main); margin-bottom: 12px; }
+  .service-card__problem span { color: var(--gold); }
+  .service-card .project-card__desc { flex-grow: 1; }
+  .service-card .project-card__meta::after { content: ' →'; }
+  .services-footnote { text-align: center; margin-top: 34px; font-size: 13.5px; color: var(--text-dim); }
+
+  /* Jak pracuję (principles pattern) */
+  .principles-section { padding: 100px 0; background: var(--bg-base); border-top: 1px solid var(--border-soft); }
+  .principles-section .container { max-width: 920px; }
+  .principles-list { display: flex; flex-direction: column; gap: 0; margin-top: 40px; border-top: 1px solid var(--border-soft); }
+  .principle { display: grid; grid-template-columns: 60px 1fr; gap: 28px; padding: 28px 0; border-bottom: 1px solid var(--border-soft); align-items: start; }
+  .principle__num { font-family: 'Fraunces', serif; font-style: italic; font-size: 36px; color: var(--gold); line-height: 1; font-weight: 400; }
+  .principle__title { font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; color: var(--text-main); margin-bottom: 8px; line-height: 1.3; }
+  .principle__title small { display: block; font-family: 'Fraunces', serif; font-style: italic; font-weight: 400; font-size: 13px; text-transform: none; letter-spacing: 0.04em; color: var(--gold); margin-bottom: 4px; }
+  .principle__text { font-size: 14.5px; line-height: 1.65; color: var(--text-mute); }
+  .principle__text em { color: var(--gold); font-style: italic; }
+
+  /* CTA / funnel */
+  .cta-section { padding: 110px 0; background: radial-gradient(ellipse at center, rgba(212, 137, 10, 0.12), transparent 65%), var(--bg-deep); border-top: 1px solid var(--border-soft); text-align: center; }
+  .cta-section .container { max-width: 720px; }
+  .cta-section .section-title { margin-bottom: 18px; }
+  .cta-section .section-sub { margin-bottom: 36px; }
+  .cta-section .page-hero__actions { justify-content: center; }
+
+  /* Footer */
+  .footer { background: #0a0705; border-top: 1px solid var(--border-soft); padding: 60px 0 30px; }
+  .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 50px; margin-bottom: 50px; }
+  @media (max-width: 880px) { .footer__grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+  @media (max-width: 520px) { .footer__grid { grid-template-columns: 1fr; } }
+  .footer__brand-logo { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; margin-bottom: 14px; color: var(--text-main); }
+  .footer__brand-logo span { color: var(--gold); }
+  .footer__tagline { font-size: 13px; color: var(--text-mute); line-height: 1.6; max-width: 320px; }
+  .footer__col h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 18px; font-weight: 600; }
+  .footer__col ul { list-style: none; }
+  .footer__col li { margin-bottom: 10px; }
+  .footer__col a { font-size: 13px; color: var(--text-mute); transition: color 0.2s; }
+  .footer__col a:hover { color: var(--gold); }
+  .footer__bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 28px; border-top: 1px solid var(--border-soft); font-size: 12px; color: var(--text-dim); }
+  .footer__social { display: flex; gap: 18px; }
+  .footer__social a { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-soft); border-radius: 50%; color: var(--text-mute); transition: border-color 0.2s, color 0.2s; }
+  .footer__social a:hover { border-color: var(--gold); color: var(--gold); }
+  @media (max-width: 600px) { .footer__bottom { flex-direction: column; gap: 16px; text-align: center; } }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-icon"><img src="https://res.cloudinary.com/dyw1pi3nt/image/upload/q_auto/f_auto/v1776859674/sygnet_e5yq6n.svg" alt="Logo Piotr Muszyński"></span>
+      <span class="nav__logo-text"><strong>Piotr Muszyński</strong><small>AI Architect · MŚP</small></span>
+    </a>
+    <div class="nav__menu">
+      <a href="index.html">Start</a>
+      <a href="o-mnie.html">O mnie</a>
+      <a href="uslugi.html" class="active">Usługi</a>
+      <a href="projekty.html">Projekty</a>
+      <a href="faq.html">FAQ</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+    <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="nav__cta">Zarezerwuj 15 min</a>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false" onclick="var n=this.closest('.nav');var o=n.classList.toggle('nav--open');this.setAttribute('aria-expanded',o)"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HERO — problem-first -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__inner">
+      <span class="page-hero__eyebrow">USŁUGI · <span>NAJPIERW PROBLEM, POTEM ROZWIĄZANIE</span></span>
+      <h1 class="page-hero__title">Masz problem w firmie?<span class="page-hero__title-script">Rozwiązanie jest bliżej, niż myślisz.</span></h1>
+      <p class="page-hero__sub">Większość przedsiębiorców nie wie jeszcze, co sztuczna inteligencja może zrobić w <strong>ich</strong> firmie — nie w firmie z reklamy, tylko w tej z prawdziwymi klientami, fakturami i za krótkim dniem. Właśnie po to jest ta strona: znajdź swój problem poniżej i zobacz, jak go rozwiązuję.</p>
+      <div class="page-hero__actions">
+        <a href="#uslugi" class="btn-amber">Znajdź swój problem</a>
+        <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="btn-outline-amber">Zarezerwuj 15 minut</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 KARTY USŁUG -->
+<section class="services-section" id="uslugi">
+  <div class="container">
+    <div style="text-align: center; max-width: 760px; margin: 0 auto;">
+      <span class="section-eyebrow">Cztery drogi</span>
+      <h2 class="section-title">Który problem <em>jest Twój?</em></h2>
+      <p class="section-sub">Wdrażam sztuczną inteligencję w firmach działających w Niemczech, Austrii i Szwajcarii. Trzy efekty: większe przychody, prostsze procesy, szybsze skalowanie. Zacznij od tego, co boli najbardziej.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <a href="uslugi-konsultacje.html" class="project-card service-card">
+        <div class="service-card__head">
+          <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="12" r="1" fill="currentColor"/><circle cx="13" cy="12" r="1" fill="currentColor"/><circle cx="17" cy="12" r="1" fill="currentColor"/></svg></div>
+          <h3 class="project-card__title">Konsultacje</h3>
+        </div>
+        <p class="service-card__problem">Czujesz, że coś zjada Ci czas i pieniądze, ale <span>nie wiesz, od czego zacząć</span>.</p>
+        <p class="project-card__desc">W 60 minut wychodzisz z listą 3 konkretnych kroków na najbliższy tydzień — bez kupowania czegokolwiek i bez zgadywania.</p>
+        <div class="project-card__meta">Zobacz jak</div>
+      </a>
+
+      <a href="uslugi-strony.html" class="project-card service-card">
+        <div class="service-card__head">
+          <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18"/><circle cx="6.5" cy="7" r="0.5" fill="currentColor"/><path d="M7 14l3-3 3 2 5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3 class="project-card__title">Strony internetowe</h3>
+        </div>
+        <p class="service-card__problem">Twoja strona wisi w internecie od lat i <span>nie przynosi ani jednego klienta</span> miesięcznie.</p>
+        <p class="project-card__desc">Dostajesz stronę, która zbiera kontakty i odpowiada klientom 24 godziny na dobę — także „gadającą stronę", z którą klient rozmawia jak z człowiekiem.</p>
+        <div class="project-card__meta">Zobacz jak</div>
+      </a>
+
+      <a href="uslugi-moduly.html" class="project-card service-card">
+        <div class="service-card__head">
+          <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1" stroke-dasharray="3 2"/></svg></div>
+          <h3 class="project-card__title">Moduły AI</h3>
+        </div>
+        <p class="service-card__problem">Te same czynności — oferty, posty, odpowiedzi na maile — <span>pochłaniają Ci 5–10 godzin tygodniowo</span>.</p>
+        <p class="project-card__desc">Dostajesz gotowe narzędzie AI, które robi to za Ciebie w Twoim stylu i po polsku. Pierwsze działa u Ciebie w 7 dni.</p>
+        <div class="project-card__meta">Zobacz jak</div>
+      </a>
+
+      <a href="uslugi-szkolenia.html" class="project-card service-card">
+        <div class="service-card__head">
+          <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4L2 9l10 5 10-5-10-5z" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5" stroke-linecap="round"/><path d="M22 9v5" stroke-linecap="round"/></svg></div>
+          <h3 class="project-card__title">Szkolenia</h3>
+        </div>
+        <p class="service-card__problem">Wszyscy w firmie słyszeli o AI, ale <span>nikt nie wie, co z tym zrobić</span> w Waszej codziennej pracy.</p>
+        <p class="project-card__desc">Warsztat na Waszych prawdziwych zadaniach — po jednym dniu każda osoba umie oddać AI co najmniej 2 czynności, które robiła ręcznie.</p>
+        <div class="project-card__meta">Zobacz jak</div>
+      </a>
+
+    </div>
+
+    <p class="services-footnote">Ceny znajdziesz na każdej podstronie — od bezpłatnych 15 minut rozmowy po projekty szyte na miarę.</p>
+  </div>
+</section>
+
+<!-- JAK PRACUJĘ -->
+<section class="principles-section">
+  <div class="container">
+    <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+      <span class="section-eyebrow">Jak pracuję</span>
+      <h2 class="section-title">Cztery role. <em>Jeden człowiek.</em></h2>
+      <p class="section-sub">Nie jestem sprzedawcą narzędzi. Łączę psychologię, strategię, projektowanie i wykonanie — od pierwszej rozmowy do działającego rozwiązania.</p>
+    </div>
+
+    <div class="principles-list">
+      <div class="principle">
+        <div class="principle__num">01</div>
+        <div>
+          <h3 class="principle__title"><small>Psychologia</small>Najpierw rozumiem Twój problem</h3>
+          <p class="principle__text">Nie zaczynam od narzędzi. Zaczynam od tego, co Cię naprawdę boli — bo połowa firm kupuje rozwiązania na problemy, <em>których nie ma</em>.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="principle__num">02</div>
+        <div>
+          <h3 class="principle__title"><small>Strategia</small>Dobieram to, co ma sens</h3>
+          <p class="principle__text">Z całej sztucznej inteligencji Twoja firma potrzebuje może 10%. Wybieram te 10% i mówię wprost, <em>czego w ogóle nie ruszać</em>.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="principle__num">03</div>
+        <div>
+          <h3 class="principle__title"><small>Architekt</small>Projektuję rozwiązanie</h3>
+          <p class="principle__text">Rysuję plan: co, w jakiej kolejności, ile potrwa. Wiesz z góry, co dostaniesz i kiedy — <em>zanim wydasz pierwsze euro</em>.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="principle__num">04</div>
+        <div>
+          <h3 class="principle__title"><small>Wykonawca</small>Robię to sam, nie przekazuję dalej</h3>
+          <p class="principle__text">Osoba, która zrozumiała Twój problem, buduje rozwiązanie. Bez podwykonawców, bez „to nie moja działka" — <em>dlatego nic nie ginie po drodze</em>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FUNNEL -->
+<section class="cta-section">
+  <div class="container">
+    <span class="section-eyebrow">Zacznij tutaj</span>
+    <h2 class="section-title">Nie wiesz, od czego zacząć? <em>To normalne.</em></h2>
+    <p class="section-sub">Powiedz o swoim problemie asystentowi na tej stronie — kliknij złoty przycisk w rogu i po prostu mów. Albo zarezerwuj 15 minut rozmowy ze mną — za darmo, bez slajdów i bez sprzedaży.</p>
+    <div class="page-hero__actions">
+      <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="btn-amber">Zarezerwuj 15 minut</a>
+      <a href="kontakt.html" class="btn-outline-amber">Napisz do mnie</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand-logo">Piotr <span>Muszyński</span></div>
+        <p class="footer__tagline">Zaproszenie na 15-minutową rozmowę. Bez slajdów, bez sprzedaży, bez kursu na pół roku. Buduję marki, strony i asystentów AI dla MŚP.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Nawigacja</h4>
+        <ul>
+          <li><a href="index.html">Start</a></li>
+          <li><a href="o-mnie.html">O mnie</a></li>
+          <li><a href="uslugi.html">Usługi</a></li>
+          <li><a href="projekty.html">Projekty</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="nrw.html">AI dla firm w NRW</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="mailto:kontakt@muszynski.online">kontakt@muszynski.online</a></li>
+          <li><a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank">Tidycal · 15 min</a></li>
+          <li><a href="https://www.linkedin.com/in/piotr-muszynski-47aa8a2a6/" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Sklep</h4>
+        <ul>
+          <li><a href="https://konsultacja.muszynski.online" target="_blank">Konsultacja 30 min</a></li>
+          <li><a href="https://audyt.muszynski.online" target="_blank">Audyt strony</a></li>
+          <li><a href="https://architekai.muszynski.online" target="_blank">AI OS dla firm</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>© 2026 Piotr Muszyński · muszyński.online · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></div>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/in/piotr-muszynski-47aa8a2a6/" target="_blank" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.27 2.38 4.27 5.47v6.27zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+        <a href="https://www.youtube.com/@Muszynskionline" target="_blank" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://www.instagram.com/muszynski.online/" target="_blank" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="voice-widget.js" defer></script>
+</body>
+</html>
