@@ -67,6 +67,7 @@
     var el = document.createElement('elevenlabs-convai');
     el.setAttribute('agent-id', AGENT_ID);
     el.setAttribute('disable-banner', 'true');
+    el.setAttribute('markdown-link-allowed-hosts', 'tidycal.com');
     document.body.appendChild(el);
     if (btn) btn.style.display = 'none';
     if (panel) panel.remove();
