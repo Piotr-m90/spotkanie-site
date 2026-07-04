@@ -19,7 +19,7 @@
 
 ## Usługi i ceny
 - Przegląd usług: https://spotkanie.muszynski.online/uslugi.html
-- Konsultacje: https://spotkanie.muszynski.online/uslugi-konsultacje.html — pierwsze 15 minut bezpłatnie; konsultacja diagnostyczna 170 € za 60 minut
+- Konsultacje: https://spotkanie.muszynski.online/uslugi-konsultacje.html — pierwsze 15 minut bezpłatnie; konsultacja z Piotrem 250 € za 60–90 minut: Piotr poznaje przyczynę problemu, projektuje rozwiązanie i mówi wprost, co klient zrobi sam, a co warto zlecić
 - Strony internetowe: https://spotkanie.muszynski.online/uslugi-strony.html — nowa strona od 2500 €; gadająca strona (asystent głosowy na stronie): audyt strony z demonstracją asystenta 470 €, wdrożenie pod klucz 1500 €, utrzymanie 120 €/mc
 - Moduły AI: https://spotkanie.muszynski.online/uslugi-moduly.html — od 150 € za moduł, pod klucz
 - Szkolenia z AI: https://spotkanie.muszynski.online/uslugi-szkolenia.html — 1:1 albo zespoły do 6 osób, wycena po bezpłatnej rozmowie
