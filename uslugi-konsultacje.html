@@ -7,7 +7,7 @@
 <link rel="canonical" href="https://spotkanie.muszynski.online/uslugi-konsultacje.html">
 <meta property="og:url" content="https://spotkanie.muszynski.online/uslugi-konsultacje.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png">
+<meta name="twitter:image" content="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png?w=1200&h=630&mode=crop&format=auto">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"WebPage","@id":"https://spotkanie.muszynski.online/uslugi-konsultacje.html#webpage","url":"https://spotkanie.muszynski.online/uslugi-konsultacje.html","name":"Konsultacje — Piotr Muszyński","inLanguage":"pl","about":{"@id":"https://spotkanie.muszynski.online/#piotr"}},
@@ -24,7 +24,9 @@
 <meta property="og:title" content="Konsultacje — Piotr Muszyński">
 <meta property="og:description" content="Powiedz, co Cię boli — usłyszysz wprost, czy sztuczna inteligencja to naprawi. 15 minut za darmo, plan w 60 minut.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png">
+<meta property="og:image" content="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png?w=1200&h=630&mode=crop&format=auto">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dyw1pi3nt/image/upload/q_auto/f_auto/v1776859674/sygnet_e5yq6n.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +35,7 @@
   :root {
     --gold: #d4890a; --gold-light: #f0a020; --gold-soft: rgba(212, 137, 10, 0.2);
     --bg-base: #0d0a08; --bg-deep: #050402; --bg-card: #16110b;
-    --text-main: #f5f0e8; --text-mute: rgba(245, 240, 232, 0.65); --text-dim: rgba(245, 240, 232, 0.4);
+    --text-main: #f5f0e8; --text-mute: rgba(245, 240, 232, 0.65); --text-dim: rgba(245, 240, 232, 0.55);
     --border-soft: rgba(212, 137, 10, 0.15);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -99,11 +101,14 @@
   .section-sub { font-size: 16px; line-height: 1.65; color: var(--text-mute); margin-bottom: 30px; }
 
   /* Service cards (project-card pattern, text-first variant) */
-  .services-section { padding: 100px 0; background: var(--bg-deep); border-top: 1px solid var(--border-soft); }
+  .services-section { padding: 100px 0; background: var(--bg-base); border-top: 1px solid var(--border-soft); }
   .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 50px; }
   @media (max-width: 880px) { .services-grid { grid-template-columns: 1fr; } }
+  .services-grid--compact { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 880px) { .services-grid--compact { grid-template-columns: 1fr; } }
   .project-card { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 10px; overflow: hidden; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s; position: relative; display: block; color: inherit; text-decoration: none; }
   .project-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 28px rgba(212,137,10,0.18); }
+  .project-card--static:hover { border-color: rgba(212, 137, 10, 0.35); transform: none; box-shadow: none; }
   .project-card__title { font-size: 17px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; color: var(--text-main); }
   .project-card__desc { font-size: 14px; line-height: 1.65; color: var(--text-mute); margin-bottom: 14px; }
   .project-card__meta { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); font-weight: 600; }
@@ -118,7 +123,7 @@
   .services-footnote { text-align: center; margin-top: 34px; font-size: 13.5px; color: var(--text-dim); }
 
   /* Jak to działa (principles pattern) */
-  .principles-section { padding: 100px 0; background: var(--bg-base); border-top: 1px solid var(--border-soft); }
+  .principles-section { padding: 100px 0; background: var(--bg-deep); border-top: 1px solid var(--border-soft); }
   .principles-section .container { max-width: 920px; }
   .principles-list { display: flex; flex-direction: column; gap: 0; margin-top: 40px; border-top: 1px solid var(--border-soft); }
   .principle { display: grid; grid-template-columns: 60px 1fr; gap: 28px; padding: 28px 0; border-bottom: 1px solid var(--border-soft); align-items: start; }
@@ -133,22 +138,30 @@
   .price-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 50px; max-width: 920px; margin-left: auto; margin-right: auto; }
   @media (max-width: 880px) { .price-grid { grid-template-columns: 1fr; } }
   .price-card { padding: 38px 34px 34px; display: flex; flex-direction: column; }
-  .price-card__amount { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 44px; color: var(--gold); line-height: 1; margin: 14px 0 6px; }
-  .price-card__amount small { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-left: 8px; }
+  .price-card__amount { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 400; font-size: 44px; color: var(--gold); line-height: 1; margin: 14px 0 6px; }
+  .price-card__amount small { font-family: 'Inter', sans-serif; font-style: normal; font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-left: 8px; }
   .price-card .project-card__desc { flex-grow: 1; margin-top: 12px; }
   .price-card .btn-amber, .price-card .btn-outline-amber { align-self: flex-start; margin-top: 18px; }
 
-  /* FAQ mini */
+  /* FAQ mini (wariant kartowy — jak faq.html) */
   .faq-section { padding: 100px 0; background: var(--bg-base); border-top: 1px solid var(--border-soft); }
   .faq-section .container { max-width: 760px; }
-  .faq-list { margin-top: 40px; border-top: 1px solid var(--border-soft); }
-  .faq-item { border-bottom: 1px solid var(--border-soft); }
-  .faq-item summary { cursor: pointer; padding: 22px 4px; font-size: 16px; font-weight: 600; color: var(--text-main); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 20px; transition: color 0.2s; }
-  .faq-item summary:hover { color: var(--gold); }
+  .faq-list { margin-top: 40px; }
+  .faq-item { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 10px; margin-bottom: 12px; overflow: hidden; transition: border-color 0.3s, box-shadow 0.3s; }
+  .faq-item:hover { border-color: rgba(212, 137, 10, 0.35); }
+  .faq-item[open] { border-color: rgba(212, 137, 10, 0.5); box-shadow: 0 12px 28px rgba(0,0,0,0.4), 0 0 20px rgba(212, 137, 10, 0.1); }
+  .faq-item summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 20px 24px; font-weight: 600; font-size: 15.5px; line-height: 1.45; color: var(--text-main); }
   .faq-item summary::-webkit-details-marker { display: none; }
-  .faq-item summary::after { content: '+'; font-family: 'Fraunces', Georgia, serif; font-size: 24px; color: var(--gold); line-height: 1; flex-shrink: 0; }
-  .faq-item[open] summary::after { content: '–'; }
-  .faq-item p { padding: 0 4px 24px; font-size: 14.5px; line-height: 1.65; color: var(--text-mute); max-width: 640px; }
+  .faq-item summary::after { content: '+'; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1; color: var(--gold); flex-shrink: 0; transition: transform 0.25s; }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item__body { padding: 0 24px 22px; font-size: 14.5px; line-height: 1.7; color: var(--text-mute); }
+  @media (max-width: 720px) { .faq-item summary { padding: 17px 18px; font-size: 14.5px; } .faq-item__body { padding: 0 18px 18px; } }
+
+  /* Inne usługi (cross-sell strip) */
+  .other-section { padding: 80px 0; background: var(--bg-deep); border-top: 1px solid var(--border-soft); }
+  .other-section .services-grid { margin-top: 40px; }
+  .other-section .service-card { padding: 28px 26px 24px; }
+  .other-section .project-card__meta::after { content: ' →'; }
 
   /* CTA / funnel */
   .cta-section { padding: 110px 0; background: radial-gradient(ellipse at center, rgba(212, 137, 10, 0.12), transparent 65%), var(--bg-deep); border-top: 1px solid var(--border-soft); text-align: center; }
@@ -203,9 +216,9 @@
 <section class="page-hero">
   <div class="container">
     <div class="page-hero__inner">
-      <span class="page-hero__eyebrow">KONSULTACJE · <span>NAJPIERW PROBLEM, POTEM ROZWIĄZANIE</span></span>
+      <span class="page-hero__eyebrow">USŁUGI · <span>KONSULTACJE</span></span>
       <h1 class="page-hero__title">Wszyscy mówią o AI.<span class="page-hero__title-script">Nikt nie mówi, co Ty masz z tym zrobić.</span></h1>
-      <p class="page-hero__sub">Co tydzień nowe narzędzie, każde obiecuje cuda — a Ty masz firmę do prowadzenia i zero czasu na testowanie w ciemno. Dlatego zaczynamy od rozmowy: mówisz, co Cię boli, a ja mówię wprost, czy sztuczna inteligencja to naprawi. Pierwsze 15 minut nic nie kosztuje.</p>
+      <p class="page-hero__sub">Co tydzień nowe narzędzie, każde obiecuje cuda. A Ty masz firmę do prowadzenia i zero czasu na testowanie w ciemno. Dlatego zaczynamy od rozmowy: mówisz, co Cię boli, a ja mówię wprost, czy sztuczna inteligencja to naprawi. Pierwsze 15 minut nic nie kosztuje.</p>
       <div class="page-hero__actions">
         <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="btn-amber">Zarezerwuj bezpłatne 15 minut</a>
         <a href="#jak-to-dziala" class="btn-outline-amber">Zobacz, jak to działa</a>
@@ -219,8 +232,8 @@
   <div class="container">
     <div style="text-align: center; max-width: 720px; margin: 0 auto;">
       <span class="section-eyebrow">Jak to działa</span>
-      <h2 class="section-title">Trzy kroki. <em>Zero zgadywania.</em></h2>
-      <p class="section-sub">Nie kupujesz kota w worku. Najpierw sprawdzamy za darmo, czy w ogóle mam Ci jak pomóc — dopiero potem siadamy do pełnej diagnozy.</p>
+      <h2 class="section-title">Od pierwszej rozmowy <em>do gotowego planu.</em></h2>
+      <p class="section-sub">Nie kupujesz kota w worku. Najpierw sprawdzamy za darmo, czy w ogóle mam Ci jak pomóc. Dopiero potem siadamy do pełnej diagnozy.</p>
     </div>
 
     <div class="principles-list">
@@ -228,7 +241,7 @@
         <div class="principle__num">01</div>
         <div>
           <h3 class="principle__title"><small>Bezpłatne 15 minut</small>Mówisz, co Cię boli</h3>
-          <p class="principle__text">Opowiadasz o problemie swoimi słowami. Ja mówię wprost, czy sztuczna inteligencja go naprawi — a jeśli nie, kończymy i <em>nie tracisz ani euro</em>. Bez slajdów, bez sprzedaży.</p>
+          <p class="principle__text">Opowiadasz o problemie swoimi słowami. Ja mówię wprost, czy sztuczna inteligencja go naprawi. Jeśli nie, kończymy i <em>nie tracisz ani euro</em>. Bez slajdów, bez sprzedaży.</p>
         </div>
       </div>
       <div class="principle">
@@ -242,7 +255,7 @@
         <div class="principle__num">03</div>
         <div>
           <h3 class="principle__title"><small>Efekt</small>Wychodzisz z planem, nie prezentacją</h3>
-          <p class="principle__text">Dostajesz listę 3 konkretnych kroków na najbliższy tydzień: co zrobić, w jakiej kolejności i <em>czego nie ruszać</em>. Możesz to wdrożyć sam albo ze mną — Twój wybór.</p>
+          <p class="principle__text">Dostajesz listę 3 konkretnych kroków na najbliższy tydzień: co zrobić, w jakiej kolejności i <em>czego nie ruszać</em>. Możesz to wdrożyć sam albo ze mną — Twój wybór. Częsty następny krok: audyt strony WWW za 470 € — co działa, co można poprawić, plus demonstracja gadającej strony na przykładzie Twojej firmy.</p>
         </div>
       </div>
     </div>
@@ -259,7 +272,7 @@
 
     <div class="services-grid">
 
-      <div class="project-card service-card">
+      <div class="project-card project-card--static service-card">
         <div class="service-card__head">
           <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3 class="project-card__title">Prowadzisz małą lub średnią firmę</h3>
@@ -268,18 +281,18 @@
         <p class="project-card__desc">Masz od 1 do 50 osób na pokładzie i każda godzina Twojego dnia jest zajęta. Potrzebujesz odpowiedzi w 60 minut, nie raportu na 40 stron.</p>
       </div>
 
-      <div class="project-card service-card">
+      <div class="project-card project-card--static service-card">
         <div class="service-card__head">
           <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.9 5.7 3.9 9S14.5 18.4 12 21c-2.5-2.6-3.9-5.7-3.9-9S9.5 5.6 12 3z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3 class="project-card__title">Działasz w Niemczech, Austrii lub Szwajcarii</h3>
         </div>
         <p class="service-card__problem">Prowadzisz polską firmę za granicą i <span>chcesz rozmawiać po polsku o tutejszych realiach</span>.</p>
-        <p class="project-card__desc">Sam prowadzę firmę w Niemczech. Znam tutejszych klientów, urzędy i rytm pracy — nie musisz mi niczego tłumaczyć dwa razy.</p>
+        <p class="project-card__desc">Sam prowadzę firmę w Niemczech. Znam tutejszych klientów, urzędy i rytm pracy. Nie musisz mi niczego tłumaczyć dwa razy.</p>
       </div>
 
     </div>
 
-    <p class="services-footnote">Nie pasujesz do żadnego opisu? Napisz albo powiedz to asystentowi na tej stronie — odpowiem wprost, czy mam Ci jak pomóc.</p>
+    <p class="services-footnote">Nie pasujesz do żadnego opisu? Napisz do mnie. Odpowiem wprost, czy mam Ci jak pomóc.</p>
   </div>
 </section>
 
@@ -288,23 +301,23 @@
   <div class="container">
     <div style="text-align: center; max-width: 720px; margin: 0 auto;">
       <span class="section-eyebrow">Ile to kosztuje</span>
-      <h2 class="section-title">Najpierw wartość. <em>Potem cena.</em></h2>
-      <p class="section-sub">Dlatego cena stoi na końcu strony, nie na początku. Dwie proste opcje — żadnych pakietów, gwiazdek ani zobowiązań na rok.</p>
+      <h2 class="section-title">Najpierw wartość, <em>potem cena.</em></h2>
+      <p class="section-sub">Dlatego cena stoi na końcu strony, nie na początku. Dwie proste opcje: żadnych pakietów, gwiazdek ani zobowiązań na rok.</p>
     </div>
 
     <div class="price-grid">
 
-      <div class="project-card price-card">
+      <div class="project-card project-card--static price-card">
         <h3 class="project-card__title">Bezpłatna rozmowa</h3>
         <div class="price-card__amount">0 €<small>· 15 minut</small></div>
         <p class="project-card__desc">Mówisz, co Cię boli. Ja mówię, czy sztuczna inteligencja to naprawi i czy warto iść dalej. Jeśli nie mam Ci jak pomóc, usłyszysz to wprost.</p>
         <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="btn-amber">Zarezerwuj termin</a>
       </div>
 
-      <div class="project-card price-card">
+      <div class="project-card project-card--static price-card">
         <h3 class="project-card__title">Konsultacja diagnostyczna</h3>
         <div class="price-card__amount">170 €<small>· 60 minut</small></div>
-        <p class="project-card__desc">30 minut o Twojej firmie + 30 minut doboru rozwiązań. Wychodzisz z listą 3 kroków na najbliższy tydzień — nie z ofertą handlową.</p>
+        <p class="project-card__desc">30 minut o Twojej firmie + 30 minut doboru rozwiązań. Wychodzisz z listą 3 kroków na najbliższy tydzień, nie z ofertą handlową.</p>
         <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="btn-outline-amber">Zacznij od bezpłatnych 15 minut</a>
       </div>
 
@@ -323,16 +336,43 @@
     <div class="faq-list">
       <details class="faq-item">
         <summary>Czy muszę się znać na technologii?</summary>
-        <p>Nie. Rozmawiamy o Twojej firmie, nie o technologii. Jeśli umiesz opowiedzieć, jak wygląda Twój dzień pracy, to w zupełności wystarczy — resztę biorę na siebie.</p>
+        <div class="faq-item__body"><p>Nie. Rozmawiamy o Twojej firmie, nie o technologii. Jeśli umiesz opowiedzieć, jak wygląda Twój dzień pracy, to w zupełności wystarczy. Resztę biorę na siebie.</p></div>
       </details>
       <details class="faq-item">
         <summary>Co jeśli sztuczna inteligencja nie rozwiąże mojego problemu?</summary>
-        <p>Mówię to wprost już w bezpłatnych 15 minutach i nic nie płacisz. Wolę stracić zlecenie niż Twój czas — bo połowa firm kupuje rozwiązania na problemy, których nie ma.</p>
+        <div class="faq-item__body"><p>Mówię to wprost już w bezpłatnych 15 minutach i nic nie płacisz. Wolę stracić zlecenie niż Twój czas. Połowa firm kupuje rozwiązania na problemy, których nie ma.</p></div>
       </details>
       <details class="faq-item">
         <summary>Ile kosztuje konsultacja?</summary>
-        <p>Pierwsze 15 minut rozmowy jest bezpłatne. Pełna konsultacja diagnostyczna to 170 € za 60 minut — wychodzisz z niej z gotowym planem na najbliższy tydzień, nie z ofertą.</p>
+        <div class="faq-item__body"><p>Pierwsze 15 minut rozmowy jest bezpłatne. Pełna konsultacja diagnostyczna to 170 € za 60 minut — wychodzisz z niej z gotowym planem na najbliższy tydzień, nie z ofertą.</p></div>
       </details>
+    </div>
+  </div>
+</section>
+
+<!-- INNE USŁUGI (cross-sell) -->
+<section class="other-section">
+  <div class="container">
+    <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+      <span class="section-eyebrow">Inne usługi</span>
+      <h2 class="section-title">Szukasz <em>czegoś innego?</em></h2>
+    </div>
+    <div class="services-grid services-grid--compact">
+      <a href="uslugi-strony.html" class="project-card service-card">
+        <h3 class="project-card__title">Strony internetowe</h3>
+        <p class="project-card__desc">Twoja strona wisi w internecie i nie przynosi klientów? Dostajesz stronę, która zbiera kontakty 24 godziny na dobę.</p>
+        <div class="project-card__meta">Zobacz jak</div>
+      </a>
+      <a href="uslugi-moduly.html" class="project-card service-card">
+        <h3 class="project-card__title">Moduły AI</h3>
+        <p class="project-card__desc">Oferty, posty i maile zjadają Ci godziny co tydzień? Gotowe narzędzie AI robi to za Ciebie, w Twoim stylu.</p>
+        <div class="project-card__meta">Zobacz jak</div>
+      </a>
+      <a href="uslugi-szkolenia.html" class="project-card service-card">
+        <h3 class="project-card__title">Szkolenia</h3>
+        <p class="project-card__desc">Zespół słyszał o AI, ale nikt nie wie, co z tym zrobić? Warsztat na Waszych prawdziwych zadaniach.</p>
+        <div class="project-card__meta">Zobacz jak</div>
+      </a>
     </div>
   </div>
 </section>
@@ -342,7 +382,7 @@
   <div class="container">
     <span class="section-eyebrow">Zacznij tutaj</span>
     <h2 class="section-title">Powiedz, co Cię boli. <em>Reszta jest po mojej stronie.</em></h2>
-    <p class="section-sub">Kliknij złoty przycisk w rogu i po prostu opowiedz o swoim problemie asystentowi na tej stronie. Albo zarezerwuj 15 minut rozmowy ze mną — za darmo, bez slajdów i bez sprzedaży.</p>
+    <p class="section-sub">Zarezerwuj bezpłatne 15 minut rozmowy ze mną — bez slajdów i bez zobowiązań. Mówisz, co Cię boli, a ja mówię wprost, czy mam Ci jak pomóc.</p>
     <div class="page-hero__actions">
       <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="btn-amber">Zarezerwuj bezpłatne 15 minut</a>
       <a href="kontakt.html" class="btn-outline-amber">Napisz do mnie</a>
@@ -381,9 +421,9 @@
       <div class="footer__col">
         <h4>Sklep</h4>
         <ul>
-          <li><a href="https://konsultacja.muszynski.online" target="_blank">Konsultacja 30 min</a></li>
+          <li><a href="https://konsultacja.muszynski.online" target="_blank">Konsultacja diagnostyczna · 60 min</a></li>
           <li><a href="https://audyt.muszynski.online" target="_blank">Audyt strony</a></li>
-          <li><a href="https://architekai.muszynski.online" target="_blank">AI OS dla firm</a></li>
+          <li><a href="https://architekai.muszynski.online" target="_blank">Wdrożenie AI pod klucz</a></li>
         </ul>
       </div>
     </div>

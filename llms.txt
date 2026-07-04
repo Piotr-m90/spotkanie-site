@@ -1,6 +1,6 @@
 # Piotr Muszyński — Zaproszenie (spotkanie.muszynski.online)
 
-> Piotr Muszyński (AI Architect dla MŚP, Hamburg) buduje strony internetowe, marki osobiste i agentów AI dla małych i średnich firm. Ta strona to zaproszenie na bezpłatną 15-minutową rozmowę — bez sprzedaży, bez slajdów. Pokazuje realne, działające portfolio: 3 marki własne, pierwsi klienci brandowi, kilkanaście stron live.
+> Piotr Muszyński (AI Architect dla MŚP, Hamburg) buduje strony internetowe, marki osobiste i agentów AI dla małych i średnich firm. Ta strona to zaproszenie na bezpłatną 15-minutową rozmowę — bez sprzedaży, bez slajdów. Pokazuje realne, działające portfolio: 3 marki własne, pierwsi klienci brandowi, 6 działających stron.
 
 ## Kim jest Piotr Muszyński
 - AI Architect dla małych i średnich firm (2-50 osób).
@@ -13,9 +13,21 @@
 ## Co buduje (portfolio)
 - **Marki własne:** Muszyński.online (marka główna, AI dla firm), Common Roots (zdrowie/rozwój, z dr Marcinem Koreckim), Metropolix (klub polskich przedsiębiorców w DACH, z Magdaleną Staniul).
 - **Klienci brandowi:** Mariusz Gębski (sport + mentoring, gebski.muszynski.online), Amelia Błażejewska (wicemistrzyni Polski w chodzie + dietetyk, amelia.muszynski.online), Rafał Błażejewski (zielarstwo i hirudoterapia, rafal.muszynski.online).
-- **Produkty własne:** Fabryka Treści (gotowe pakiety postów na social, fabryka.muszynski.online), Claude Pack (gotowe umiejętności AI, claudepack.tech).
+- **Produkty własne:** Fabryka Treści (gotowe pakiety postów na social, fabrykatresci.eu), Claude Pack (gotowe umiejętności AI, claudepack.tech).
 - **Partnerstwa (klubowicz/partner):** LumaFlex (terapia światłem), X39 LifeWave (fototerapia/biohacking).
 - **Strony live:** konsultacja / spotkanie / audyt / architekai (muszynski.online) + mertopolix.com + commonroots.life.
+
+## Usługi i ceny
+- Przegląd usług: https://spotkanie.muszynski.online/uslugi.html
+- Konsultacje: https://spotkanie.muszynski.online/uslugi-konsultacje.html — pierwsze 15 minut bezpłatnie; konsultacja diagnostyczna 170 € za 60 minut
+- Strony internetowe: https://spotkanie.muszynski.online/uslugi-strony.html — nowa strona od 2500 €; gadająca strona (asystent głosowy na stronie): audyt strony z demonstracją asystenta 470 €, wdrożenie pod klucz 1500 €, utrzymanie 120 €/mc
+- Moduły AI: https://spotkanie.muszynski.online/uslugi-moduly.html — od 150 € za moduł, pod klucz
+- Szkolenia z AI: https://spotkanie.muszynski.online/uslugi-szkolenia.html — 1:1 albo zespoły do 6 osób, wycena po bezpłatnej rozmowie
+- Banner LinkedIn: 89 € (pakiet 10 grafik: 290 €)
+- Audyt strony/obecności w internecie: 470 € — analiza co działa i co poprawić + demonstracja gadającej strony na przykładzie firmy klienta
+- Fabryka Treści (prowadzenie social media): od 300 €/mc — https://fabrykatresci.eu
+- FAQ (ceny, terminy, RODO): https://spotkanie.muszynski.online/faq.html
+- AI dla polskich firm w NRW: https://spotkanie.muszynski.online/nrw.html
 
 ## Jak się umówić
 - **Bezpłatna rozmowa 15 minut (bez sprzedaży):** https://tidycal.com/pmuszynski/15-konkretna-rozmowa

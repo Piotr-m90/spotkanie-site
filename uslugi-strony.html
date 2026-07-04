@@ -7,7 +7,7 @@
 <link rel="canonical" href="https://spotkanie.muszynski.online/uslugi-strony.html">
 <meta property="og:url" content="https://spotkanie.muszynski.online/uslugi-strony.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png">
+<meta name="twitter:image" content="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png?w=1200&h=630&mode=crop&format=auto">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"WebPage","@id":"https://spotkanie.muszynski.online/uslugi-strony.html#webpage","url":"https://spotkanie.muszynski.online/uslugi-strony.html","name":"Strony internetowe, które sprzedają — Piotr Muszyński","inLanguage":"pl","about":{"@id":"https://spotkanie.muszynski.online/#piotr"}},
@@ -15,11 +15,13 @@
 {"@type":"Service","name":"Strony internetowe, które sprzedają","serviceType":"Projektowanie i budowa stron internetowych z asystentem głosowym","provider":{"@id":"https://spotkanie.muszynski.online/#piotr"},"areaServed":["DE","AT","CH"],"availableLanguage":["pl","de"]}
 ]}
 </script>
-<meta name="description" content="Twoja strona wygląda ładnie i nic z tego nie ma? Buduję strony, które zbierają kontakty 24 godziny na dobę — z gadającą stroną, asystentem odpowiadającym po polsku i niemiecku.">
+<meta name="description" content="Twoja strona wygląda ładnie i nic z niej nie masz? Buduję strony, które zbierają kontakty 24 godziny na dobę — z gadającą stroną, asystentem odpowiadającym po polsku i niemiecku.">
 <meta property="og:title" content="Strony internetowe, które sprzedają — Piotr Muszyński">
 <meta property="og:description" content="Klient wchodzi o 23:00, ma pytanie i nie ma kogo zapytać. Strona, która odpowiada i umawia terminy, gdy śpisz.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png">
+<meta property="og:image" content="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png?w=1200&h=630&mode=crop&format=auto">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dyw1pi3nt/image/upload/q_auto/f_auto/v1776859674/sygnet_e5yq6n.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +30,7 @@
   :root {
     --gold: #d4890a; --gold-light: #f0a020; --gold-soft: rgba(212, 137, 10, 0.2);
     --bg-base: #0d0a08; --bg-deep: #050402; --bg-card: #16110b;
-    --text-main: #f5f0e8; --text-mute: rgba(245, 240, 232, 0.65); --text-dim: rgba(245, 240, 232, 0.4);
+    --text-main: #f5f0e8; --text-mute: rgba(245, 240, 232, 0.65); --text-dim: rgba(245, 240, 232, 0.55);
     --border-soft: rgba(212, 137, 10, 0.15);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -114,7 +116,7 @@
   .services-footnote { text-align: center; margin-top: 34px; font-size: 13.5px; color: var(--text-dim); }
 
   /* Jak pracuję (principles pattern) */
-  .principles-section { padding: 100px 0; background: var(--bg-base); border-top: 1px solid var(--border-soft); }
+  .principles-section { padding: 100px 0; background: var(--bg-deep); border-top: 1px solid var(--border-soft); }
   .principles-section .container { max-width: 920px; }
   .principles-list { display: flex; flex-direction: column; gap: 0; margin-top: 40px; border-top: 1px solid var(--border-soft); }
   .principle { display: grid; grid-template-columns: 60px 1fr; gap: 28px; padding: 28px 0; border-bottom: 1px solid var(--border-soft); align-items: start; }
@@ -151,7 +153,7 @@
   @media (max-width: 600px) { .footer__bottom { flex-direction: column; gap: 16px; text-align: center; } }
 
   /* Gadająca strona — highlight (page-specific) */
-  .talking-section { padding: 100px 0; background: var(--bg-deep); border-top: 1px solid var(--border-soft); }
+  .talking-section { padding: 100px 0; background: var(--bg-base); border-top: 1px solid var(--border-soft); }
   .talking-box { max-width: 860px; margin: 46px auto 0; background: var(--bg-card); border: 1px solid var(--gold); border-radius: 12px; padding: 44px 40px; text-align: center; box-shadow: 0 0 40px rgba(212, 137, 10, 0.12); }
   @media (max-width: 720px) { .talking-box { padding: 32px 22px; } }
   .talking-box__lead { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: clamp(20px, 2.6vw, 26px); line-height: 1.45; color: var(--text-main); margin-bottom: 14px; }
@@ -173,6 +175,14 @@
   .price-row__desc { font-size: 14px; line-height: 1.65; color: var(--text-mute); }
   .price-row__price { font-family: 'Fraunces', serif; font-style: italic; font-size: 26px; color: var(--gold); white-space: nowrap; }
   .price-row__price small { font-size: 14px; color: var(--text-dim); font-family: 'Inter', sans-serif; font-style: normal; }
+
+  /* Inne usługi (cross-sell strip) */
+  .services-grid--compact { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 880px) { .services-grid--compact { grid-template-columns: 1fr; } }
+  .other-section { padding: 80px 0; background: var(--bg-deep); border-top: 1px solid var(--border-soft); }
+  .other-section .services-grid { margin-top: 40px; }
+  .other-section .service-card { padding: 28px 26px 24px; }
+  .other-section .project-card__meta::after { content: ' →'; }
 </style>
 </head>
 <body>
@@ -202,8 +212,8 @@
   <div class="container">
     <div class="page-hero__inner">
       <span class="page-hero__eyebrow">USŁUGI · <span>STRONY INTERNETOWE</span></span>
-      <h1 class="page-hero__title">Twoja strona wygląda ładnie.<span class="page-hero__title-script">I nic z tego nie ma.</span></h1>
-      <p class="page-hero__sub">Klient wchodzi na nią o 23:00. Ma jedno pytanie. Nie ma kogo zapytać — więc wychodzi i pyta konkurencję. Tak co miesiąc tracisz zapytania, których nigdy nie zobaczysz. Da się to zatrzymać — nawet bez budowania nowej strony.</p>
+      <h1 class="page-hero__title">Twoja strona wygląda ładnie.<span class="page-hero__title-script">I nic z niej nie masz.</span></h1>
+      <p class="page-hero__sub">Klient wchodzi na nią o 23:00. Ma jedno pytanie. Nie ma kogo zapytać, więc wychodzi i pyta konkurencję. Tak co miesiąc tracisz zapytania, których nigdy nie zobaczysz. Da się to zatrzymać, nawet bez budowania nowej strony.</p>
       <div class="page-hero__actions">
         <a href="#jak" class="btn-amber">Zobacz, jak to działa</a>
         <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="btn-outline-amber">Zarezerwuj 15 minut</a>
@@ -218,7 +228,7 @@
     <div style="text-align: center; max-width: 720px; margin: 0 auto;">
       <span class="section-eyebrow">Różnica</span>
       <h2 class="section-title">Strona-wizytówka <em>kontra strona, która sprzedaje.</em></h2>
-      <p class="section-sub">Jesteś właśnie na stronie, która sprzedaje. Zwróć uwagę na trzy rzeczy — te same wbudowuję w strony moich klientów.</p>
+      <p class="section-sub">Jesteś właśnie na stronie, która sprzedaje. Zwróć uwagę na trzy rzeczy. Te same wbudowuję w strony moich klientów.</p>
     </div>
 
     <div class="principles-list">
@@ -233,7 +243,7 @@
         <div class="principle__num">02</div>
         <div>
           <h3 class="principle__title"><small>Opowieść</small>Historia zamiast pustych haseł</h3>
-          <p class="principle__text">„Jakość i profesjonalizm od 1998 roku" nie przekonało jeszcze nikogo. Opowiadam Twoją firmę tak, że klient w 30 sekund wie, <em>czy jesteś dla niego</em> — i czuje, że trafił do człowieka, nie do katalogu.</p>
+          <p class="principle__text">„Jakość i profesjonalizm od 1998 roku" nie przekonało jeszcze nikogo. Opowiadam Twoją firmę tak, że klient w 30 sekund wie, <em>czy jesteś dla niego</em>, i czuje, że trafił do człowieka, nie do katalogu.</p>
         </div>
       </div>
       <div class="principle">
@@ -253,18 +263,18 @@
     <div style="text-align: center; max-width: 760px; margin: 0 auto;">
       <span class="section-eyebrow">Wyróżnik</span>
       <h2 class="section-title">Gadająca <em>strona.</em></h2>
-      <p class="section-sub">Asystent głosowy, który zna Twoją firmę, odpowiada klientom po polsku i po niemiecku — i umawia terminy, gdy Ty śpisz. Klient nie wypełnia formularza. Po prostu mówi, czego potrzebuje.</p>
+      <p class="section-sub">Asystent głosowy, który zna Twoją firmę, odpowiada klientom po polsku i po niemiecku i umawia terminy, gdy Ty śpisz. Klient nie wypełnia formularza. Po prostu mówi, czego potrzebuje.</p>
     </div>
 
     <div class="talking-box">
       <p class="talking-box__lead">Nie wierz mi na słowo. <span>Kliknij złoty przycisk w rogu</span> — właśnie z takim asystentem rozmawiasz.</p>
-      <p class="talking-box__note">Zapytaj go o cokolwiek: co robię, ile to kosztuje, od czego zacząć. Dokładnie tak samo odpowie klientom na Twojej stronie — o Twojej ofercie, Twoich terminach, Twoim głosem firmy.</p>
+      <p class="talking-box__note">Zapytaj go o cokolwiek: co robię, ile to kosztuje, od czego zacząć. Dokładnie tak samo odpowie klientom na Twojej stronie: o Twojej ofercie, Twoich terminach, Twoim głosem firmy.</p>
     </div>
 
     <div class="talking-facts">
       <div class="talking-fact">
         <strong>24/7</strong>
-        <p>Odbiera każde pytanie — także w niedzielę o 23:00, gdy nikt nie siedzi przy telefonie.</p>
+        <p>Odbiera każde pytanie, także w niedzielę o 23:00, gdy nikt nie siedzi przy telefonie.</p>
       </div>
       <div class="talking-fact">
         <strong>2 języki</strong>
@@ -272,7 +282,7 @@
       </div>
       <div class="talking-fact">
         <strong>1 dodatek</strong>
-        <p>Doklejam go do każdej strony — także tej, którą już masz. Niczego nie przebudowujemy.</p>
+        <p>Doklejam go do każdej strony, także tej, którą już masz. Niczego nie przebudowujemy.</p>
       </div>
     </div>
   </div>
@@ -295,7 +305,7 @@
           <h3 class="project-card__title">Mariusz Gębski</h3>
         </div>
         <p class="service-card__problem">Sportowiec z historią wartą mentoringu — i <span>bez miejsca, gdzie można ją poznać</span>.</p>
-        <p class="project-card__desc">Marka „Przekraczaj granice": strona osobista, storytelling i ankieta, która diagnozuje, czego potrzebuje odwiedzający — zanim napisze pierwszą wiadomość.</p>
+        <p class="project-card__desc">Marka „Przekraczaj granice": strona osobista, opowieść o marce i ankieta, która diagnozuje, czego potrzebuje odwiedzający, zanim napisze pierwszą wiadomość.</p>
         <div class="project-card__meta">Zobacz w projektach</div>
       </a>
 
@@ -305,7 +315,7 @@
           <h3 class="project-card__title">Amelia Błażejewska</h3>
         </div>
         <p class="service-card__problem">Wicemistrzyni Polski i dietetyk kliniczny — <span>dwie historie, zero strony</span>.</p>
-        <p class="project-card__desc">Pozycjonowanie od zera: jak mówić, do kogo i po co — plus strona, która łączy sportową drogę z wiedzą o żywieniu w jedną spójną opowieść.</p>
+        <p class="project-card__desc">Pozycjonowanie od zera: jak mówić, do kogo i po co, plus strona, która łączy sportową drogę z wiedzą o żywieniu w jedną spójną opowieść.</p>
         <div class="project-card__meta">Zobacz w projektach</div>
       </a>
 
@@ -334,14 +344,48 @@
       </div>
       <div class="price-row">
         <div>
-          <h3 class="price-row__name">Gadająca strona</h3>
-          <p class="price-row__desc">Asystent głosowy jako dodatek do każdej strony — także tej, którą już masz. Uruchomienie, nauczenie go Twojej oferty i stała opieka: aktualizuję odpowiedzi, gdy zmienia się Twoja firma.</p>
+          <h3 class="price-row__name">Gadająca strona · krok 1: audyt Twojej strony</h3>
+          <p class="price-row__desc">Analiza Twojej obecnej strony: co działa, co można poprawić. Do tego demonstracja gadającej strony na przykładzie Twojej firmy — słyszysz asystenta, który zna Twoją ofertę, zanim zdecydujesz o wdrożeniu.</p>
         </div>
-        <div class="price-row__price">250 € <small>+ 120 €/mc</small></div>
+        <div class="price-row__price">470 €</div>
+      </div>
+      <div class="price-row">
+        <div>
+          <h3 class="price-row__name">Gadająca strona · krok 2: wdrożenie pod klucz</h3>
+          <p class="price-row__desc">Uruchamiam asystenta na Twojej stronie, także tej, którą już masz, i uczę go Twojej oferty. Potem stała opieka: rozmowy asystenta, aktualizacje wiedzy, raport co miesiąc.</p>
+        </div>
+        <div class="price-row__price">1500 € <small>+ 120 €/mc</small></div>
       </div>
     </div>
 
-    <p class="services-footnote">Nie wiesz, która droga jest Twoja? Od tego jest bezpłatne 15 minut rozmowy — bez zobowiązań.</p>
+    <p class="services-footnote">Nie wiesz, która droga jest Twoja? Od tego jest bezpłatne 15 minut rozmowy, bez zobowiązań.</p>
+  </div>
+</section>
+
+<!-- INNE USŁUGI (cross-sell) -->
+<section class="other-section">
+  <div class="container">
+    <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+      <span class="section-eyebrow">Inne usługi</span>
+      <h2 class="section-title">Szukasz <em>czegoś innego?</em></h2>
+    </div>
+    <div class="services-grid services-grid--compact">
+      <a href="uslugi-konsultacje.html" class="project-card service-card">
+        <h3 class="project-card__title">Konsultacje</h3>
+        <p class="project-card__desc">Nie wiesz, od czego zacząć z AI w firmie? W 60 minut wychodzisz z planem, nie z ofertą.</p>
+        <div class="project-card__meta">Zobacz jak</div>
+      </a>
+      <a href="uslugi-moduly.html" class="project-card service-card">
+        <h3 class="project-card__title">Moduły AI</h3>
+        <p class="project-card__desc">Oferty, posty i maile zjadają Ci godziny co tydzień? Gotowe narzędzie AI robi to za Ciebie, w Twoim stylu.</p>
+        <div class="project-card__meta">Zobacz jak</div>
+      </a>
+      <a href="uslugi-szkolenia.html" class="project-card service-card">
+        <h3 class="project-card__title">Szkolenia</h3>
+        <p class="project-card__desc">Zespół słyszał o AI, ale nikt nie wie, co z tym zrobić? Warsztat na Waszych prawdziwych zadaniach.</p>
+        <div class="project-card__meta">Zobacz jak</div>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -350,7 +394,7 @@
   <div class="container">
     <span class="section-eyebrow">Zacznij tutaj</span>
     <h2 class="section-title">Twój klient z 23:00 <em>nie będzie czekał.</em></h2>
-    <p class="section-sub">Powiedz asystentowi na tej stronie, jak dziś wygląda Twoja strona — kliknij złoty przycisk w rogu i po prostu mów. Albo zarezerwuj 15 minut rozmowy ze mną: powiem Ci wprost, czy potrzebujesz nowej strony, czy wystarczy dodatek do obecnej.</p>
+    <p class="section-sub">Zarezerwuj 15 minut rozmowy ze mną: powiem Ci wprost, czy potrzebujesz nowej strony, czy wystarczy dodatek do obecnej. Za darmo, bez slajdów i bez zobowiązań.</p>
     <div class="page-hero__actions">
       <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="btn-amber">Zarezerwuj 15 minut</a>
       <a href="kontakt.html" class="btn-outline-amber">Napisz do mnie</a>
@@ -389,9 +433,9 @@
       <div class="footer__col">
         <h4>Sklep</h4>
         <ul>
-          <li><a href="https://konsultacja.muszynski.online" target="_blank">Konsultacja 30 min</a></li>
+          <li><a href="https://konsultacja.muszynski.online" target="_blank">Konsultacja diagnostyczna · 60 min</a></li>
           <li><a href="https://audyt.muszynski.online" target="_blank">Audyt strony</a></li>
-          <li><a href="https://architekai.muszynski.online" target="_blank">AI OS dla firm</a></li>
+          <li><a href="https://architekai.muszynski.online" target="_blank">Wdrożenie AI pod klucz</a></li>
         </ul>
       </div>
     </div>

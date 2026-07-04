@@ -9,12 +9,12 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Person","@id":"https://spotkanie.muszynski.online/#piotr","name":"Piotr Muszyński","jobTitle":"AI Architect dla MŚP","description":"Buduję strony, marki osobiste i agentów AI dla małych i średnich firm.","image":"https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png","email":"kontakt@muszynski.online","telephone":"+4915203058540","url":"https://muszynski.online","address":{"@type":"PostalAddress","streetAddress":"Pestalozzistraße 25","postalCode":"22305","addressLocality":"Hamburg","addressCountry":"DE"},"knowsAbout":["sztuczna inteligencja dla MŚP","strony internetowe","marka osobista","automatyzacja pracy","agenci AI"],"sameAs":["https://www.linkedin.com/in/piotr-muszynski-47aa8a2a6/","https://www.youtube.com/@Muszynskionline","https://www.instagram.com/muszynski.online/","https://muszynski.online"]},
-{"@type":"ProfessionalService","@id":"https://spotkanie.muszynski.online/#service","name":"Muszyński.online — AI Architect dla MŚP","url":"https://spotkanie.muszynski.online","image":"https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png","description":"Strony, marki osobiste i agenci AI dla małych i średnich firm. Bez kursów na pół roku, bez agencji na pół roku.","founder":{"@id":"https://spotkanie.muszynski.online/#piotr"},"areaServed":["PL","DE","AT","CH"],"availableLanguage":["pl","de","en"],"priceRange":"€€","address":{"@type":"PostalAddress","addressLocality":"Hamburg","addressCountry":"DE"}},
+{"@type":"ProfessionalService","@id":"https://spotkanie.muszynski.online/#service","name":"Muszyński.online — AI Architect dla MŚP","url":"https://spotkanie.muszynski.online","image":"https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png","description":"Strony, marki osobiste i agenci AI dla małych i średnich firm. Bez kursu na pół roku, bez agencji za tysiące euro.","founder":{"@id":"https://spotkanie.muszynski.online/#piotr"},"areaServed":["PL","DE","AT","CH"],"availableLanguage":["pl","de","en"],"priceRange":"€€","address":{"@type":"PostalAddress","addressLocality":"Hamburg","addressCountry":"DE"}},
 {"@type":"WebSite","@id":"https://spotkanie.muszynski.online/#website","url":"https://spotkanie.muszynski.online","name":"Piotr Muszyński — Zaproszenie","inLanguage":"pl","publisher":{"@id":"https://spotkanie.muszynski.online/#piotr"}},
 {"@type":"WebPage","@id":"https://spotkanie.muszynski.online/#webpage","url":"https://spotkanie.muszynski.online/","name":"Zaproszenie — Piotr Muszyński · 15 minut, bez sprzedaży","isPartOf":{"@id":"https://spotkanie.muszynski.online/#website"},"about":{"@id":"https://spotkanie.muszynski.online/#piotr"},"inLanguage":"pl"}
 ]}
 </script>
-<meta name="description" content="Zaproszenie do 15-minutowej rozmowy. Bez slajdów, bez handlu. Zobacz co zbudowałem dla siebie i pierwszych klientów — i powiedz nad czym sam pracujesz.">
+<meta name="description" content="Zaproszenie do 15-minutowej rozmowy. Bez slajdów, bez handlu. Zobacz co zbudowałem dla siebie i pierwszych klientów. I powiedz, nad czym sam pracujesz.">
 <meta property="og:title" content="Zaproszenie — Piotr Muszyński">
 <meta property="og:description" content="15 minut. Bez sprzedaży. Po prostu pogadać o tym, co budujesz.">
 <meta property="og:type" content="website">
@@ -39,7 +39,7 @@
     --bg-card: #16110b;
     --text-main: #f5f0e8;
     --text-mute: rgba(245, 240, 232, 0.65);
-    --text-dim: rgba(245, 240, 232, 0.4);
+    --text-dim: rgba(245, 240, 232, 0.55);
     --border-soft: rgba(212, 137, 10, 0.15);
   }
 
@@ -587,7 +587,30 @@
     color: var(--bg-base);
     font-weight: 700;
   }
-  .project-card__badge--progress { background: rgba(212, 137, 10, 0.2); color: var(--gold); border: 1px solid var(--gold); }
+  /* LIVE / Aktywny — pulsing dot + breathing glow */
+  .project-card__badge--live { display: inline-flex; align-items: center; gap: 6px; padding-left: 9px; background: #e0342c; color: #fff; animation: badgeGlow 2.4s ease-in-out infinite; }
+  .project-card__badge--live::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #fff; flex-shrink: 0; animation: liveDot 1.6s ease-out infinite; }
+  @keyframes liveDot {
+    0%   { box-shadow: 0 0 0 0 rgba(255,255,255,0.85); }
+    70%  { box-shadow: 0 0 0 6px rgba(255,255,255,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+  }
+  @keyframes badgeGlow {
+    0%,100% { box-shadow: 0 0 5px 0 rgba(224,52,44,0.5); }
+    50%     { box-shadow: 0 0 16px 3px rgba(224,52,44,0.95); }
+  }
+  /* PRZEDSPRZEDAŻ — shimmering gold sweep */
+  .project-card__badge--preorder { overflow: hidden; background: linear-gradient(100deg, #c47e09 0%, #f0bb45 48%, #c47e09 92%); box-shadow: 0 0 12px rgba(240,187,69,0.45); }
+  .project-card__badge--preorder::after { content: ''; position: absolute; top: 0; left: 0; width: 55%; height: 100%; background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,0.8) 50%, transparent 100%); transform: translateX(-220%); animation: badgeShimmer 2.8s ease-in-out infinite; }
+  @keyframes badgeShimmer { 0% { transform: translateX(-220%); } 55%,100% { transform: translateX(360%); } }
+  /* W TRAKCIE — animated progress bar */
+  .project-card__badge--progress { background: rgba(212, 137, 10, 0.2); color: var(--gold); border: 1px solid var(--gold); overflow: hidden; padding-bottom: 7px; }
+  .project-card__badge--progress::after { content: ''; position: absolute; left: 0; bottom: 0; height: 3px; width: 80%; background: var(--gold); box-shadow: 0 0 6px rgba(212,137,10,0.8); animation: progFill 2.6s ease-in-out infinite; }
+  @keyframes progFill { 0% { width: 0; } 55%,100% { width: 80%; } }
+  @media (prefers-reduced-motion: reduce) {
+    .project-card__badge--live, .project-card__badge--live::before, .project-card__badge--preorder::after, .project-card__badge--progress::after { animation: none; }
+    .project-card__badge--progress::after { width: 80%; }
+  }
   .project-card__body { padding: 20px 22px 24px; }
   .project-card__title {
     font-size: 15px; font-weight: 700;
@@ -889,6 +912,13 @@
     .testimonial, .testimonial::before, .testimonial::after { transition: none; }
   }
 
+  /* ==================== CTA ==================== */
+  .cta-section { padding: 110px 0; background: radial-gradient(ellipse at center, rgba(212, 137, 10, 0.12), transparent 65%), var(--bg-deep); border-top: 1px solid var(--border-soft); text-align: center; }
+  .cta-section .container { max-width: 720px; }
+  .cta-section .section-title { margin-bottom: 18px; }
+  .cta-section .section-sub { margin-bottom: 36px; }
+  .cta-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; }
+
   /* ==================== FOOTER ==================== */
   .footer {
     background: #0a0705;
@@ -987,12 +1017,12 @@
 
   <div class="hero-cine__inner">
     <div class="hero-cine__copy">
-      <span class="hero-cine__eyebrow">SPOTKAJ. POZNAJ. <span>ZADECYDUJ.</span></span>
+      <span class="hero-cine__eyebrow">POZNAJMY SIĘ. <span>POTEM ZDECYDUJESZ.</span></span>
       <h1 class="hero-cine__title">
         Zostaw mi piętnaście minut.
         <span class="hero-cine__title-script">Resztę robię sam.</span>
       </h1>
-      <p class="hero-cine__sub">Pomagam właścicielom małych i średnich firm zarabiać więcej, pracować mniej i wykorzystać AI tam, gdzie ma sens. Bez kursów na pół roku, bez agencji na pół roku, bez "to skomplikowane".</p>
+      <p class="hero-cine__sub">Pomagam właścicielom małych i średnich firm zarabiać więcej, pracować mniej i wykorzystać AI tam, gdzie ma sens. Bez kursu na pół roku, bez agencji za tysiące euro, bez «to skomplikowane».</p>
       <div class="hero-cine__actions">
         <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="btn-amber">Zarezerwuj 15 minut</a>
         <a href="#projekty" class="btn-outline-amber">Zobacz portfolio</a>
@@ -1007,8 +1037,8 @@
           <span class="av" title="Artur Szpakowski · BauKalk"></span>
         </div>
         <div class="hero-cine__proof-text">
-          <strong>Nie pracuję sam.</strong><br>
-          3 własne marki i sieć ludzi, z którymi buduję — partnerzy i pierwsi klienci.
+          <strong>Za każdym projektem stoi sieć:</strong><br>
+          3 własne marki, partnerzy i pierwsi klienci, z którymi buduję.
         </div>
       </div>
     </div>
@@ -1020,7 +1050,7 @@
   <div class="container">
     <div class="pillars-grid">
 
-      <a href="projekty.html#strony" class="pillar">
+      <a href="uslugi-strony.html" class="pillar">
         <span class="pillar__num">01</span>
         <div class="pillar__icon-wrap">
           <div class="pillar__icon">
@@ -1029,7 +1059,7 @@
         </div>
         <h3 class="pillar__title">Strony, które sprzedają</h3>
         <p class="pillar__desc">Nie wizytówki z 2015 roku. Strony, które zbierają kontakty, sprzedają usługi i pracują, gdy Ty śpisz.</p>
-        <span class="pillar__cta">Zobacz przykłady</span>
+        <span class="pillar__cta">Zobacz jak</span>
       </a>
 
       <a href="projekty.html#klienci" class="pillar">
@@ -1044,7 +1074,7 @@
         <span class="pillar__cta">Zobacz przykłady</span>
       </a>
 
-      <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="pillar">
+      <a href="uslugi-moduly.html" class="pillar">
         <span class="pillar__num">03</span>
         <div class="pillar__icon-wrap">
           <div class="pillar__icon">
@@ -1053,7 +1083,7 @@
         </div>
         <h3 class="pillar__title">Asystent AI w firmie</h3>
         <p class="pillar__desc">Odpowiada klientom 24/7, pisze oferty, robi notatki ze spotkań. Tak jakby ktoś u Ciebie pracował, tylko nie chodzi na obiad.</p>
-        <span class="pillar__cta">Porozmawiaj 15 min</span>
+        <span class="pillar__cta">Zobacz jak</span>
       </a>
 
       <a href="https://konsultacja.muszynski.online" target="_blank" class="pillar">
@@ -1076,11 +1106,11 @@
           </div>
         </div>
         <h3 class="pillar__title">Zdjęcia i filmy</h3>
-        <p class="pillar__desc">Profesjonalne zdjęcia produktowe i krótkie filmy reklamowe — bez fotografa, bez planu zdjęciowego, bez 3000 zł za sesję.</p>
+        <p class="pillar__desc">Profesjonalne zdjęcia produktowe i krótkie filmy reklamowe: bez fotografa, bez planu zdjęciowego, bez 3000 zł za sesję.</p>
         <span class="pillar__cta">Zobacz portfolio</span>
       </a>
 
-      <a href="o-mnie.html" class="pillar">
+      <a href="uslugi-konsultacje.html" class="pillar">
         <span class="pillar__num">06</span>
         <div class="pillar__icon-wrap">
           <div class="pillar__icon">
@@ -1089,7 +1119,7 @@
         </div>
         <h3 class="pillar__title">Porządek w firmie</h3>
         <p class="pillar__desc">Najpierw układamy co, gdzie, kiedy i dla kogo. Dopiero potem podpinamy AI. Bez tego nawet najlepszy program to zabawka.</p>
-        <span class="pillar__cta">Moja historia</span>
+        <span class="pillar__cta">Zobacz jak</span>
       </a>
 
     </div>
@@ -1112,7 +1142,7 @@
 
         <a href="https://muszynski.online" target="_blank" class="project-card">
           <div class="project-card__thumb" style="background-image: url('https://muszynski-media.gumlet.io/muszynski-online/brand-thumb-mo.png?w=700&format=auto&quality=85');">
-            <span class="project-card__badge">Aktywny</span>
+            <span class="project-card__badge project-card__badge--live">Aktywny</span>
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">Muszyński.online</h3>
@@ -1123,11 +1153,11 @@
 
         <a href="https://commonroots.life" target="_blank" class="project-card">
           <div class="project-card__thumb" style="background-image: url('https://muszynski-media.gumlet.io/muszynski-online/brand-thumb-cr.png?w=700&format=auto&quality=85');">
-            <span class="project-card__badge">Preorder</span>
+            <span class="project-card__badge project-card__badge--preorder">Przedsprzedaż</span>
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">Common Roots</h3>
-            <p class="project-card__desc">Marka o zdrowiu, pracy i rozwoju — w sześciu językach, z własnym portalem klienta i brandingiem.</p>
+            <p class="project-card__desc">Marka o zdrowiu, pracy i rozwoju: w sześciu językach, z własnym portalem klienta i brandingiem.</p>
             <div class="project-card__meta">Z Marcinem Koreckim &nbsp;→</div>
           </div>
         </a>
@@ -1154,27 +1184,27 @@
     <div style="max-width: 660px; margin: 0 auto 44px; text-align: center;">
       <span class="section-eyebrow">Gotowe od ręki</span>
       <h2 class="section-title">Nie wszystko wymaga <em>projektu.</em></h2>
-      <p class="section-sub">Część rzeczy bierzesz od ręki — działają od dziś, bez wdrożenia i bez czekania. Dwa produkty, które sam zbudowałem i sprzedaję pod swoją marką.</p>
+      <p class="section-sub">Część rzeczy bierzesz od ręki: działają od dziś, bez wdrożenia i bez czekania. Dwa produkty, które sam zbudowałem i sprzedaję pod swoją marką.</p>
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px; max-width: 880px; margin: 0 auto;">
-      <a href="https://fabryka.muszynski.online" target="_blank" style="display: block; background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 14px; padding: 30px 28px; text-decoration: none; transition: border-color .25s, transform .25s;" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--border-soft)';this.style.transform='none'">
-        <div style="font-family: 'Fraunces', serif; font-size: 21px; font-weight: 700; color: var(--text-main); margin-bottom: 6px;">Fabryka Treści</div>
+      <a href="https://fabrykatresci.eu" target="_blank" class="project-card" style="padding: 30px 28px;">
+        <div style="font-family: 'Fraunces', serif; font-size: 21px; font-weight: 600; color: var(--text-main); margin-bottom: 6px;">Fabryka Treści</div>
         <div style="font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--gold); font-weight: 600; margin-bottom: 14px;">Codzienne posty na social</div>
-        <p style="font-size: 14px; line-height: 1.65; color: var(--text-mute); margin: 0 0 18px;">Gotowe posty na Facebooka, Instagrama i LinkedIna — pisane w głosie Twojej marki, po polsku, pod okiem człowieka. Akceptujesz w 30 sekund z telefonu.</p>
-        <div style="font-size: 13.5px; color: var(--text-main); font-weight: 600;">Od 99 €/mc — zamiast 800–2500 € za agencję.</div>
+        <p style="font-size: 14px; line-height: 1.65; color: var(--text-mute); margin: 0 0 18px;">Gotowe posty na Facebooka, Instagrama i LinkedIna, pisane w głosie Twojej marki, po polsku, pod okiem człowieka. Akceptujesz w 30 sekund z telefonu.</p>
+        <div style="font-size: 13.5px; color: var(--text-main); font-weight: 600;">Od 300 €/mc — zamiast 800–2500 € za agencję.</div>
         <div style="font-size: 12.5px; color: var(--text-dim); margin-top: 4px;">Średnio 5 godzin tygodniowo mniej pisania.</div>
-        <div style="font-size: 13px; color: var(--gold); font-weight: 600; margin-top: 16px;">fabryka.muszynski.online →</div>
+        <div style="font-size: 13px; color: var(--gold); font-weight: 600; margin-top: 16px;">fabrykatresci.eu →</div>
       </a>
-      <a href="https://claudepack.tech" target="_blank" style="display: block; background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 14px; padding: 30px 28px; text-decoration: none; transition: border-color .25s, transform .25s;" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--border-soft)';this.style.transform='none'">
-        <div style="font-family: 'Fraunces', serif; font-size: 21px; font-weight: 700; color: var(--text-main); margin-bottom: 6px;">Claude Pack</div>
+      <a href="https://claudepack.tech" target="_blank" class="project-card" style="padding: 30px 28px;">
+        <div style="font-family: 'Fraunces', serif; font-size: 21px; font-weight: 600; color: var(--text-main); margin-bottom: 6px;">Claude Pack</div>
         <div style="font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--gold); font-weight: 600; margin-bottom: 14px;">Gotowe umiejętności AI</div>
-        <p style="font-size: 14px; line-height: 1.65; color: var(--text-mute); margin: 0 0 18px;">Nasze gotowe umiejętności AI spakowane do kupienia — wrzucasz do swojego asystenta i od razu działa. To, co sami zbudowaliśmy, gotowe dla Ciebie.</p>
-        <div style="font-size: 13.5px; color: var(--text-main); font-weight: 600;">17 umiejętności od 39 € — działają od ręki.</div>
+        <p style="font-size: 14px; line-height: 1.65; color: var(--text-mute); margin: 0 0 18px;">Nasze gotowe umiejętności AI spakowane do kupienia. Wrzucasz do swojego asystenta i od razu działa. To, co sami zbudowaliśmy, gotowe dla Ciebie.</p>
+        <div style="font-size: 13.5px; color: var(--text-main); font-weight: 600;">17 gotowych umiejętności — wgrywasz do swojego asystenta i działa od ręki.</div>
         <div style="font-size: 12.5px; color: var(--text-dim); margin-top: 4px;">Bez kodowania, bez kursu na pół roku.</div>
         <div style="font-size: 13px; color: var(--gold); font-weight: 600; margin-top: 16px;">claudepack.tech →</div>
       </a>
     </div>
-    <p style="text-align: center; font-size: 13.5px; color: var(--text-dim); margin: 28px auto 0; max-width: 620px;">Nie wiesz, co pasuje do Ciebie? Najpierw bezpłatna rozmowa 15 minut — podpowiem, czy lepszy gotowy produkt, czy strona szyta na miarę. Zero kosztu, zero zobowiązań.</p>
+    <p style="text-align: center; font-size: 13.5px; color: var(--text-dim); margin: 28px auto 0; max-width: 620px;">Nie wiesz, co pasuje do Ciebie? Najpierw bezpłatna rozmowa 15 minut: podpowiem, czy lepszy gotowy produkt, czy strona szyta na miarę. Zero kosztu, zero zobowiązań.</p>
   </div>
 </section>
 
@@ -1186,13 +1216,13 @@
       <div>
         <span class="section-eyebrow">Dlaczego ja</span>
         <h2 class="section-title">Rozmawiam z Tobą. <em>Nie sprzedaję kursu.</em></h2>
-        <p class="section-sub">Nie obiecuję pasywnego dochodu w 90 dni. Nie pokazuję zdjęć z drogimi samochodami. Pokazuję strony, marki i konkretne rozwiązania, które dziś przynoszą klientów — i opowiadam, jak każde zbudowałem.</p>
+        <p class="section-sub">Nie obiecuję pasywnego dochodu w 90 dni. Nie pokazuję zdjęć z drogimi samochodami. Pokazuję strony, marki i konkretne rozwiązania, które dziś przynoszą klientów. I opowiadam, jak każde zbudowałem.</p>
         <p class="section-sub">Pierwsza rozmowa kosztuje 15 minut Twojego czasu. Nic więcej.</p>
       </div>
 
       <div class="stats-grid">
         <div class="stat"><div class="stat__num">3</div><div class="stat__label">Własne marki</div></div>
-        <div class="stat"><div class="stat__num">6<span style="font-size:24px">+</span></div><div class="stat__label">Stron live</div></div>
+        <div class="stat"><div class="stat__num">6</div><div class="stat__label">Działających stron</div></div>
         <div class="stat"><div class="stat__num">2</div><div class="stat__label">Klienci brandowi</div></div>
         <div class="stat"><div class="stat__num">15<span style="font-size:18px;margin-left:4px">min</span></div><div class="stat__label">Na poznanie się</div></div>
         <div class="stat"><div class="stat__num">0<span style="font-size:18px;margin-left:4px">€</span></div><div class="stat__label">Za rozmowę</div></div>
@@ -1210,7 +1240,7 @@
 
       <div>
         <span class="section-eyebrow">Wspólnie</span>
-        <h2 class="section-title">Robimy razem. <em>Krok po kroku.</em></h2>
+        <h2 class="section-title">Jak wygląda <em>wspólna praca.</em></h2>
         <p class="section-sub">Każda zmiana w Twojej firmie to wspólna praca. Ty wiesz najlepiej, jak działa Twój biznes. Ja wiem, jak wykorzystać AI, żeby działał szybciej.</p>
 
         <ul class="together-list">
@@ -1228,7 +1258,7 @@
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <div><strong>Sprawdzamy co tydzień, nie raz na kwartał</strong><span>Co tydzień patrzymy, co działa, co nie — i poprawiamy, póki nie zacznie przynosić klientów.</span></div>
+            <div><strong>Sprawdzamy co tydzień, nie raz na kwartał</strong><span>Co tydzień patrzymy, co działa, a co nie. Poprawiamy, póki nie zacznie przynosić klientów.</span></div>
           </li>
         </ul>
       </div>
@@ -1250,7 +1280,7 @@
     <div style="text-align: center; max-width: 720px; margin: 0 auto;">
       <span class="section-eyebrow">Co mówią</span>
       <h2 class="section-title">Słowa <em>z bliska</em>.</h2>
-      <p class="section-sub">Partnerzy, z którymi buduję marki, i pierwsi klienci, dla których zbudowałem markę osobistą — ich własnymi słowami.</p>
+      <p class="section-sub">Partnerzy, z którymi buduję marki, i pierwsi klienci, dla których zbudowałem markę osobistą. Ich własnymi słowami.</p>
     </div>
 
     <div class="testimonials-grid">
@@ -1331,6 +1361,19 @@
   </div>
 </section>
 
+<!-- ==================== CTA ==================== -->
+<section class="cta-section">
+  <div class="container">
+    <span class="section-eyebrow">Następny krok</span>
+    <h2 class="section-title">Porozmawiajmy <em>15 minut.</em></h2>
+    <p class="section-sub">Opowiadasz, nad czym pracujesz. Ja mówię, co bym zrobił na Twoim miejscu. Bez slajdów, bez zobowiązań.</p>
+    <div class="cta-actions">
+      <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="btn-amber">Zarezerwuj 15 minut</a>
+      <a href="uslugi.html" class="btn-outline-amber">Zobacz, jak pracuję</a>
+    </div>
+  </div>
+</section>
+
 <!-- ==================== FOOTER ==================== -->
 <footer class="footer">
   <div class="container">
@@ -1366,9 +1409,9 @@
       <div class="footer__col">
         <h4>Sklep</h4>
         <ul>
-          <li><a href="https://konsultacja.muszynski.online" target="_blank">Konsultacja 30 min</a></li>
+          <li><a href="https://konsultacja.muszynski.online" target="_blank">Konsultacja diagnostyczna · 60 min</a></li>
           <li><a href="https://audyt.muszynski.online" target="_blank">Audyt strony</a></li>
-          <li><a href="https://architekai.muszynski.online" target="_blank">AI OS dla firm</a></li>
+          <li><a href="https://architekai.muszynski.online" target="_blank">Wdrożenie AI pod klucz</a></li>
         </ul>
       </div>
 

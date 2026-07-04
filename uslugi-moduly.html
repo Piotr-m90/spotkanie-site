@@ -7,7 +7,7 @@
 <link rel="canonical" href="https://spotkanie.muszynski.online/uslugi-moduly.html">
 <meta property="og:url" content="https://spotkanie.muszynski.online/uslugi-moduly.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png">
+<meta name="twitter:image" content="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png?w=1200&h=630&mode=crop&format=auto">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"WebPage","@id":"https://spotkanie.muszynski.online/uslugi-moduly.html#webpage","url":"https://spotkanie.muszynski.online/uslugi-moduly.html","name":"Moduły AI — Piotr Muszyński","inLanguage":"pl","about":{"@id":"https://spotkanie.muszynski.online/#piotr"}},
@@ -19,7 +19,9 @@
 <meta property="og:title" content="Moduły AI — Piotr Muszyński">
 <meta property="og:description" content="Oddajesz jeden proces, widzisz efekt — dopiero potem dokładasz kolejny. Gadająca strona, filmy z nagrań z terenu, treści i grafiki.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png">
+<meta property="og:image" content="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png?w=1200&h=630&mode=crop&format=auto">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dyw1pi3nt/image/upload/q_auto/f_auto/v1776859674/sygnet_e5yq6n.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +30,7 @@
   :root {
     --gold: #d4890a; --gold-light: #f0a020; --gold-soft: rgba(212, 137, 10, 0.2);
     --bg-base: #0d0a08; --bg-deep: #050402; --bg-card: #16110b;
-    --text-main: #f5f0e8; --text-mute: rgba(245, 240, 232, 0.65); --text-dim: rgba(245, 240, 232, 0.4);
+    --text-main: #f5f0e8; --text-mute: rgba(245, 240, 232, 0.65); --text-dim: rgba(245, 240, 232, 0.55);
     --border-soft: rgba(212, 137, 10, 0.15);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -127,11 +129,20 @@
   .principle__text em { color: var(--gold); font-style: italic; }
 
   /* Cena (minimal, page-specific) */
-  .price-section { padding: 90px 0; background: var(--bg-deep); border-top: 1px solid var(--border-soft); }
+  .price-section { padding: 100px 0; background: var(--bg-deep); border-top: 1px solid var(--border-soft); }
   .price-section .container { max-width: 720px; text-align: center; }
   .price-box { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 10px; padding: 40px 36px; margin-top: 36px; }
   .price-box__amount { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: clamp(34px, 4vw, 46px); color: var(--gold); line-height: 1.1; margin-bottom: 12px; }
   .price-box__desc { font-size: 14.5px; line-height: 1.7; color: var(--text-mute); }
+
+  /* Inne usługi (cross-sell) */
+  .xsell-section { padding: 70px 0; background: var(--bg-base); border-top: 1px solid var(--border-soft); }
+  .xsell-section .services-grid { grid-template-columns: repeat(3, 1fr); margin-top: 36px; }
+  @media (max-width: 980px) { .xsell-section .services-grid { grid-template-columns: 1fr; } }
+  .service-card--compact { padding: 26px 24px 22px; }
+  .service-card--compact .project-card__title { font-size: 15px; }
+  .service-card--compact .service-card__problem { font-size: 15px; flex-grow: 1; }
+  .service-card--compact .project-card__meta::after { content: ' →'; }
 
   /* CTA / funnel */
   .cta-section { padding: 110px 0; background: radial-gradient(ellipse at center, rgba(212, 137, 10, 0.12), transparent 65%), var(--bg-deep); border-top: 1px solid var(--border-soft); text-align: center; }
@@ -186,9 +197,9 @@
 <section class="page-hero">
   <div class="container">
     <div class="page-hero__inner">
-      <span class="page-hero__eyebrow">MODUŁY AI · <span>ODDAJESZ JEDEN PROCES, WIDZISZ EFEKT</span></span>
+      <span class="page-hero__eyebrow">USŁUGI · <span>MODUŁY AI</span></span>
       <h1 class="page-hero__title">Ile godzin tygodniowo zjada Ci robota,<span class="page-hero__title-script">którą dawno mógłbyś oddać?</span></h1>
-      <p class="page-hero__sub">Pisanie postów. Odpowiadanie na te same pytania klientów. Opisy, oferty, grafiki. Nikt Ci za to nie płaci, a potrafi pochłonąć <strong>5–10 godzin tygodniowo</strong>. Moduł to gotowa umiejętność, którą instaluję w Twojej firmie — oddajesz jeden taki proces i pierwszy efekt widzisz w 7 dni.</p>
+      <p class="page-hero__sub">Pisanie postów. Odpowiadanie na te same pytania klientów. Opisy, oferty, grafiki. Nikt Ci za to nie płaci, a potrafi pochłonąć <strong>5–10 godzin tygodniowo</strong>. Moduł to gotowa umiejętność, którą instaluję w Twojej firmie. Oddajesz jeden taki proces i pierwszy efekt widzisz w 7 dni.</p>
       <div class="page-hero__actions">
         <a href="#moduly" class="btn-amber">Zobacz przykłady modułów</a>
         <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="btn-outline-amber">Zarezerwuj 15 minut</a>
@@ -203,7 +214,7 @@
     <div style="text-align: center; max-width: 760px; margin: 0 auto;">
       <span class="section-eyebrow">Jak klocki</span>
       <h2 class="section-title">Jeden moduł. <em>Jeden problem z głowy.</em></h2>
-      <p class="section-sub">Nie kupujesz wielkiego wdrożenia na pół roku. Moduł wpinam w Twoją firmę pojedynczo, jak klocek: oddajesz JEDEN proces, widzisz efekt na własne oczy — i dopiero wtedy decydujesz, czy dokładasz kolejny.</p>
+      <p class="section-sub">Nie kupujesz wielkiego wdrożenia na pół roku. Moduł wpinam w Twoją firmę pojedynczo, jak klocek: oddajesz JEDEN proces, widzisz efekt na własne oczy. Dopiero wtedy decydujesz, czy dokładasz kolejny.</p>
     </div>
 
     <div class="services-grid">
@@ -213,7 +224,7 @@
           <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 10h.01M12 10h.01M16 10h.01" stroke-linecap="round"/><path d="M12 19.5v2" stroke-linecap="round"/></svg></div>
           <h3 class="project-card__title">Gadająca strona</h3>
         </div>
-        <p class="service-card__problem">Klienci piszą wieczorami i w weekendy — <span>a Ty odpisujesz o 23:00 albo wcale</span>.</p>
+        <p class="service-card__problem">Klienci piszą wieczorami i w weekendy, <span>a Ty odpisujesz o 23:00 albo wcale</span>.</p>
         <p class="project-card__desc">Twoja strona sama rozmawia z klientem i odbiera pytania 24 godziny na dobę, 7 dni w tygodniu. Rano dostajesz gotową listę kontaktów zamiast stosu zaległych wiadomości.</p>
         <div class="project-card__meta">Zobacz w katalogu</div>
       </a>
@@ -224,7 +235,7 @@
           <h3 class="project-card__title">Reklama z materiału z terenu</h3>
         </div>
         <p class="service-card__problem">Masz telefon pełen nagrań z budowy czy warsztatu, <span>a w internecie zero</span>.</p>
-        <p class="project-card__desc">Wysyłasz 1 nagranie z terenu — odbierasz 2–3 gotowe filmy reklamowe z napisami i lektorem. Bez kamerzysty, bez montażysty, bez wolnych sobót przed komputerem.</p>
+        <p class="project-card__desc">Wysyłasz 1 nagranie z terenu, odbierasz 2–3 gotowe filmy reklamowe z napisami i lektorem. Bez kamerzysty, bez montażysty, bez wolnych sobót przed komputerem.</p>
         <div class="project-card__meta">Zobacz w katalogu</div>
       </a>
 
@@ -233,8 +244,8 @@
           <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19l7-7 3 3-7 7-3-3z" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 2l7.586 7.586" stroke-linecap="round"/><circle cx="11" cy="11" r="2"/></svg></div>
           <h3 class="project-card__title">Treści i grafiki</h3>
         </div>
-        <p class="service-card__problem">Posty i grafiki <span>zjadają Ci 4–5 godzin tygodniowo</span> — albo nie powstają wcale.</p>
-        <p class="project-card__desc">Moduł pisze posty i przygotowuje grafiki w Twoim stylu i po polsku. Ty tylko zatwierdzasz — 15 minut przeglądu zamiast całego wieczoru przy klawiaturze.</p>
+        <p class="service-card__problem">Posty i grafiki <span>zjadają Ci 4–5 godzin tygodniowo</span> albo nie powstają wcale.</p>
+        <p class="project-card__desc">Moduł pisze posty i przygotowuje grafiki w Twoim stylu i po polsku. Ty tylko zatwierdzasz: 15 minut przeglądu zamiast całego wieczoru przy klawiaturze.</p>
         <div class="project-card__meta">Zobacz w katalogu</div>
       </a>
 
@@ -244,7 +255,7 @@
           <h3 class="project-card__title">Cięcie filmów</h3>
         </div>
         <p class="service-card__problem">Godzinne nagranie leży na dysku, <span>bo nie masz kiedy go pociąć</span>.</p>
-        <p class="project-card__desc">Z jednego dłuższego nagrania powstaje 5–10 krótkich filmów gotowych na Facebooka, Instagram i TikToka. Nagrywasz raz — materiał pracuje za Ciebie przez miesiąc.</p>
+        <p class="project-card__desc">Z jednego dłuższego nagrania powstaje 5–10 krótkich filmów gotowych na Facebooka, Instagram i TikToka. Nagrywasz raz, a materiał pracuje za Ciebie przez miesiąc.</p>
         <div class="project-card__meta">Zobacz w katalogu</div>
       </a>
 
@@ -259,8 +270,8 @@
   <div class="container">
     <div style="text-align: center; max-width: 720px; margin: 0 auto;">
       <span class="section-eyebrow">Jak to działa</span>
-      <h2 class="section-title">Trzy kroki. <em>Zero ryzyka na start.</em></h2>
-      <p class="section-sub">Najgorsze, co możesz zrobić, to kupić wszystko naraz. Dlatego moduły działają odwrotnie — mały krok, szybki efekt, potem decyzja.</p>
+      <h2 class="section-title">Od pierwszej rozmowy <em>do działającego modułu.</em></h2>
+      <p class="section-sub">Najgorsze, co możesz zrobić, to kupić wszystko naraz. Dlatego moduły działają odwrotnie: mały krok, szybki efekt, potem decyzja.</p>
     </div>
 
     <div class="principles-list">
@@ -268,7 +279,7 @@
         <div class="principle__num">01</div>
         <div>
           <h3 class="principle__title"><small>Wybór</small>Wybierasz jeden proces, który boli najbardziej</h3>
-          <p class="principle__text">Nie musisz wiedzieć, „co potrafi AI". Wystarczy, że wiesz, co Cię wkurza — a jeśli nie wiesz, od czego zacząć, <em>ustalimy to w 15 minut rozmowy</em>.</p>
+          <p class="principle__text">Nie musisz wiedzieć, „co potrafi AI". Wystarczy, że wiesz, co Cię wkurza. A jeśli nie wiesz, od czego zacząć, <em>ustalimy to w 15 minut rozmowy</em>.</p>
         </div>
       </div>
       <div class="principle">
@@ -293,10 +304,37 @@
 <section class="price-section">
   <div class="container">
     <span class="section-eyebrow">Ile to kosztuje</span>
-    <h2 class="section-title">Jedna cena. <em>Jeden proces z głowy.</em></h2>
+    <h2 class="section-title">Cena, którą znasz <em>przed startem.</em></h2>
     <div class="price-box">
       <div class="price-box__amount">od 150€ za moduł</div>
-      <p class="price-box__desc">Pod klucz — instalacja, dopasowanie do Twojej firmy i instrukcja po polsku w cenie. Bez abonamentu na start i bez wdrożenia na pół roku. Wyjątek: gadająca strona, która pracuje dla Ciebie co miesiąc — 250€ za uruchomienie + 120€ miesięcznie za opiekę.</p>
+      <p class="price-box__desc">Pod klucz: instalacja, dopasowanie do Twojej firmy i instrukcja po polsku w cenie. Bez abonamentu na start i bez wdrożenia na pół roku. Wyjątek: gadająca strona, która pracuje dla Ciebie co miesiąc — najpierw audyt Twojej strony z demonstracją (470€), potem wdrożenie pod klucz (1500€) i 120€ miesięcznie za opiekę.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INNE USŁUGI -->
+<section class="xsell-section">
+  <div class="container">
+    <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+      <span class="section-eyebrow">Inne usługi</span>
+      <h2 class="section-title" style="font-size: clamp(26px, 3.4vw, 38px);">Szukasz czegoś <em>innego?</em></h2>
+    </div>
+    <div class="services-grid">
+      <a href="uslugi-konsultacje.html" class="project-card service-card service-card--compact">
+        <h3 class="project-card__title">Konsultacje</h3>
+        <p class="service-card__problem">Czujesz, że coś zjada Ci czas i pieniądze, ale <span>nie wiesz, od czego zacząć</span>.</p>
+        <div class="project-card__meta">Zobacz jak</div>
+      </a>
+      <a href="uslugi-strony.html" class="project-card service-card service-card--compact">
+        <h3 class="project-card__title">Strony internetowe</h3>
+        <p class="service-card__problem">Twoja strona wisi w internecie od lat i <span>nie przynosi ani jednego klienta</span> miesięcznie.</p>
+        <div class="project-card__meta">Zobacz jak</div>
+      </a>
+      <a href="uslugi-szkolenia.html" class="project-card service-card service-card--compact">
+        <h3 class="project-card__title">Szkolenia</h3>
+        <p class="service-card__problem">Wszyscy w firmie słyszeli o AI, ale <span>nikt nie wie, co z tym zrobić</span> w Waszej codziennej pracy.</p>
+        <div class="project-card__meta">Zobacz jak</div>
+      </a>
     </div>
   </div>
 </section>
@@ -306,7 +344,7 @@
   <div class="container">
     <span class="section-eyebrow">Zacznij tutaj</span>
     <h2 class="section-title">Nie wiesz, który moduł wybrać? <em>Nie musisz.</em></h2>
-    <p class="section-sub">Powiedz asystentowi na tej stronie, co zjada Ci najwięcej czasu — kliknij złoty przycisk w rogu i po prostu mów. Albo zarezerwuj 15 minut rozmowy ze mną: za darmo, bez slajdów i bez sprzedaży.</p>
+    <p class="section-sub">Powiedz asystentowi głosowemu na tej stronie, co zjada Ci najwięcej czasu. Albo zarezerwuj 15 minut rozmowy ze mną: za darmo, bez slajdów i bez sprzedaży.</p>
     <div class="page-hero__actions">
       <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="btn-amber">Zarezerwuj 15 minut</a>
       <a href="https://moduly.muszynski.online" target="_blank" class="btn-outline-amber">Przejrzyj katalog modułów</a>
@@ -345,9 +383,9 @@
       <div class="footer__col">
         <h4>Sklep</h4>
         <ul>
-          <li><a href="https://konsultacja.muszynski.online" target="_blank">Konsultacja 30 min</a></li>
+          <li><a href="https://konsultacja.muszynski.online" target="_blank">Konsultacja diagnostyczna · 60 min</a></li>
           <li><a href="https://audyt.muszynski.online" target="_blank">Audyt strony</a></li>
-          <li><a href="https://architekai.muszynski.online" target="_blank">AI OS dla firm</a></li>
+          <li><a href="https://architekai.muszynski.online" target="_blank">Wdrożenie AI pod klucz</a></li>
         </ul>
       </div>
     </div>

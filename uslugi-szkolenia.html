@@ -7,7 +7,7 @@
 <link rel="canonical" href="https://spotkanie.muszynski.online/uslugi-szkolenia.html">
 <meta property="og:url" content="https://spotkanie.muszynski.online/uslugi-szkolenia.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png">
+<meta name="twitter:image" content="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png?w=1200&h=630&mode=crop&format=auto">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"WebPage","@id":"https://spotkanie.muszynski.online/uslugi-szkolenia.html#webpage","url":"https://spotkanie.muszynski.online/uslugi-szkolenia.html","name":"Szkolenia z AI — Piotr Muszyński","inLanguage":"pl","about":{"@id":"https://spotkanie.muszynski.online/#piotr"}},
@@ -19,7 +19,9 @@
 <meta property="og:title" content="Szkolenia z AI — Piotr Muszyński">
 <meta property="og:description" content="Nikt w firmie nie używa narzędzi AI, za które płacisz? Warsztat na Waszych prawdziwych zadaniach. Po szkoleniu umiesz to zrobić sam.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png">
+<meta property="og:image" content="https://muszynski-media.gumlet.io/muszynski-online/piotr-hero-marcust.png?w=1200&h=630&mode=crop&format=auto">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dyw1pi3nt/image/upload/q_auto/f_auto/v1776859674/sygnet_e5yq6n.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +30,7 @@
   :root {
     --gold: #d4890a; --gold-light: #f0a020; --gold-soft: rgba(212, 137, 10, 0.2);
     --bg-base: #0d0a08; --bg-deep: #050402; --bg-card: #16110b;
-    --text-main: #f5f0e8; --text-mute: rgba(245, 240, 232, 0.65); --text-dim: rgba(245, 240, 232, 0.4);
+    --text-main: #f5f0e8; --text-mute: rgba(245, 240, 232, 0.65); --text-dim: rgba(245, 240, 232, 0.55);
     --border-soft: rgba(212, 137, 10, 0.15);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -99,6 +101,7 @@
   @media (max-width: 880px) { .services-grid { grid-template-columns: 1fr; } }
   .project-card { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 10px; overflow: hidden; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s; position: relative; display: block; color: inherit; text-decoration: none; }
   .project-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 28px rgba(212,137,10,0.18); }
+  .project-card--static:hover { border-color: rgba(212, 137, 10, 0.35); transform: none; box-shadow: none; }
   .project-card__title { font-size: 17px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; color: var(--text-main); }
   .project-card__desc { font-size: 14px; line-height: 1.65; color: var(--text-mute); margin-bottom: 14px; }
   .project-card__meta { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); font-weight: 600; }
@@ -152,16 +155,25 @@
   /* Page-specific (szkolenia) */
   .topics-section { padding: 100px 0; background: var(--bg-base); border-top: 1px solid var(--border-soft); }
   .services-grid--3 { grid-template-columns: repeat(3, 1fr); }
-  @media (max-width: 1020px) { .services-grid--3 { grid-template-columns: 1fr; } }
+  @media (max-width: 980px) { .services-grid--3 { grid-template-columns: 1fr; } }
   .bridge-section { padding: 90px 0; background: var(--bg-deep); border-top: 1px solid var(--border-soft); text-align: center; }
   .bridge-quote { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: clamp(22px, 3vw, 32px); line-height: 1.45; color: var(--text-main); max-width: 780px; margin: 24px auto 20px; }
   .bridge-quote span { color: var(--gold); }
   .bridge-note { font-size: 14.5px; line-height: 1.7; color: var(--text-mute); max-width: 600px; margin: 0 auto; }
-  .price-section { padding: 90px 0; background: var(--bg-base); border-top: 1px solid var(--border-soft); }
+  .price-section { padding: 100px 0; background: var(--bg-base); border-top: 1px solid var(--border-soft); }
   .price-box { max-width: 680px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 10px; padding: 44px 38px; text-align: center; }
   .price-box .section-title { font-size: clamp(26px, 3.4vw, 38px); }
   .price-box .section-sub { margin-bottom: 26px; }
   @media (max-width: 600px) { .price-box { padding: 34px 22px; } }
+
+  /* Inne usługi (cross-sell) */
+  .xsell-section { padding: 70px 0; background: var(--bg-deep); border-top: 1px solid var(--border-soft); }
+  .xsell-section .services-grid { grid-template-columns: repeat(3, 1fr); margin-top: 36px; }
+  @media (max-width: 980px) { .xsell-section .services-grid { grid-template-columns: 1fr; } }
+  .service-card--compact { padding: 26px 24px 22px; }
+  .service-card--compact .project-card__title { font-size: 15px; }
+  .service-card--compact .service-card__problem { font-size: 15px; flex-grow: 1; }
+  .service-card--compact .project-card__meta::after { content: ' →'; }
 </style>
 </head>
 <body>
@@ -192,7 +204,7 @@
     <div class="page-hero__inner">
       <span class="page-hero__eyebrow">USŁUGI · <span>SZKOLENIA</span></span>
       <h1 class="page-hero__title">Kupiłeś narzędzia AI. Nikt ich nie używa.<span class="page-hero__title-script">Po jednym warsztacie to się zmienia.</span></h1>
-      <p class="page-hero__sub">Płacisz co miesiąc za dostępy, które leżą odłogiem — bo nikt nie pokazał Twoim ludziom, co z nimi zrobić w <strong>Waszej</strong> codziennej pracy. Uczę na Twoich prawdziwych zadaniach, nie na slajdach. A po szkoleniu umiesz to zrobić sam — nie zostajesz ode mnie zależny.</p>
+      <p class="page-hero__sub">Płacisz co miesiąc za dostępy, które leżą odłogiem, bo nikt nie pokazał Twoim ludziom, co z nimi zrobić w <strong>Waszej</strong> codziennej pracy. Uczę na Twoich prawdziwych zadaniach, nie na slajdach: to, co z kursów zbierałbyś przez 20 godzin, masz w godzinę–dwie na swoich przykładach. A po szkoleniu umiesz to zrobić sam. Nie zostajesz zależny ode mnie ani od żadnego pseudo-fachowca.</p>
       <div class="page-hero__actions">
         <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="btn-amber">Zarezerwuj 15 minut</a>
         <a href="#dla-kogo" class="btn-outline-amber">Zobacz, jak to wygląda</a>
@@ -206,13 +218,13 @@
   <div class="container">
     <div style="text-align: center; max-width: 760px; margin: 0 auto;">
       <span class="section-eyebrow">Dla kogo</span>
-      <h2 class="section-title">Dwie sytuacje. <em>Jedno wyjście.</em></h2>
-      <p class="section-sub">Szkolę 1:1 albo małe zespoły do 6 osób — po polsku, na miejscu w Niemczech, Austrii i Szwajcarii albo przez kamerę. Zawsze na Waszych plikach, mailach i klientach.</p>
+      <h2 class="section-title">Szkolę firmy z zespołem <em>i ludzi, którzy zaczynają sami.</em></h2>
+      <p class="section-sub">Szkolę 1:1 albo małe zespoły do 6 osób: po polsku, na miejscu w Niemczech, Austrii i Szwajcarii albo przez kamerę. Zawsze na Waszych plikach, mailach i klientach.</p>
     </div>
 
     <div class="services-grid">
 
-      <div class="project-card service-card">
+      <div class="project-card project-card--static service-card">
         <div class="service-card__head">
           <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21V8l7-5 7 5v13" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 21h18" stroke-linecap="round"/><path d="M9 21v-5h4v5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 12h4v9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3 class="project-card__title">Masz firmę i zespół</h3>
@@ -222,7 +234,7 @@
         <div class="project-card__meta">Warsztat 1 dzień · do 6 osób</div>
       </div>
 
-      <div class="project-card service-card">
+      <div class="project-card project-card--static service-card">
         <div class="service-card__head">
           <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5" stroke-linecap="round"/></svg></div>
           <h3 class="project-card__title">Jesteś sam i chcesz zacząć</h3>
@@ -247,35 +259,35 @@
 
     <div class="services-grid services-grid--3">
 
-      <div class="project-card service-card">
+      <div class="project-card project-card--static service-card">
         <div class="service-card__head">
           <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5" stroke-linecap="round"/></svg></div>
           <h3 class="project-card__title">Codzienna robota firmy</h3>
         </div>
         <p class="service-card__problem">Oferta, którą pisałeś <span>90 minut</span>, powstaje w 15.</p>
-        <p class="project-card__desc">Claude i narzędzia AI przy ofertach, mailach, umowach i notatkach ze spotkań. Uczysz się na swoich dokumentach — po szkoleniu masz gotowe wzorce, które po prostu odpalasz.</p>
+        <p class="project-card__desc">Claude i narzędzia AI przy ofertach, mailach, umowach i notatkach ze spotkań. Uczysz się na swoich dokumentach. Po szkoleniu masz gotowe wzorce, które po prostu odpalasz.</p>
       </div>
 
-      <div class="project-card service-card">
+      <div class="project-card project-card--static service-card">
         <div class="service-card__head">
           <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M7 21h10" stroke-linecap="round"/><path d="M7 13l3-3 3 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3 class="project-card__title">Treści i grafiki</h3>
         </div>
         <p class="service-card__problem">Posty na <span>2 tygodnie</span> w jedno popołudnie.</p>
-        <p class="project-card__desc">Posty, grafiki, opisy produktów i zdjęcia — w Twoim stylu, nie w stylu robota. Pokazuję, jak trzymać jeden głos marki, żeby klient poznał, że to Ty.</p>
+        <p class="project-card__desc">Posty, grafiki, opisy produktów i zdjęcia: w Twoim stylu, nie w stylu robota. Pokazuję, jak trzymać jeden głos marki, żeby klient poznał, że to Ty.</p>
       </div>
 
-      <div class="project-card service-card">
+      <div class="project-card project-card--static service-card">
         <div class="service-card__head">
           <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3 class="project-card__title">Obsługa klienta z AI</h3>
         </div>
         <p class="service-card__problem">80% pytań klientów to wciąż <span>te same pytania</span>.</p>
-        <p class="project-card__desc">Ustawiamy asystenta, który odpowiada na nie od ręki, 24 godziny na dobę — także w nocy i w niedzielę. Ty odbierasz tylko rozmowy, w których naprawdę chodzi o pieniądze.</p>
+        <p class="project-card__desc">Ustawiamy asystenta, który odpowiada na nie od ręki, 24 godziny na dobę, także w nocy i w niedzielę. Ty odbierasz tylko rozmowy, w których naprawdę chodzi o pieniądze.</p>
       </div>
 
     </div>
-    <p class="services-footnote">Nie musisz wybierać z góry — program układamy pod to, co u Ciebie najbardziej boli.</p>
+    <p class="services-footnote">Nie musisz wybierać z góry. Program układamy pod to, co u Ciebie najbardziej boli.</p>
   </div>
 </section>
 
@@ -293,7 +305,7 @@
         <div class="principle__num">01</div>
         <div>
           <h3 class="principle__title"><small>Materiał</small>Pracujemy na Twoich przykładach</h3>
-          <p class="principle__text">Przed szkoleniem przysyłasz mi 3 prawdziwe zadania: ofertę, maila do klienta, opis produktu. Na warsztacie rozwiązujemy <em>je</em>, nie wymyślone ćwiczenia — więc efekt zabierasz do firmy tego samego dnia.</p>
+          <p class="principle__text">Przed szkoleniem przysyłasz mi 3 prawdziwe zadania: ofertę, maila do klienta, opis produktu. Na warsztacie rozwiązujemy <em>je</em>, nie wymyślone ćwiczenia. Efekt zabierasz do firmy tego samego dnia.</p>
         </div>
       </div>
       <div class="principle">
@@ -307,7 +319,7 @@
         <div class="principle__num">03</div>
         <div>
           <h3 class="principle__title"><small>Efekt</small>Po szkoleniu nie jesteś ode mnie zależny</h3>
-          <p class="principle__text">Dostajesz spisane wzorce i nagranie warsztatu. Wszystko umiesz powtórzyć sam — bez abonamentu u mnie, bez dzwonienia o pomoc przy każdym mailu. <em>To jest cel, nie ryzyko.</em></p>
+          <p class="principle__text">Dostajesz spisane wzorce i nagranie warsztatu. Wszystko umiesz powtórzyć sam: bez abonamentu u mnie, bez płacenia komuś za rzeczy, które robisz w kwadrans. Skalujesz firmę sam — <em>to jest cel, nie ryzyko.</em></p>
         </div>
       </div>
     </div>
@@ -318,7 +330,7 @@
 <section class="bridge-section">
   <div class="container">
     <span class="section-eyebrow">Dlaczego ja</span>
-    <p class="bridge-quote">Sam przeszedłem przebranżowienie — zaczynałem w zupełnie innym zawodzie, od zera. Dziś buduję narzędzia AI dla firm w trzech krajach. <span>Jeśli ja mogłem się przekształcić, Ty też możesz.</span></p>
+    <p class="bridge-quote">Sam przeszedłem przebranżowienie: zaczynałem w zupełnie innym zawodzie, od zera. Dziś buduję narzędzia AI dla firm w trzech krajach. <span>Jeśli ja mogłem się przekształcić, Ty też możesz.</span></p>
     <p class="bridge-note">Dlatego nie uczę jak wykładowca, tylko jak ktoś, kto pamięta, jak to jest niczego nie rozumieć na starcie. Bez wyższości, bez mądrych słów — krok po kroku, aż zadziała u Ciebie.</p>
   </div>
 </section>
@@ -329,8 +341,35 @@
     <div class="price-box">
       <span class="section-eyebrow">Ile to kosztuje</span>
       <h2 class="section-title">Wycena po <em>15 minutach rozmowy.</em></h2>
-      <p class="section-sub">Nie podam Ci ceny z sufitu, bo szkolenie 1:1 przez kamerę to co innego niż dzień warsztatu dla 6 osób na miejscu. Na bezpłatnej 15-minutowej rozmowie ustalamy zakres — i dostajesz jedną konkretną kwotę, bez gwiazdek.</p>
+      <p class="section-sub">Nie podam Ci ceny z sufitu, bo szkolenie 1:1 przez kamerę to co innego niż dzień warsztatu dla 6 osób na miejscu. Na bezpłatnej 15-minutowej rozmowie ustalamy zakres i dostajesz jedną konkretną kwotę, bez gwiazdek.</p>
       <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="btn-amber">Umów bezpłatne 15 minut</a>
+    </div>
+  </div>
+</section>
+
+<!-- INNE USŁUGI -->
+<section class="xsell-section">
+  <div class="container">
+    <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+      <span class="section-eyebrow">Inne usługi</span>
+      <h2 class="section-title" style="font-size: clamp(26px, 3.4vw, 38px);">Szukasz czegoś <em>innego?</em></h2>
+    </div>
+    <div class="services-grid">
+      <a href="uslugi-konsultacje.html" class="project-card service-card service-card--compact">
+        <h3 class="project-card__title">Konsultacje</h3>
+        <p class="service-card__problem">Czujesz, że coś zjada Ci czas i pieniądze, ale <span>nie wiesz, od czego zacząć</span>.</p>
+        <div class="project-card__meta">Zobacz jak</div>
+      </a>
+      <a href="uslugi-strony.html" class="project-card service-card service-card--compact">
+        <h3 class="project-card__title">Strony internetowe</h3>
+        <p class="service-card__problem">Twoja strona wisi w internecie od lat i <span>nie przynosi ani jednego klienta</span> miesięcznie.</p>
+        <div class="project-card__meta">Zobacz jak</div>
+      </a>
+      <a href="uslugi-moduly.html" class="project-card service-card service-card--compact">
+        <h3 class="project-card__title">Moduły AI</h3>
+        <p class="service-card__problem">Te same czynności <span>pochłaniają Ci 5–10 godzin tygodniowo</span>.</p>
+        <div class="project-card__meta">Zobacz jak</div>
+      </a>
     </div>
   </div>
 </section>
@@ -339,8 +378,8 @@
 <section class="cta-section">
   <div class="container">
     <span class="section-eyebrow">Zacznij tutaj</span>
-    <h2 class="section-title">Narzędzia już masz. <em>Brakuje tylko startu.</em></h2>
-    <p class="section-sub">Powiedz asystentowi na tej stronie, co u Ciebie leży odłogiem — kliknij złoty przycisk w rogu i po prostu mów. Albo zarezerwuj 15 minut rozmowy ze mną — za darmo, bez slajdów i bez sprzedaży.</p>
+    <h2 class="section-title">Zacznijmy od tego, <em>co już masz.</em></h2>
+    <p class="section-sub">Powiedz asystentowi głosowemu na tej stronie, co u Ciebie leży odłogiem. Albo zarezerwuj 15 minut rozmowy ze mną: za darmo, bez slajdów i bez sprzedaży.</p>
     <div class="page-hero__actions">
       <a href="https://tidycal.com/pmuszynski/15-konkretna-rozmowa" target="_blank" class="btn-amber">Zarezerwuj 15 minut</a>
       <a href="kontakt.html" class="btn-outline-amber">Napisz do mnie</a>
@@ -379,9 +418,9 @@
       <div class="footer__col">
         <h4>Sklep</h4>
         <ul>
-          <li><a href="https://konsultacja.muszynski.online" target="_blank">Konsultacja 30 min</a></li>
+          <li><a href="https://konsultacja.muszynski.online" target="_blank">Konsultacja diagnostyczna · 60 min</a></li>
           <li><a href="https://audyt.muszynski.online" target="_blank">Audyt strony</a></li>
-          <li><a href="https://architekai.muszynski.online" target="_blank">AI OS dla firm</a></li>
+          <li><a href="https://architekai.muszynski.online" target="_blank">Wdrożenie AI pod klucz</a></li>
         </ul>
       </div>
     </div>
