@@ -4,7 +4,7 @@
   /* ===== KONFIGURACJA =====
      AGENT_ID: wklej ID agenta z ElevenLabs (Agents Platform), żeby włączyć widget.
      Pusty string = widget wyłączony, strona działa bez zmian. */
-  var AGENT_ID = '';
+  var AGENT_ID = 'agent_1301kwnrwjw3ek79mvj882qz7355';
 
   var CONFIG = {
     widgetSrc: 'https://unpkg.com/@elevenlabs/convai-widget-embed',
@@ -14,7 +14,7 @@
       button: 'Porozmawiaj z asystentem AI',
       badge: 'AI',
       header: 'Rozmawiasz z asystentem AI (sztuczna inteligencja)',
-      consent: 'Po kliknięciu „Rozpocznij rozmowę" przeglądarka poprosi o dostęp do mikrofonu, a Twój głos będzie przetwarzany przez ElevenLabs (serwery w UE) wyłącznie po to, żeby asystent odpowiedział na Twoje pytania. Zgoda obowiązuje na czas tej wizyty.',
+      consent: 'Po kliknięciu „Rozpocznij rozmowę" przeglądarka poprosi o dostęp do mikrofonu, a Twój głos będzie przetwarzany przez ElevenLabs zgodnie z RODO (umowa powierzenia danych; transfer poza UE zabezpieczony standardowymi klauzulami umownymi) wyłącznie po to, żeby asystent odpowiedział na Twoje pytania. Zgoda obowiązuje na czas tej wizyty.',
       privacyLink: 'Szczegóły w polityce prywatności',
       start: 'Rozpocznij rozmowę',
       notNow: 'Nie teraz'
