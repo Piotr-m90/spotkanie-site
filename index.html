@@ -581,6 +581,9 @@
     transition: opacity 0.3s;
   }
   .project-card:hover .project-card__thumb { transform: scale(1.03); transition: transform 0.5s ease; }
+  /* Nienazwany projekt — neutralna grafika zamiast starego logo */
+  .project-card__thumb--pivot { background: radial-gradient(ellipse at 50% 45%, rgba(138,107,176,0.35), transparent 65%), linear-gradient(135deg, #1a1420 0%, #0d0a08 100%); display: flex; align-items: center; justify-content: center; }
+  .project-card__pivot-icon { width: 30%; max-width: 64px; color: var(--plum-light); filter: drop-shadow(0 0 18px rgba(138,107,176,0.5)); position: relative; z-index: 1; }
   .project-card__badge {
     position: absolute;
     top: 12px; right: 12px;
@@ -1183,14 +1186,15 @@
         </a>
 
         <div class="project-card">
-          <div class="project-card__thumb" style="background-image: url('https://muszynski-media.gumlet.io/muszynski-online/brand-thumb-mx.png?w=700&format=auto&quality=85');">
+          <div class="project-card__thumb project-card__thumb--pivot">
             <span class="project-card__badge project-card__badge--pivot">Nowy kierunek</span>
+            <svg class="project-card__pivot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z" fill="currentColor" stroke="none" opacity="0.9"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
           </div>
           <div class="project-card__body">
-            <h3 class="project-card__title">Metropolix → nowy kierunek</h3>
-            <p class="project-card__tagline project-card__tagline--plum">Powrót do Polski — mój nowy projekt</p>
-            <p class="project-card__desc">Klub B2B, który budowałem z Magdaleną, się domyka. Pomysł idzie dalej: platforma dla Polaków wracających z emigracji. Szczegóły niebawem.</p>
-            <div class="project-card__meta">Nowy projekt · wkrótce</div>
+            <h3 class="project-card__title">Wracam do Polski</h3>
+            <p class="project-card__tagline project-card__tagline--plum">Nowy projekt — jeszcze bez nazwy</p>
+            <p class="project-card__desc">Poprzedni projekt się kończy. W jego miejsce startuje coś nowego — dla ludzi, którzy przenoszą centrum życia z powrotem do Polski.</p>
+            <a href="https://nawigator.muszynski.online" target="_blank" class="project-card__meta" style="color: var(--plum-light);">Pierwszy kawałek już działa: Nawigator Powrotu →</a>
           </div>
         </div>
 

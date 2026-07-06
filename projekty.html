@@ -108,6 +108,9 @@
   .project__thumb::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(13,10,8,0.8) 100%); }
   .project:hover .project__thumb { transform: scale(1.03); transition: transform 0.5s ease; }
   .project__thumb-text { position: relative; z-index: 1; font-family: 'Fraunces', serif; font-weight: 600; font-size: 28px; color: var(--gold); text-align: center; letter-spacing: -0.01em; line-height: 1.1; filter: drop-shadow(0 0 30px rgba(212, 137, 10, 0.4)); }
+  /* Nienazwany projekt — neutralna grafika zamiast starego logo */
+  .project__thumb--pivot { background: radial-gradient(ellipse at 50% 45%, rgba(138,107,176,0.35), transparent 65%), linear-gradient(135deg, #1a1420 0%, #0d0a08 100%); }
+  .project__pivot-icon { width: 56px; height: 56px; color: var(--plum-light); filter: drop-shadow(0 0 20px rgba(138,107,176,0.5)); position: relative; z-index: 1; }
   .project__badge { position: absolute; top: 14px; right: 14px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; padding: 4px 10px; border-radius: 4px; background: var(--gold); color: var(--bg-base); font-weight: 700; }
   /* LIVE / Aktywny — pulsing dot + breathing glow */
   .project__badge--live { display: inline-flex; align-items: center; gap: 6px; padding-left: 9px; background: #e0342c; color: #fff; animation: badgeGlow 2.4s ease-in-out infinite; }
@@ -356,15 +359,16 @@
       </article>
 
       <article class="project">
-        <div class="project__thumb" style="background-image: url('https://muszynski-media.gumlet.io/muszynski-online/brand-thumb-mx.png?w=700&format=auto&quality=85');">
+        <div class="project__thumb project__thumb--pivot">
           <span class="project__badge project__badge--pivot">Nowy kierunek</span>
+          <svg class="project__pivot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z" fill="currentColor" stroke="none" opacity="0.9"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
         </div>
         <div class="project__body">
-          <h3 class="project__title">Metropolix → nowy kierunek</h3>
-          <p class="project__tagline project__tagline--plum">Powrót do Polski — mój nowy projekt</p>
-          <p class="project__desc">Klub B2B, który budowałem z Magdaleną, się domyka. Pomysł idzie dalej: platforma dla Polaków wracających z emigracji. Szczegóły niebawem.</p>
-          <div class="project__meta"><span class="project__tag">Od 2025</span><span class="project__tag">Nowy kierunek</span><span class="project__tag">Wkrótce</span></div>
-          <span class="project__link project__link--muted">Więcej niebawem</span>
+          <h3 class="project__title">Wracam do Polski</h3>
+          <p class="project__tagline project__tagline--plum">Nowy projekt — jeszcze bez nazwy</p>
+          <p class="project__desc">Poprzedni projekt się kończy. W jego miejsce startuje coś nowego — dla ludzi, którzy przenoszą centrum życia z powrotem do Polski.</p>
+          <div class="project__meta"><span class="project__tag">Nowy projekt</span><span class="project__tag">Wkrótce</span></div>
+          <a href="https://nawigator.muszynski.online" target="_blank" class="project__link">Nawigator Powrotu</a>
         </div>
       </article>
     </div>
@@ -451,8 +455,8 @@
         <div class="project__body"><h3 class="project__title">Strona, która uczy AI dla firm</h3><p class="project__desc">Dla właścicieli małych biznesów, którzy słyszeli o AI ale nie wiedzą od czego zacząć. Pokazuje konkretnie: jakie zadania można oddać AI, ile to kosztuje, ile czasu odzyskasz.</p><div class="project__meta"><span class="project__tag">AI dla MŚP</span><span class="project__tag">Edukacja</span></div><a href="https://architekai.muszynski.online" target="_blank" class="project__link">architekai.muszynski.online</a></div>
       </article>
       <article class="project">
-        <div class="project__thumb" style="background-image: url('https://muszynski-media.gumlet.io/muszynski-online/brand-thumb-mx.png?w=700&format=auto&quality=85');"><span class="project__badge project__badge--pivot">W zmianie</span></div>
-        <div class="project__body"><h3 class="project__title">Strona, która zmienia kierunek</h3><p class="project__desc">Był klub B2B dla polskich przedsiębiorców za granicą, budowany z Magdaleną. Ten rozdział się domyka — na tym samym adresie startuje mój nowy pomysł: platforma dla Polaków wracających do kraju. Szczegóły niebawem.</p><div class="project__meta"><span class="project__tag">Nowy kierunek</span><span class="project__tag">Wkrótce</span></div><span class="project__link project__link--muted">Więcej niebawem</span></div>
+        <div class="project__thumb project__thumb--pivot"><span class="project__badge project__badge--pivot">W zmianie</span><svg class="project__pivot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z" fill="currentColor" stroke="none" opacity="0.9"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></div>
+        <div class="project__body"><h3 class="project__title">Strona, która zmienia kierunek</h3><p class="project__desc">Był klub B2B dla polskich przedsiębiorców za granicą. Ten rozdział się domyka. W jego miejsce coś nowego — na razie widać tylko pierwszy kawałek.</p><div class="project__meta"><span class="project__tag">Nowy projekt</span><span class="project__tag">Wkrótce</span></div><a href="https://nawigator.muszynski.online" target="_blank" class="project__link">Nawigator Powrotu</a></div>
       </article>
       <article class="project">
         <div class="project__thumb" style="background-image: url('https://muszynski-media.gumlet.io/muszynski-online/brand-thumb-cr.png?w=700&format=auto&quality=85');"><span class="project__badge project__badge--preorder">Przedsprzedaż</span></div>
