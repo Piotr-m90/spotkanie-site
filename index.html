@@ -36,11 +36,17 @@
     --gold-soft: rgba(212, 137, 10, 0.2);
     --bg-base: #0d0a08;
     --bg-deep: #050402;
-    --bg-card: #16110b;
+    --bg-card: #1c150d;
     --text-main: #f5f0e8;
     --text-mute: rgba(245, 240, 232, 0.65);
     --text-dim: rgba(245, 240, 232, 0.55);
     --border-soft: rgba(212, 137, 10, 0.15);
+    --teal: #3f9c8f;
+    --teal-light: #6cc6b8;
+    --coral: #d9694f;
+    --coral-light: #ef8b74;
+    --plum: #8a6bb0;
+    --plum-light: #b79ee0;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -607,6 +613,8 @@
   .project-card__badge--progress { background: rgba(212, 137, 10, 0.2); color: var(--gold); border: 1px solid var(--gold); overflow: hidden; padding-bottom: 7px; }
   .project-card__badge--progress::after { content: ''; position: absolute; left: 0; bottom: 0; height: 3px; width: 80%; background: var(--gold); box-shadow: 0 0 6px rgba(212,137,10,0.8); animation: progFill 2.6s ease-in-out infinite; }
   @keyframes progFill { 0% { width: 0; } 55%,100% { width: 80%; } }
+  /* NOWY KIERUNEK — pivot / evolving project, calmer than live-red */
+  .project-card__badge--pivot { background: rgba(138, 107, 176, 0.2); color: var(--plum-light); border: 1px solid var(--plum); }
   @media (prefers-reduced-motion: reduce) {
     .project-card__badge--live, .project-card__badge--live::before, .project-card__badge--preorder::after, .project-card__badge--progress::after { animation: none; }
     .project-card__badge--progress::after { width: 80%; }
@@ -619,6 +627,16 @@
     margin-bottom: 8px;
     color: var(--text-main);
   }
+  .project-card__tagline {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+  .project-card__tagline--gold { color: var(--gold-light); }
+  .project-card__tagline--teal { color: var(--teal-light); }
+  .project-card__tagline--plum { color: var(--plum-light); }
   .project-card__desc {
     font-size: 12.5px;
     line-height: 1.55;
@@ -1030,7 +1048,7 @@
       <div class="hero-cine__social-proof">
         <div class="hero-cine__avatars" aria-label="Ludzie, z którymi współpracuję">
           <span class="av" title="Dr Marcin Korecki · Common Roots"></span>
-          <span class="av" title="Magdalena Staniul · Metropolix"></span>
+          <span class="av" title="Magdalena Staniul · nowy projekt"></span>
           <span class="av" title="Mariusz Gębski · sport i mentoring"></span>
           <span class="av" title="Amelia Błażejewska · sport i dietetyka"></span>
           <span class="av" title="Rafał Błażejewski · medycyna naturalna"></span>
@@ -1146,6 +1164,7 @@
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">Muszyński.online</h3>
+            <p class="project-card__tagline project-card__tagline--gold">AI dla małych firm — po polsku</p>
             <p class="project-card__desc">Moja główna marka. Uczę właścicieli małych firm, jak używać AI, żeby zarabiać więcej.</p>
             <div class="project-card__meta">Od 2024 · po polsku &nbsp;→</div>
           </div>
@@ -1157,21 +1176,23 @@
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">Common Roots</h3>
+            <p class="project-card__tagline project-card__tagline--teal">Zdrowie i rozwój — z dr. Koreckim</p>
             <p class="project-card__desc">Marka o zdrowiu, pracy i rozwoju: w sześciu językach, z własnym portalem klienta i brandingiem.</p>
             <div class="project-card__meta">Z Marcinem Koreckim &nbsp;→</div>
           </div>
         </a>
 
-        <a href="https://metropolix.muszynski.online" target="_blank" class="project-card">
+        <div class="project-card">
           <div class="project-card__thumb" style="background-image: url('https://muszynski-media.gumlet.io/muszynski-online/brand-thumb-mx.png?w=700&format=auto&quality=85');">
-            <span class="project-card__badge project-card__badge--progress">W trakcie</span>
+            <span class="project-card__badge project-card__badge--pivot">Nowy kierunek</span>
           </div>
           <div class="project-card__body">
-            <h3 class="project-card__title">Metropolix</h3>
-            <p class="project-card__desc">Klub polskich przedsiębiorców mieszkających za granicą. Mapa firm, polecenia, kontakty.</p>
-            <div class="project-card__meta">Z Magdaleną &nbsp;→</div>
+            <h3 class="project-card__title">Metropolix → nowy kierunek</h3>
+            <p class="project-card__tagline project-card__tagline--plum">Powrót do Polski — nowy projekt z Magdaleną</p>
+            <p class="project-card__desc">Ten sam duet, nowy pomysł: platforma dla Polaków wracających z emigracji. Szczegóły niebawem.</p>
+            <div class="project-card__meta">Z Magdaleną · wkrótce</div>
           </div>
-        </a>
+        </div>
 
       </div>
     </div>
